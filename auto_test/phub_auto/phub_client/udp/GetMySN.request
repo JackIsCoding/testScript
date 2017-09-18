@@ -1,0 +1,9 @@
+[globalsection]
+protocol_ver = uint32:60
+cmd_type = uint8:1
+
+peerid = string:001EC9B3C9030000
+sn_list = list:PeerID:1
+
+[PeerID_0]
+peerid = string:001EC9B3C9030000

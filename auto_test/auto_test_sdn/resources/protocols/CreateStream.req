@@ -1,0 +1,8 @@
+[globalsection]
+sequence = int64:4034645978872648589
+businessID = int64:6110535445105132665
+streamKey = string:zxy
+
+streamName = string:autotest
+streamType = string:flv
+pullUrl = string:rtmp://tw03a107.sandai.net/test/xunlei

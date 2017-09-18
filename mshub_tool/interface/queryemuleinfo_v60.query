@@ -1,0 +1,21 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+cmdid = uint16:5001
+peerid = string:00FF202B15526IUQ
+###will trigger insert emule res
+#file_hash_id = string_hex:C75F87CFCEDA46D9853DBB6CE96A536C
+#filesize = uint64:57273968
+######
+
+
+file_hash_id = string_hex:6FE91F95168E66941F6F465B5C53C72A 
+filesize = uint64:35116032
+query_times_sn = uint32:1
+partner_id = string:0
+product_flag = uint32:101
+ed2k_link = string:

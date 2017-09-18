@@ -1,0 +1,4 @@
+[globalsection]
+version = uint32:66
+command_type = uint8:
+external_ip = uint32:

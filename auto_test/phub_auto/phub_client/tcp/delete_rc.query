@@ -1,0 +1,10 @@
+[globalsection]
+version = uint32:53
+seq = uint32:255
+length = uint32:0
+cmd_type = uint8:57
+
+peerid = string:4000000000000018
+cid = string_hex:211CBC50351318A7C290291C86F499DC3EF7448D
+filesize = uint64:2100000
+gcid = string_hex:2118A6036721D268C3364929DD78C0B3220F3246

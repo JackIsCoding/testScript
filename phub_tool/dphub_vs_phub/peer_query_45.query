@@ -1,0 +1,24 @@
+[globalsection]
+version = uint32:45
+seq = uint32:255
+length = uint32:0
+
+query_plus = uint8:59
+peerid = string:7845C4084DE3ED1U
+cid = string_hex:5DD5473166CE4492FEACC1A8603B6117988CA474
+filesize = uint64:35920080
+gcid = string_hex:D0FC2D08516A38A3351227B685C3BCFCD01E0FB0
+peer_capacity_flag = uint8:2
+internal_ip = uint32:0
+nat_type = uint32:0
+level_resource = uint8:255
+query_type = uint8:18
+server_res_num = uint32:1000
+query_times = uint32:5
+p2p_capacity = uint32:255
+upnp_ip = uint32:0
+upnp_port = uint16:0
+RscType = uint8:1
+partnerID = string:0
+productFlag = uint8:10
+

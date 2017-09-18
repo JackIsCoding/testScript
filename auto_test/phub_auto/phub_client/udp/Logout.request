@@ -1,0 +1,6 @@
+[globalsection]
+protocol_ver = uint32:60
+cmd_type = uint8:13
+
+report_ip = uint32:604834314
+peerid = string:4000000000000014

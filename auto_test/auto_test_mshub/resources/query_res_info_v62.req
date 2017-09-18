@@ -1,0 +1,41 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reserve = reserve:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+query_options = uint32:0
+
+[url]
+query_url="string:http://random.url.test/jfibfgbdjk/9845626416"
+query_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+
+[cid_info]
+cid = string_hex:C64897A31D925BD3573E0A8EF4D46946D7E12BE6
+filesize = uint64:6201259
+assist_url = string:
+assist_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+cid_query_type = uint8:1
+
+[reserve]
+thunder_version = string:7.9.9.120
+product_flag = uint32:12345
+partner_id = string:yyz
+thunderS_version = string:1.1.2.256

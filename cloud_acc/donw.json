@@ -1,0 +1,7 @@
+{
+        "ServiceId": "dc2",
+        "RoomId": "t18",
+	    "Connections": 80,
+	        "LoadTime": 1234
+}
+

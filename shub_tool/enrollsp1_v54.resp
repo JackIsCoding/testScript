@@ -1,0 +1,53 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:240
+client_version = uint32:526521
+compress_flag = uint16:0
+cmdid = uint16:80
+result = uint8:0
+lastest_version = string:
+login_hint = uint8:2
+login_desc = string:
+login_ass = string:0
+client_conf_setting = list:client_conf:
+server_list = list:server:
+external_ip = uint32:
+postfixs_array = list:string:
+filter_flag = uint8:
+filter_peerid_version = uint32:
+filter_peerid = list:string:
+query_static_flag = uint32:
+next_report_time = uint32:
+user_agent_flag = uint8:
+user_agent_version = uint32:
+user_agent_list = list:user_agent:
+country_code = uint32:
+update_file_head = uint8:
+current_file_head = uint32:
+filehead_suffix = list:filehead:
+#spi_acc_version = uint32:0
+#spi_acc_list = list:
+#disable_query_hub = uint8:0
+
+
+[client_conf]
+section = string:
+name = string:
+value = string:0
+
+[peerid]
+peerid = string:
+
+[server]
+serverid = string:0
+server_ip = uint32:0
+server_port = uint32:0
+
+[user_agent]
+user_agent_name = string:
+value = uint32:
+
+[filehead]
+file_head = string:
+filesuffix = string:

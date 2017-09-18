@@ -1,0 +1,27 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[url]
+query_url = "string:http://218.77.3.29/cdn.baidupcs.com/file/3b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=N,B,T,t&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm"
+#query_url = string:http://pubnet.sandai.net:8080/20/758c345e4810e3c571f4dc250cb44d5725e8adcf/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1/5a3f0e7f/200000/0/24bc53/0/0/5a3f0e7f/0/index=0-28814/indexmd5=29bf88e39c8abe01b2a22c4932ec7260/e6d86a5876626ed8ba04034a4500c340/20b2f66d85b172e16c36b2e796dd32ba/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1_IBOdownload_.flv.xv?type=vod&movieid=175377&subid=903236&ext=.xv
+original_url = string:
+refer_url = string:

@@ -1,0 +1,38 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:14560
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = reserve:0
+cmdid = uint16:6002
+result = uint8:1
+error_code = uint32:0
+has_record = uint32:10
+forbidden_type = uint32:0
+forbidden_msg = string:
+task_type = uint32:1
+task_name = string:
+task_id = string_unhex:
+res_info_list = list:res_info:
+
+[reserve]
+thunder_version = string:7.9.9.120
+product_flag = uint32:12345
+partner_id = string:yyz
+thunderS_version = string:1.1.2.256
+
+
+[res_info]
+fileindex = uint32:0
+filename = string:
+filesuffix = string:
+filesize = uint64:
+cid = string_unhex:
+gcid = string_unhex:
+gcid_part_size = uint32:
+gcid_level = uint32:
+control_flag = uint32:
+is_bcid_exist = uint8:
+bcid = string_unhex:
+dw_strategy = uint32:

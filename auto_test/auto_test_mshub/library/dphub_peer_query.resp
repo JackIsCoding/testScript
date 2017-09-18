@@ -1,0 +1,43 @@
+[globalsection]
+ProtocolVersion = uint32:
+SequenceNumbern = uint32:
+BodyLength = uint32:
+cmdid = uint16:
+CompresLength = uint32:
+CompressFlag = uint16:
+Result = uint16:
+cid = string: 
+gcid= string: 
+filesize = uint64: 
+blockSize = uint32:
+levelresource = uint16:
+totalresource = uint32:
+Retryinterval = uint32:
+UpLevelNodeRc = noderc:0
+PeerRc = list:peerrc:0
+
+[noderc]
+nodeid = uint32:
+nodetype = uint8:
+nodehost = string:
+nodeport = uint16:
+
+[peerrc]
+peerid = string:
+peercapacity = uint32:
+internalip = uint32:
+tcpport = uint16:
+udpport = uint16:
+resourcelevel = uint8:
+resourcepriority = uint8:
+filesubnettype = uint16:
+filerctype = uint16:
+fileidxdesctype = uint8:
+fileidxcontent = string:
+cdntype2 = uint32:
+PeerAdress = list:peeradress:0
+
+[peeradress]
+ip = uint32:
+port = uint16:
+peerid = string:

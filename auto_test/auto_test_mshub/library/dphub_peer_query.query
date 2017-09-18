@@ -1,0 +1,43 @@
+[globalsection]
+ProtocolVersion = uint32:3
+SequenceNumber = uint32:5
+BodyLength = uint32:0
+DPHubCommands = uint16:71
+CompresLength = uint32:0
+CompressFlag = uint16:0
+PeerID = string:FC4DD4F72DF0KEIU
+PeerCapability = uint32:45163
+RegionId = uint32:10721
+ParentId = uint32:1003
+Reserve = reserve:0
+FileRc = filerc:0
+Resource_capacity = uint32:0
+maxRes = uint16:300
+levelRes = uint16:0
+speedup = uint8:0
+p2PCapacity = uint32:45
+internalIp = uint32:3232242241
+upnpIp = uint32:0
+upnpPort = uint16:0
+natType = uint32:196864
+introducer = uint32:2001
+curPeerNum = uint16:202
+totalQueryTimes =uint16:2
+nodeQueryTimes = uint16:1
+requestFrom =uint16:0
+
+[filerc]
+cid = string_hex:8C16FEA784ED223E256728C76C4E366ABEFDBC81
+gcid= string_hex:5488A340A90B591F17C47EC087500A459A5542D7
+filesize = uint64:1729541309
+blockSize = uint32:524288
+subnetType = uint16:0
+fileResourceType = uint16:3
+fileIdxDescType = uint8:2
+fileIdxContent = string:0200000001003802
+
+[reserve]
+PartnerID = string:pc.thunder9
+ProductReleaseID = uint32:2754525
+ProductFlag = uint32:134217728
+ThunderVerstion = string:2.1032.112.13

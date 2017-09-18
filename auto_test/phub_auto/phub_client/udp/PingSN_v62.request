@@ -1,0 +1,12 @@
+[globalsection]
+protocol_ver = uint32:62
+cmd_type = uint8:2
+
+peerid = string:20FF202B15526IUQ
+net_type = uint32:0
+Latest_Port = uint16:0
+Time_elapsed = uint32:0
+Delta_port = uint32:0
+Udt_ver = uint16:0
+local_port = uint16:80
+Mhxy_ver = uint8:0

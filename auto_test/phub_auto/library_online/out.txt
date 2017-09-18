@@ -1,0 +1,10 @@
+
+----------sending /usr/local/phub_test_lb/phub_client/tcp/ReportRclist.request ----------
+
+----------------request:
+{'globalsection': {'version': 'uint32:50', 'seq': 'uint32:255', 'length': 'uint32:0', 'report_rclist': 'uint8:53', 'peerid': 'string:4000000000000000', 'peer_rclist': 'list:rc_info:3', 'p2p_capacity': 'uint32:255'}, 'rc_info_0': {'cid': 'string_hex:000CBC50351318A7C290291C86F499DC3EF7448D', 'filesize': 'uint64:1000000', 'gcid': 'string_hex:0008A6036721D268C3364929DD78C0B3220F3246'}, 'rc_info_1': {'cid': 'string_hex:2421BC50351318A7C290291C86F499DC3EF7448D', 'filesize': 'uint64:4954015113', 'gcid': 'string_hex:54A8A6036721D268C3364929DD78C0B3220F3246'}, 'rc_info_2': {'cid': 'string_hex:0001BC50351318A7C290291C86F499DC3EF7448D', 'filesize': 'uint64:2224015113', 'gcid': 'string_hex:0008A6036721D268C3364929DD78C0B3220F3246'}}
+recv command_length:16
+WARN, result = 0
+----------------response:
+{'globalsection': {'version': 'uint32:50', 'seq': 'uint32:255', 'length': 'uint32:16', 'report_rclist_resp': 'uint8:54', 'result': 'uint8:0'}}
+

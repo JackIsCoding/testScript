@@ -1,0 +1,15 @@
+[globalsection]
+version = uint32:60
+seq = uint32:255
+length = uint32:0
+cmd_type = uint8:151
+
+peerid = string:00FF202B15526IUQ
+resourceid = string:XXXXXXXX
+file_list = list:file_info:1
+
+[file_info_0]
+index = uint32:12345
+cid = string_hex:1421BC50351318A7C290291C86F499DC3EF7448D
+file_size = uint64:168633
+

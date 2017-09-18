@@ -1,0 +1,34 @@
+[globalsection]
+version=uint32:50
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+cmdid=uint16:1005
+peerid=string:00FF202B15526IUQ
+internalip=string:192.168.108.209
+productflag=uint32:8388608
+thunderversion=string:7.9.5.43
+networktype=uint32:0
+ostype=uint32:7
+osdetail="string:M6m1B7601P2|Service Pack 1|LANG804"
+user_detail=string:0
+pluginlist=list:plugin:0
+enable_login_control =uint32:64472286
+#filter_peerid_version=uint32:0
+#user_agent_ver=uint32:0
+#partner_id=string:0
+#file_head_suffix_map_ver=uint32:0
+#download_channel_stat=uint32:0
+#spi_acc_version=uint32:0
+#user_id=string:0
+#os_version=string:0
+#tp_service_name=string:0
+#tp_service_version=string:0
+#process_id=uint32:0
+
+
+[plugin_0]
+plugin_id=uint32:0
+plugin_ver=uint32:0
+

@@ -1,0 +1,13 @@
+[globalsection]
+version = uint32:
+seq = uint32:
+length = uint32:
+cmd_type = uint8:
+
+result = uint32:
+resourceid = string:
+peer_list = list:peer_info:
+
+[peer_info]
+index = uint32:
+peer_amount = uint32:

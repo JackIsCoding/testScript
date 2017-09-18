@@ -1,0 +1,71 @@
+CONFIG_DB_NAME=mshub_setting
+CONFIG_DB_HOST=10.10.67.102
+CONFIG_DB_PORT=3306
+CONFIG_DB_USER=root
+CONFIG_DB_PASSWD=sd-9898w
+MYSQL=/usr/bin/mysql
+
+MYSQL="${MYSQL} -u${CONFIG_DB_USER} -p${CONFIG_DB_PASSWD} -h${CONFIG_DB_HOST} -P${CONFIG_DB_PORT} ${CONFIG_DB_NAME}"
+
+function print_help()
+{
+    echo ""
+    echo "Usage: $0 <table> <key>
+---------------------------------
+|  res_info     |   url         |
+---------------------------------
+|  res_info_cold|   url         |
+-------------------------------------------------
+|  server_res   |   gcid        | [ url ]       |
+-------------------------------------------------
+|  server_res   |   gcid        |
+---------------------------------
+|  bcid_info    |   gcid        |
+---------------------------------
+|  gcid_info    |   cid         |
+---------------------------------
+|  bt_info      |   bthash idx  |
+---------------------------------
+|  bt_res       |   gcid        |
+---------------------------------
+|  emule_info   |   emulehash   |
+---------------------------------
+|  emule_res    |   gcid        |
+---------------------------------
+"
+    exit 1
+}
+
+function get_table_name()
+{
+    table="$1"
+    key="$2"
+    hash_val=`./tool/mshub_hash "${key}"`
+    if [[ $? -ne 0 ]]; then
+        echo "./tool/mshub_hash ${key} failed"
+        exit 1
+    fi
+    SQL="select table_num from mshub_hash_table_map where table_name='${table}'"
+    result=`${MYSQL} -Ne "${SQL}"`
+    let result=hash_val%result
+    echo "${table}_${result}"
+}
+
+function get_table_info()
+{
+    # get db_id and db_name
+    full_table_name="$1"
+    table_name_prefix=${full_table_name%_*}
+    table_index="${full_table_name##*_}"
+    SQL="select db_id,db_name from mshub_hash_table_db_map where ${table_index}>=start and ${table_index}<=end and table_name='${table_name_prefix}'"
+    array=(`${MYSQL} -Ne "${SQL}"`)
+    db_id=${array[0]}
+    db_name=${array[1]}
+
+    # get db_name's ip port passwd
+    SQL="select host, port, user, password from mshub_db_host where id='${db_id}'"
+    array=(`${MYSQL} -Ne "${SQL}"`)
+    echo "${array[0]} ${array[1]} ${array[2]} ${array[3]} ${db_name}"
+}
+
+

@@ -1,0 +1,25 @@
+[globalsection]
+version = uint32:
+sequence = uint32:
+length = uint32:
+client_version = uint32:
+compress_flag = uint16:
+cmdid = uint16:
+result = uint8:
+lastest_version = string:
+login_hint = uint8:
+client_conf_setting = list:client_conf:
+server_list = list:server:
+external_ip = uint32:
+
+
+[client_conf]
+section = string:
+name = string:
+value = string:
+
+
+[server]
+serverid = string:
+server_ip = uint32:
+server_port = uint32:

@@ -1,0 +1,53 @@
+#!/bin/env python
+import os
+import sys
+from configobj import ConfigObj
+
+tel_conf = '/usr/local/sandai/nginx_old/auto_test_new/resources/config_tel.data'
+cnc_conf = '/usr/local/sandai/nginx_old/auto_test_new/resources/config_cnc.data'
+tel_list = ['119.147.41.170','119.147.41.171','119.147.41.172','119.147.41.173','121.9.209.235','121.9.209.236','121.9.209.243','121.9.209.244']
+cnc_list = ['123.129.242.226','123.129.242.227','123.129.242.250','112.87.43.227','112.87.43.228','153.37.209.7','153.37.209.8']
+
+
+
+def run(type):
+    if type == 'tel':
+        for each in tel_list:
+            config1 = ConfigObj(tel_conf)
+            print config1['read_interface']
+            config1['read_interface']['host']=each
+            config1.write()
+            os.system('sh run_test.sh mshub_tel')
+    if type == 'cnc':
+        for each in cnc_list:
+            config2 = ConfigObj(cnc_conf)
+            print config2['read_interface']
+            config2['read_interface']['host']=each
+            config2.write()
+            os.system('sh run_test.sh mshub_cnc')
+
+def runsingle(type,ip):
+    if type == 'tel':
+        config1 = ConfigObj(tel_conf)
+        config1['read_interface']['host']=ip
+        config1.write()
+        os.system('sh run_test.sh mshub_tel')
+    if type == 'cnc':
+        config2 = ConfigObj(cnc_conf)
+        config2['read_interface']['host']=ip
+        config2.write()
+        os.system('sh run_test.sh mshub_cnc')
+
+if __name__ == '__main__':
+    if len(sys.argv)==1:
+        print '------'
+        print 'need 1 more param for tel or cnc'
+        print 'example:./**.py tel'
+        print './**.py tel ip'
+        print '------'
+        sys.exit(1)
+    if len(sys.argv)==2:
+        run(sys.argv[1])
+
+    if len(sys.argv)==3:
+        runsingle(sys.argv[1],sys.argv[2])

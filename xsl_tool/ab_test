@@ -1,0 +1,6 @@
+#!/bin/sh
+while [ 0 ]
+do
+date
+ab -r -n 20000 -c 50 http://pre.api-shoulei-ssl.xunlei.com/homepage/refreshpage?id=0&length=8&ts=0
+done

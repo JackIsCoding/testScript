@@ -1,0 +1,7 @@
+[globalsection]
+version = uint32:70
+seq = uint32:255
+length = uint32:0
+isrc_online = uint8:51
+
+peerid = string:121511897A31AD91

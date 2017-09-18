@@ -1,0 +1,20 @@
+#!/bin/bash
+
+URL="pool.bt.n0808.com:11400"
+#URL="http://10.10.32.143:11400"
+#BTFILE_PATH="./e3c1a1fa3199d19235cc46795d9377609f9e8c9f.torrent"
+#INFOID="E3C1A1FA3199D19235CC46795D9377609F9E8C9F"
+BTFILE_PATH="./88EFC7DFD9BA5EEFCB70F4CCFF0A791D553C5A88.torrent"
+INFOID="88EFC7DFD9BA5EEFCB70F4CCFF0A791D553C5A88"
+PEERID="aabbbbbbbbbbbbbb"
+SAVE_FILE="get.torrent"
+
+
+./query_post "${URL}" ${BTFILE_PATH} ${INFOID} ${PEERID} ${SAVE_FILE}
+
+if [ $? -ne 0 ];then
+	echo "test no pass "
+	exit -1
+fi
+
+exit 0

@@ -1,0 +1,9 @@
+[globalsection]
+version = uint32:51
+command_type = uint8:110
+requestor_ip = uint32:168476481
+requestor_port = uint16:8888
+target_peerid = string:00FF202B15526IU7
+gcid = string:44A8A6036721D268C3364929DD78C0B3220F3246
+filesize = uint64:168476481
+peerid = string:10FF202B15526IUQ

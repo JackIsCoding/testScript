@@ -1,0 +1,22 @@
+[globalsection]
+version = uint32:50
+seq = uint32:255
+length = uint32:0
+report_rclist = uint8:61
+
+peerid = string:4000000000000019
+tcpip = uint32:123456789
+tcpport = uint16:200
+product_flag = uint32:0
+peer_rclist = list:rc_info:2
+cdn_type = uint32:2
+
+[rc_info_0]
+cid = string_hex:311CBC50351318A7C290291C86F499DC3EF7448D
+filesize = uint64:3110000
+gcid = string_hex:0AA9A6036721D268C3364929DD78C0B3220F3246
+
+[rc_info_1]
+cid = string_hex:2421BC50351318A7C290291C86F499DC3EF7448D
+filesize = uint64:4954015113
+gcid = string_hex:54A8A6036721D268C3364929DD78C0B3220F3246

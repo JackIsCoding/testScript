@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160819 15:11:24.780" generator="Robot 2.8.7 (Python 2.6.6 on linux2)">
+<suite source="/usr/local/mshub_interface_lua/auto_test_new/suit/query_res_info.robot" id="s1" name="Query Res Info">
+<kw type="setup" name="Connect_to_redis">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20160819 15:11:25.368" level="FAIL">No keyword with name 'Connect_to_redis' found.</msg>
+<status status="FAIL" endtime="20160819 15:11:25.369" starttime="20160819 15:11:25.368"></status>
+</kw>
+<test id="s1-t1" name="Query res_info by query_url,res_info is not exist">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.373" critical="yes" starttime="20160819 15:11:25.369">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t2" name="Query res_info by original_url,res_info is not exist">
+<doc>Query url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.377" critical="yes" starttime="20160819 15:11:25.373">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t3" name="Query res_info by query_url and original_url,res_info not exist">
+<doc>Original_url,query_url is exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.381" critical="yes" starttime="20160819 15:11:25.378">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t4" name="Query res_info by query_url version --v62">
+<doc>Original_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.386" critical="yes" starttime="20160819 15:11:25.382">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t5" name="Query res_info with rsa encode">
+<doc>query res info with rsa encode</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.389" critical="yes" starttime="20160819 15:11:25.386">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t6" name="Query res_info with zlib encode">
+<doc>query res info with zlib encode</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.393" critical="yes" starttime="20160819 15:11:25.390">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t7" name="Query res_info with filesuffix is midownload">
+<doc>query res_info with filesuffix is midownload</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.397" critical="yes" starttime="20160819 15:11:25.394">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t8" name="Query res_info by session url">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.401" critical="yes" starttime="20160819 15:11:25.398">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t9" name="Query res_info by query_url version --v60">
+<doc>Original_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.405" critical="yes" starttime="20160819 15:11:25.402">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t10" name="Query res_info by query_url kankan url">
+<doc>Original_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.409" critical="yes" starttime="20160819 15:11:25.406">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t11" name="Query res_info by query_url publish url">
+<doc>Original_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.413" critical="yes" starttime="20160819 15:11:25.410">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t12" name="Query res_info by query_url small sp">
+<doc>Original_url is exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.417" critical="yes" starttime="20160819 15:11:25.414">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t13" name="Query res_info by original_url">
+<doc>Query_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.421" critical="yes" starttime="20160819 15:11:25.418">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t14" name="Query res_info by original_url,query_url's res_info is not exist">
+<doc>Firstly, query by query_url,res_info is not exist,then query by original_url, res_info is exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.426" critical="yes" starttime="20160819 15:11:25.422">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t15" name="Query res_info by query_url,not need bcid">
+<doc>Original_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.430" critical="yes" starttime="20160819 15:11:25.427">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t16" name="Query res_info by original_url from old shub">
+<doc>Get res_info from old shub.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.434" critical="yes" starttime="20160819 15:11:25.431">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t17" name="Query res_info through anti-rob, with query url and original url">
+<doc>With query_url and original_url</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.439" critical="yes" starttime="20160819 15:11:25.435">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t18" name="Query res_info through anti-rob">
+<doc>With query_url and empty original_url</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.443" critical="yes" starttime="20160819 15:11:25.439">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t19" name="Query res_info by invalid empty query_url and empty original_url">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.447" critical="yes" starttime="20160819 15:11:25.443">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t20" name="Query res_info by invalid query_url,whose length is less than 10">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.451" critical="yes" starttime="20160819 15:11:25.448">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t21" name="Query res_info by invalid query_url,which is end with '/'">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.456" critical="yes" starttime="20160819 15:11:25.452">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t22" name="Query res_info by invalid query_url,without protocol">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.460" critical="yes" starttime="20160819 15:11:25.456">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t23" name="Query res_info by invalid query_url,without host">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.464" critical="yes" starttime="20160819 15:11:25.461">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t24" name="Query res_info by invalid query_url,which is page url.">
+<doc>Original url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.468" critical="yes" starttime="20160819 15:11:25.465">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t25" name="Query res_info by invalid original_url,whose length is less than 10">
+<doc>Redirect url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.473" critical="yes" starttime="20160819 15:11:25.469">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t26" name="Query res_info by invalid original_url,which is end with '/'">
+<doc>Redirect url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.477" critical="yes" starttime="20160819 15:11:25.473">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t27" name="Query res_info by invalid original_url,without protocol">
+<doc>Redirect url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.482" critical="yes" starttime="20160819 15:11:25.478">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t28" name="Query res_info by invalid original_url,without host">
+<doc>Redirect url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.486" critical="yes" starttime="20160819 15:11:25.482">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t29" name="Query res_info by invalid original_url,which is page url.">
+<doc>Redirect url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.490" critical="yes" starttime="20160819 15:11:25.486">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t30" name="Query res_info by cid without assist_url,res_info is not exist">
+<doc>Assist_url is not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.495" critical="yes" starttime="20160819 15:11:25.491">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t31" name="Query res_info by cid with assist_url,res_info is not exist">
+<doc>Assist_url is exist,but res_info not exist.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.499" critical="yes" starttime="20160819 15:11:25.495">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t32" name="Query res_info by cid without assist_url">
+<doc>Assist_url is not exist,result has bcid.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.504" critical="yes" starttime="20160819 15:11:25.500">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t33" name="Query res_info by cid with assist_url,get res_info by assist_url">
+<doc>Assist_url is exist,get res_info by assist_url.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.508" critical="yes" starttime="20160819 15:11:25.504">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t34" name="Query res_info by cid with assist_url,get res_info by cid_filesize">
+<doc>Assist_url is exist,get res_info by assist_url.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.512" critical="yes" starttime="20160819 15:11:25.509">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t35" name="Query res_info by cid with assist_url,res_info is different from cid_filesize,get res_info by cid_filesize">
+<doc>Assist_url is exist,get res_info is different from cid_filesize,so get res_info by assist_url.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.521" critical="yes" starttime="20160819 15:11:25.513">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t36" name="Query res_info by cid from old shub">
+<doc>Get res_info by cid from old shub.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.525" critical="yes" starttime="20160819 15:11:25.522">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t37" name="Query res_info by cid with assist_url,get res_info by cid_filesize,not need bcid">
+<doc>Assist_url is exist,get res_info by assist_url,and not need bcid.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.530" critical="yes" starttime="20160819 15:11:25.526">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t38" name="Query res_info by cid with invalid assist_url,whose length is less than 10">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.534" critical="yes" starttime="20160819 15:11:25.530">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t39" name="Query res_info by cid with invalid assist_url,which is end with '/'">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.538" critical="yes" starttime="20160819 15:11:25.534">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t40" name="Query res_info by cid with invalid assist_url,without protocol">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.542" critical="yes" starttime="20160819 15:11:25.539">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t41" name="Query res_info by cid with invalid assist_url,without host">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.546" critical="yes" starttime="20160819 15:11:25.543">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t42" name="Query res_info by cid with invalid assist_url,which is page url.">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.550" critical="yes" starttime="20160819 15:11:25.547">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t43" name="Query res_info by cid ,whose length is less than 40">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.554" critical="yes" starttime="20160819 15:11:25.551">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t44" name="Query res_info by cid ,whose length is more than 40">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.558" critical="yes" starttime="20160819 15:11:25.554">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t45" name="Query res_info by cid ,which is empty">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.562" critical="yes" starttime="20160819 15:11:25.558">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t46" name="Query res_info by cid ,whose length is less than 40,but find by assist_url">
+<doc>With assist_url and find res_info.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.566" critical="yes" starttime="20160819 15:11:25.562">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t47" name="Query res_info by cid ,whose length is more than 40,but find by assist_url">
+<doc>With assist_url and find res_info.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.570" critical="yes" starttime="20160819 15:11:25.566">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<test id="s1-t48" name="Query res_info by cid ,which is empty,but find by assist_url">
+<doc>With assist_url and find res_info.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:11:25.574" critical="yes" starttime="20160819 15:11:25.570">Parent suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</test>
+<doc>Query res info test suit.
+
+Test test.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20160819 15:11:25.578" starttime="20160819 15:11:24.783">Suite setup failed:
+No keyword with name 'Connect_to_redis' found.</status>
+</suite>
+<statistics>
+<total>
+<stat fail="48" pass="0">Critical Tests</stat>
+<stat fail="48" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="48" pass="0" id="s1" name="Query Res Info">Query Res Info</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20160819 15:11:25.196" level="ERROR">Error in file '/usr/local/mshub_interface_lua/auto_test_new/suit/query_res_info.robot': Initializing test library 'RedisOperation' with no arguments failed: NoSectionError: No section: 'twemproxy'
+Traceback (most recent call last):
+  File "/usr/local/mshub_interface_lua/auto_test_new/library/Redisbase.py", line 16, in __init__
+    self.connect_to_redis()
+  File "/usr/local/mshub_interface_lua/auto_test_new/library/Redisbase.py", line 21, in connect_to_redis
+    host = config.get('twemproxy', 'host')
+  File "/usr/lib64/python2.6/ConfigParser.py", line 532, in get
+    raise NoSectionError(section)</msg>
+</errors>
+</robot>

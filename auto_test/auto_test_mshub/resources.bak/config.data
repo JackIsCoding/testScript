@@ -1,0 +1,71 @@
+[read_interface]
+#test
+host = http://10.10.159.53:80
+#host = http://10.10.159.47:80
+#host = http://10.10.159.119:80
+
+#tel
+#host = "http://t0308.sandai.net"
+#host = "http://t16105.sandai.net"
+#host = "http://hub5idx.shub.sandai.net:82"
+
+#cnc
+#host = "http://tw07573.sandai.net"
+#host = "http://c1213.sandai.net"
+
+[write_interface]
+#test
+host = http://10.10.159.54:80
+#host = http://10.10.159.47:80
+#host = http://10.10.159.118:80
+
+#tel
+#host = "http://t0377.sandai.net"
+#host = "http://t16115.sandai.net"
+
+#cnc
+#host = "http://c12a67.sandai.net"
+#host = "http://tw07567.sandai.net"
+
+
+[cn_query]
+host = http://10.10.159.52
+port = 8788
+
+[dcn_interface]
+host = http://10.10.159.54
+port = 8754
+
+[dc_query]
+host = http://10.10.159.50
+port = 8755
+
+[updator]
+host = http://10.10.159.49
+port = 16095
+
+[votebox]
+host = http://10.10.159.50
+port = 16040
+
+[dbproxy]
+host = http://10.10.159.51
+port = 10086
+
+[msg_channel]
+host = 10.10.159.47
+port = 9000
+
+[msg_processor]
+host = 10.10.159.50
+port = 9001
+
+[twemproxy]
+host = 10.10.159.49
+port = 22123
+
+[database]
+dbHost = 10.10.159.54
+dbPort = 3306
+dbUsername = root
+dbPassword = sd-9898w

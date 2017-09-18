@@ -1,0 +1,1 @@
+ab  -p ab.txt -T application/json -c 100 -n 10000 http://tw06600.sandai.net:7000/api/shenzhen/shoulei/1

@@ -1,0 +1,10 @@
+sequence: 1392394383123136
+errorCode: E_OK
+allCount: 1
+streamInfoList {
+  streamID: 7270
+  streamKey: "autotest_1504768401_PL4lMJo5"
+  streamName: "test"
+  streamStatus: CLOSED
+}
+

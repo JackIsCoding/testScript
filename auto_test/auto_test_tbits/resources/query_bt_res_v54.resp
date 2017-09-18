@@ -1,0 +1,16 @@
+[globalsection]
+version=uint32:
+sequence=uint32:
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+cmdid=uint16:4014
+result=uint8:
+has_record=uint32:
+use_policy=uint8:
+info_id=string_unhex:
+index=uint32:
+file_total_size=uint64:
+file_size=uint64:
+start_offset=uint64:
+block_size=uint32:

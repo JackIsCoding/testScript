@@ -1,0 +1,15 @@
+[globalsection]
+protocol_version = uint32:61
+sequence = uint32:3
+body_length = uint32:16
+client_version = uint32:526521
+compress_flag = uint16:0
+reserve = reserve:0
+cmdid = uint16:6002
+result = uint8:
+
+[reserve]
+thunder_version=string:7.9.9.120
+product_flag=uint32:800001
+partner_id=string:MI
+thunderS_version=string:1.1.2.256

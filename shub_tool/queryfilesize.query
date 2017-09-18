@@ -1,0 +1,29 @@
+[globalsection]
+version=uint32:60
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reserve = string:onlystring
+cmdid=uint16:2039
+peerid=string:0023143F2C04KKPQ
+query_info_list = list:query_info:2
+product_id = uint32:101
+
+[query_info_1]
+by_what = uint8:0
+query_string = "string:http://url.change.cn/test.zip"
+
+[query_info_0]
+by_what = uint8:0
+query_string = "string:http://cdn.amazeui.org/src/1.0/dist/AmazeUI-1.0.1.zip"
+
+[query_info_2]
+by_what = uint8:0
+#query_string = "string:http://dv50.serenlu.com/%5B%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9www.001ni.com%5DDRG-08.avi"
+query_string = "string:http://pubnet.sandai.net:8080/20/758c345e4810e3c571f4dc250cb44d5725e8adcf/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1/5a3f0e7f/200000/0/24bc53/0/0/5a3f0e7f/0/index=0-28814/indexmd5=29bf88e39c8abe01b2a22c4932ec7260/e6d86a5876626ed8ba04034a4500c340/20b2f66d85b172e16c36b2e796dd32ba/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1_IBOdownload_.flv.xv?type=vod&movieid=175377&subid=903236&ext=.xv"
+
+[query_info_3]
+by_what = uint8:0
+query_string = "string:http://cdn.amazeui.org/src/1.0/dist/AmazeUI-1.0.1.zip"
+

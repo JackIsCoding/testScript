@@ -1,0 +1,6 @@
+[globalsection]
+query = uint16:6001
+peerid = string:0000000000111111
+query_url = string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+refer_url = string:
+query_options = uint32:0

@@ -1,0 +1,9 @@
+[globalsection]
+version = uint32:
+seq = uint32:
+length = uint32:
+cmdid = uint8:
+
+result = uint8:
+total_res_num = uint32:
+

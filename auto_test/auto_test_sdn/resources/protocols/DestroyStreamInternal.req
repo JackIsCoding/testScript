@@ -1,0 +1,3 @@
+[globalsection]
+sequence = uint32:1010101
+streamID = uint32:30

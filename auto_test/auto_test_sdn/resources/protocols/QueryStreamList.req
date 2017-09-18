@@ -1,0 +1,3 @@
+[globalsection]
+sequence = uint64:1010101
+businessID = uint64:255

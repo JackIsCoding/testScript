@@ -1,0 +1,19 @@
+[globalsection]
+version=uint32:50
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+cmdid=uint16:2011
+host_down_info_list = list:host_down_info:2
+partner_id=string:80000010
+productflag=uint32:8
+
+[host_down_info_0]
+host = "string:vod.xunlei.com"
+down_size = uint64:99999
+
+[host_down_info_1]
+host = "string:i.xunlei.com"
+down_size = uint64:88888
+

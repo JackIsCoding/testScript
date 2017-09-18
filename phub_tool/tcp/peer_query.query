@@ -1,0 +1,27 @@
+[globalsection]
+version = uint32:65
+seq = uint32:255
+length = uint32:0
+
+query_plus = uint8:59
+peerid = string:121511897A31AD9I
+cid = string_hex:8C16FEA784ED223E256728C76C4E366ABEFDBC81
+filesize = uint64:1729541309
+gcid = string_hex:3488A340A90B591F17C47EC087500A459A5542D7
+peer_capacity = uint32:45163
+#internal_ip = uint32:798951946
+internal_ip = uint32:798951941
+nat_type = uint32:196864
+#nat_type = uint32:4294967295
+level_resource = uint8:5
+query_type = uint8:0
+server_res_num = uint32:5
+query_times = uint32:1
+#p2p_capacity = uint32:105
+p2p_capacity = uint32:255
+upnp_ip = uint32:916392458
+upnp_port = uint16:20001
+
+rsc_type = uint8:1
+partner_id = string:AAAAABBBBB
+product_id = uint32:1000

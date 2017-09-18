@@ -1,0 +1,27 @@
+[globalsection]
+version = uint32:61
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+cmdid = uint16:2021
+bywhat = uint8:1
+query_info = cid_info:1
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:123456
+query_time = uint32:22
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[cid_info]
+cid = string_hex:501E2ECEF09C38BAD3565F4113C7F165E116D462
+filesize = uint64:2634150
+
+assist_url = string:
+assist_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+cid_query_type = uint8:1

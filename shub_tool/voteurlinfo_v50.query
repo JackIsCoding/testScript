@@ -1,0 +1,16 @@
+[globalsection]
+version=uint32:50
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+cmdid=uint16:2007
+peerid=string:00FF202B15526IUQ
+query_url=string:http://dldx.csdn.net/fd.php?i=708864151197564&s=74a549e7b95c7a645a4c32a9e5422c5c
+filesize=uint64:6201259
+cid=string_hex:96C32F6962A450C3F213C9FEFA03666AEC30854D
+gcid=string_hex:59A49B62E1AFAFB01C6879B8CDE53A0ACBBCD607
+gcid_level=uint32:90
+original_url=string:
+#partner_id=string:80000010
+#productflag=uint32:8388608

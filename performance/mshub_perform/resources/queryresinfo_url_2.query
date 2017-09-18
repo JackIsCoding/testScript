@@ -1,0 +1,95 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = client_info:0
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:8888388888888801
+report_ip = uint32:123456
+query_time = uint32:2
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+query_option = int32:2
+
+[url]
+
+
+#query_url=string:http://lx.vip.baidupcs.com/123234rwer/download?bkt=dfsdf12323&fid=123234334&time=12343434&sign=1232423&to=14343432&fm=123455
+#query_url=string::http://lx.cdn.baidupcs.com/file/9d11?bkt=p2-nj02-366&xcode=91e30cd6ec590b03fc7419bf8601a65db0bd7acbd306220837047dfb5e85c39&fid=23&time=1437947395&sign=FDTAq%2FM7jYIC2VM%3D&to=hc&fm=NanTny&sta_dx=15&sta_cs=1548&sta_ft=apk&sta_ct=1&fm2=Nanjinny&newver=68abf
+#query_url=string:http://lx.cdn.baidupcs.com/file/9d11?bkt=p2-nj02-366&xcode=91e30cd6ec590b03fc7419bf8601a65db0bd7acbd306220837047dfb5e85c39&fid=23&time=1437947395&sign=FDTAq%2FM7jYIC2VM%3D&to=hc&fm=NanTny&sta_dx=15&sta_cs=1548&sta_ft=apk&sta_ct=1&fm2=Nanjinny&newver=68abf
+
+#query_url=string:http://pubnet.sandai.net:8080/20/c7cbb1a4ea986831ff7ca0a6922a9cc3427f7f98/fda828573c73cb5025fb51e80ba58c612c2114e1/1cba0685/200000/0/f62f5/0/0/1cba0685/0/index=0-12034/indexmd5=e653af462899a8ba72bc1eb5a4f9983f/90b8b9e231250636f1b4b8fa07b05775/47728e70c12307984ff35b4ab9af1973/fda828573c73cb5025fb51e80ba58c612c2114e1.flv.xv?type=vod&movieid=184337&subid=1093783&ext=.xv
+
+
+#query_url=string:http://gdl.lixian.vip.xunlei.com/download?fid=5bTGntNVeixBNXJLO4XFNj1rst/AGBAAAAAAALapN3kdmCuPM/GPnTBbCC5JVHJ6&mid=666&threshold=150&tid=0CDBEF0232878C1D515C9142D31E6A89&srcid=4&verno=1&g=B6A937791D982B8F33F18F9D305B082E4954727A&scn=c8&i=B6A937791D982B8F33F18F9D305B082E4954727A&t=1&ui=109273277&ti=832266684861696&s=1054912&m=0&n=01085F972B616C6C5F075D852C68706C611854966E367833320044BB387462645F0259963B5F646E5F005085006169682E0449815F00000000&ff=0&co=5D4FC1B856091AFBA4CF6C29B9C5A5E7&cm=1&pk=lixian&ak=1:1:6:4&e=2000000000&ms=10485760&ck=98B2000655D698FAF0ED0B1C8C8D2779&at=B0B0871FA4588D729673CB1DC7E75D8D
+#query_url=string:
+query_url = string:http://i3.market.mi-img.com/download/AppStore/0d727b519f734427b1ac3aeab8fb232cd21565e52/com.halfbrick.fruitninja.apk
+##query_url = string:http://f1.market.xiaomi.com/download/AppStore/0b1904c5243df5dea931b2ea937c8b3bead407ddf/%E4%B9%B1%E6%96%97%E8%A5%BF%E6%B8%B8_1.0.23_23.mds
+#query_url=string:http://hnpy.newhua.com/down/kugou7736.zip
+#query_url=string::http://ori_test_122.com/test.zip
+#query_url=string:http://cachebypass.extensionfile.net/piwik.js
+#query_url = string:ftp://dygod3:dygod3@y069.dydytt.net:3272/海贼王/[阳光电影-www.ygdy8.com][one piece][677].rmvb
+#query_url = string:http://redirected_1122.url.com/test.flv
+#query_url = string:http://invalid.url.test/redirect_url/test.html
+#query_url = string:http://black.url.com/black.rar
+#query_url = string:http://test_result.not.exist/query_url/res_info.rar
+
+#query_url = string:http://down.33k.cc:41151/www.xunbo.cc/[迅雷下载Www.99b.Cc]龙珠改[第66话].rmvb
+
+#query_url = string:http://pubnet.sandai.net:8080/20/758c345e4810e3c571f4dc250cb44d5725e8adcf/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1/5a3f0e7f/200000/0/24bc53/0/0/5a3f0e7f/0/index=0-28814/indexmd5=29bf88e39c8abe01b2a22c4932ec7260/e6d86a5876626ed8ba04034a4500c340/20b2f66d85b172e16c36b2e796dd32ba/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1_IBOdownload_.flv.xv?type=vod&movieid=175377&subid=903236&ext=.xv
+
+#query_url = "string:http://gdl.lixian.vip.xunlei.com/download?fid=5bTGntNVeixBNXJLO4XFNj1rst/AGBAAAAAAALapN3kdmCuPM/GPnTBbCC5JVHJ6&mid=666&threshold=150&tid=0CDBEF0232878C1D515C9142D31E6A89&srcid=4&verno=1&g=B6A937791D982B8F33F18F9D305B082E4954727A&scn=c8&i=B6A937791D982B8F33F18F9D305B082E4954727A&t=1&ui=109273277&ti=832266684861696&s=1054912&m=0&n=01085F972B616C6C5F075D852C68706C611854966E367833320044BB387462645F0259963B5F646E5F005085006169682E0449815F00000000&ff=0&co=5D4FC1B856091AFBA4CF6C29B9C5A5E7&cm=1&pk=lixian&ak=1:1:6:4&e=2000000000&ms=10485760&ck=98B2000655D698FAF0ED0B1C8C8D2779&at=B0B0871FA4588D729673CB1DC7E75D8D"
+
+## 
+#query_url = 'string:http://218.77.3.29/cdn.baidupcs.com/file/3b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=N,B,T,t&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm'
+
+#query_url = 'string:http://cdn.amazeui.org/src/2.0/dist/AmazeUI-2.1.0-beta1.zip'
+#query_url = 'string:thunder://QUFmdHA6Ly82djo2dkBmdHAyLmthbjY2LmNvbTo0MTY1L+OAkOabtOWkmueUteW9seivt+WOu3d3dy42NnlzLm9yZ+OAkeW8gOW/g+mtlOazlURWROWbveivrS5ybXZiWlo='
+#query_url = 'string:thunder://QUFmdHA6Ly9keTEzMS5jb206NnZkeS5jb21AZnRwMi42NmUuY2M6NjUyMC+hvjZ2tefTsHd3dy42dmR5LmNvbaG/0am5+sHQs7VCRNbQ06LLq9fWMTAyNLjfx+UubWt2Wlo='
+#query_url = 'string:http://dlsw.baidu.com/sw-search-sp/soft/02/14552/XMPSetup_4.9.17.2314-dl.1410430546.exe'
+#query_url = 'string:http://mcgi.v.qq.com/commdatav2?cmd=4&platform=aphone&confid=236'
+
+
+#query_url = 'string:http://119.147.135.24544/file.data.weipan.cn/46567549/2e9c6b6f04ac0413a48a6d970dc4910831d29c6c?ssig=+JoUsdkTKg&Expires=1418055172&KID=sae,l30zoo1wmz&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&corp=1'
+
+#query_url = 'string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb'
+
+#query_url = 'string:thunder://QUFmdHA6Ly82dmhhby5jb206NnZoYW8ubmV0QGZ0cDE1LjY2eXMub3JnOjI2Mjgvsam359Gp1tC1xLDXxPFIRNbQ06LLq9fWMTAyNLjfx+WhvjZ2tefTsNPyw/uxu7XBLNDCtdjWt3d3dy42dmhhby5uZXShvy5tcDRaWg=='
+
+
+#query_url = 'string:http://v.youku.com/v_show/id_XNzM0ODIyMTM2.html?filetype=flv'
+
+##kuai chuan
+#query_url = 'string:thunder://QUFodHRwOi8vZGwyLnQyMC5zZW5kZmlsZS52aXAueHVubGVpLmNvbTo4MDAwLyU1QiVFNyU4MiVBQiVFNyU5NCVCNSVFNSVCRCVCMXd3dyUyRXh1YW5keSUyRWNvbSU1RCVFNyU4QiU4MiVFNiU4MCU5MiUyRURWRHNjciVFOCU4QiVCMSVFOCVBRiVBRCVFNCVCOCVBRCVFNSVBRCU5NyUyRW1wND9rZXk9YjcxNGRhNWFjZWU4OWIxZmQ3ZTllZGRjNmJjYzIxZjkmZmlsZV91cmw9JTJGZ2RyaXZlJTJGcmVzb3VyY2UlMkYzMyUyRjdFJTJGMzNCMDY1OEY3QTIzQUE5OUE2NEZCRDJERUU4MzA3RjE2NTIyNTU3RSZmaWxlX3R5cGU9MCZhdXRoa2V5PTZERDBFQTk0MzI0NDRENjdCM0MzNTREM0VGRDFCM0Y4QkZCM0ZBMkI4MzBCREQyODMwRkI0RUZBNTEwQUY5ODUmZXhwX3RpbWU9MTQyMjQ3NDk4MCZmcm9tX3VpZD0zMTE2NDQ3MDUmdGFza19pZD02MDg3Nzc0NDk0NjExODM5MjM0JmdldF91aWQ9MTE3OTE4MTU5JmY9bGl4aWFuLnZpcC54dW5sZWkuY29tJnJlZHVjZV9jZG49MSZmaWQ9bmlMbnkvNHdIanprRnh6T3ZwV1RrTjduc3hiYVZJUjNBQUFBQURPd1pZOTZJNnFacGsrOUxlNkRCL0ZsSWxWKyZtaWQ9NjY2JnRocmVzaG9sZD0xNTAmdGlkPThBMkM4MUI2RDg3QTc4Mzk2QzU3MkE3MTQwNTI1OUM3JnNyY2lkPTcmdmVybm89MVpa'
+#query_url=string:http://songsong.url.com/t1.flv
+#query_url = "string:http://original_2500.url.com/test.flv"
+#query_url = "string:http://www.baidu.com/originalurl22 2222 22222 222"
+#query_url = "string:http://lx.cdn.baidupcs.com/file/9d11?bkt=p2-nj02-366&xcode=91e30cd6eec590b03fc7419bf8601a65db0bd7acbd306220837047dfb5e85c39&fid=23&time=1437947395&sign=FDTAq%2FM7jYIC2VM%3D&to=hc&fm=NanTny&sta_dx=15&sta_cs=1548&sta_ft=apk&sta_ct=1&fm2=Nanjinny&newver=66"
+#query_url = string:http://xmp.down.sandai.net/kankan/XMPSetup_8.8.888888-7.9.9.9.exe
+query_url_code_page = uint32:8
+original_url=string:http://f1.market.xiaomi.com/download/AppStore/0b1904c5243df5dea931b2ea937c8b3bead407ddf/%E4%B9%B1%E6%96%97%E8%A5%BF%E6%B8%B8_1.0.23_23.mds
+#original_url = "string:http://original_411.url.com/test.flv"
+#original_url = string:http://i3.market.mi-img.com/download/AppStore/0827b5b6b8d41609ec167d7f80c7c45fd8343d202/com.gameley.t
+#original_url = "string:http://lx.cdn.baidupcs.com/file/9d11?bkt=p2-nj02-366&xcode=91e30cd6eec590b03fc7419bf8601a65db0bd7acbd306220837047dfb5e85c39&fid=23&time=1437947395&sign=FDTAq%2FM7jYIC2VM%3D&to=hc&fm=NanTny&sta_dx=15&sta_cs=1548&sta_ft=apk&sta_ct=1&fm2=Nanjinny&newver=65"
+#original_url = string:http://www.bllack.com/data.flv
+#original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+
+
+[client_info]
+thunder_ver=string:9.0.0.1
+product_flag=uint32:123
+partner_id=string:001234567800
+thunderS_ver=string:9.0.0.1

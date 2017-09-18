@@ -1,0 +1,34 @@
+[globalsection]
+version = uint32:
+sequence = uint32:
+length = uint32:
+client_version = uint32:
+compress_flag = uint16:
+reverse = string:
+cmdid = uint16:
+result = uint8:
+cid = string_unhex:
+filesize = uint64:
+gcid = string_unhex:
+relation_resource_list = list:relation_resource_list:
+
+[relation_resource_list]
+gcid = string_unhex:
+cid = string_unhex:
+file_name = string:
+file_suffix = string:
+file_size = uint16:
+block_num = uint8:
+block_total_size = uint16:
+
+start_pos1 = uint16:
+start_pos2 = uint16:
+len = uint16:
+
+url = string:
+url_code_page = uint:8
+reference_url = string:
+reference_url_code_page = uint8:
+resource_level = uint8:
+resource_priority = uint8:
+

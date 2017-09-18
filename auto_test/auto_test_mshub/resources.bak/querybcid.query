@@ -1,0 +1,19 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reserve=client_info:0
+cmdid = uint16:2003
+peerid = string:8888888888888888
+gcid = string_hex:
+filesize = uint64:0
+partner_id = string:
+productflag = uint32:0
+
+[client_info]
+thunder_ver=string:7.9.9.9
+product_flag=uint32:123
+partner_id=string:001234567800
+thunderS_ver=string:8.0.0.1

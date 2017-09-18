@@ -1,0 +1,4 @@
+[globalsection]
+version = uint32:63
+cmd_type = uint8:113
+peerid = string:9876543210FEDCBA

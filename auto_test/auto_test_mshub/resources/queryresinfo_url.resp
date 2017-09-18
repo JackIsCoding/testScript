@@ -1,0 +1,24 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:9
+length = uint32:14560
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:
+cmdid = uint16:2022
+result = uint8:
+cid = string_unhex:
+filesize = uint64:
+gcid = string_unhex:
+gcid_part_size = uint32:
+gcidlevel = uint32:
+bcid = string_unhex:
+control_flag = uint32:
+speedthreshold = uint32:
+pub_file_size_threshld = uint32:
+res_type = uint8:
+dspider_control_flag = uint8:
+filesuffix = string:
+download_strategy = uint32:
+is_bcid_exist = uint8:
+res_status = uint32:

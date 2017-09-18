@@ -1,0 +1,1 @@
+cat 1.out |awk -F: '{print $23}' |awk -F \' '{print $1}'

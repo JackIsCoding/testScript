@@ -1,0 +1,37 @@
+[globalsection]
+version = uint32:
+seq = uint32:
+length = uint32:
+cmdid = uint8:
+
+ack_result = uint8:
+cid = string_unhex:
+filesize = uint64:
+gcid = string_unhex:
+
+level_num = uint8:
+peer_resource = list:peer_rsc_info:
+
+total_rcs = uint32:
+query_interval= uint16:
+
+[peer_rsc_info]
+peerid = string:
+filename = string:
+internal_ip = uint32:
+tcp_port = uint16:
+udp_port = uint16:
+res_level = uint8:
+res_priority = uint8:
+capability = uint32:
+cdn_type = uint32:
+sn_count = uint8:
+sn_ip_0 = uint32:
+sn_port_0 = uint16:
+sn_peer_id_0 = string:
+sn_ip_1 = uint32:
+sn_port_1 = uint16:
+sn_peer_id_1 = string:
+#sn_ip_2 = uint32:
+#sn_port_2 = uint16:
+#sn_peer_id_2 = string:

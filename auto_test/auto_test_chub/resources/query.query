@@ -1,0 +1,77 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:4
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = reserve:0
+#reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:6001
+peerid = string:2233445566778111
+internal_ip  = uint32:123454545
+#query_url = string:http://gdl.lixian.vip.xunlei.com/E3C6112DF38F61235820DCA379AC97430A235F9E.torrent?fid=UbCa7SwONmnJBrSW/3zyVOfmQLaGLQAAAAAAAPjXwzdArRxr8WDhCRgXoDWDG8VO&mid=666&threshold=150&tid=1051D97D88115AF5C7E7BB9BA76A9B86&srcid=4&verno=1&dt=1
+#query_url = string:thunder://QUFlZDJrOi8vfGZpbGV8dGVzdC5tcDR8MTkyODgwODc2OHxFOTdGRkMxNzcyMkFFNTEwRTQwN0RBOENFQTc3QUJEMXwvWlo=
+#query_url = string:ed2k://|file|test.mp4|1928808768|E97FFC17722AE510E407DA8CEA77ABD1|/
+#query_url = string:thunder://QUFlZDJrOi8vfGZpbGV8ob5sb2y159OwzOzMw3d3dy5sb2xkeXR0LmNvbaG/xua7w8mtwdYuVGhlIEp1bmdsZSBCb29rLjIwMTYuVEM3MjBQLlgyNjQuQUFDLk1hbmRhcmluLnRvcnJlbnR8NjMwOTV8MDI2OURDNEYzODE3MTE5MDBGRjM4OTNGMTgyMUJDN0Z8aD1LN0hXUTRFR0w3TDNBRURaNVRUSVNMN1AzM0tTVkNCSHwvWlo=
+#query_url = string:ed2k://|file|【lol电影天堂www.loldytt.com】奇幻森林.The Jungle Book.2016.TC720P.X264.AAC.Mandarin.torrent|63095|0269DC4F381711900FF3893F1821BC7F|h=K7HWQ4EGL7L3AEDZ5TTISL7P33KSVCBH|/
+#query_url = string:magnet:?xt=urn:btih:e5957e78504a168a025168c649e3434fbf1b9f02
+#query_url = string:magnet:?xt=urn:btih:219B0481C5F279485988CDC08702ECE6D1901477 
+#query_url = string:thunder://QUFodHRwOi8vMTIwLjc2LjczLjE5MC9kb3dubG9hZGxpYi9UaHVuZGVyX2RsXzcuOS4zMC40ODYwLmV4ZS50b3JyZW50Wlo=
+#query_url = string:https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.1.0-3272444.exe?filename=VMware-workstation-full-12.1.0-3272444.exe
+#query_url = string:http://hc.yinyuetai.com/uploads/videos/common/273D013903F35B1DC7A513BDAB5034EA.flv?sc=053c847e8674aea6
+#query_url = string:thunder://QUFodHRwOi8vdDEzYTAxNXZtNy5zYW5kYWkubmV0L3BhZGRpbmcudG9ycmVudFpa
+#query_url = string:http://t13a015vm7.sandai.net/padding.torrent
+#query_url = string:http://120.76.73.190/downloadlib/xlproduct2.torrent
+#query_url = string:ed2k://|file|%E7%81%B5%E4%B9%A6%E5%A6%99%E6%8E%A2.Castle.S08E13.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.1024X576.x264.mp4|417872394|95cee0335c5f9f2a22c7b70fb5907f24|h=u4nj5uft35mbcixrg2lmt45tuz73a36p|/
+#query_url = string:magnet:?xt=urn:btih:258dd3fa9525c02c7a43512958d5b1847affd9c4
+query_url = string:http://t13a015vm7.sandai.net/xlmultiDirfile.torrent
+#query_url = string:magnet:?xt=urn:btih:9E22DD270D47D9149E358F0DCB643173725E7A4E
+#query_url = string:https://110.10.45.26/download/cdn_https.txt
+#query_url = string:thunder://QUFodHRwOi8vZGw1OC44MHMuaW06OTIwLzE2MDcvwtO24dXfL8LTtuHV319iZC5tcDRaWg==
+#query_url = string:http://dl58.80s.im:920/1607/掠夺者/掠夺者_bd.mp4
+#query_url = string:magnet:?xt=urn:btih:FTNKLA7DNVWNASNY3M7UZRS4U7M54RFX
+#query_url = string:magnet:?xt=urn:btih:JKE7QIJ7PJJ4NOTMUBYKAX2YFJKIA77L
+#query_url = string:http://f5.market.xiaomi.com/download/AppStore/0899dd4db28e74d42034daf6e1c8e74995dba033b/%E5%B0%8F%E7%B1%B3%E8%A7%86%E9%A2%91_v2015100890%28%E5%B0%8F%E7%B1%B3%E8%A7%86%E9%A2%91-UN%29_2015100890.mds
+#query_url = string:thunder://QUFodHRwOi8vZjIubWFya2V0Lm1pLWltZy5jb20vZG93bmxvYWQvQXBwU3RvcmUvMDRmYjFhNTM5MjljYjQxZjIwMjhiOTMwNWM2ZDZmNTZhYTBiNGNiZmQvJUU1JUIwJThGJUU3JUIxJUIzJUU2JTk5JUJBJUU4JTgzJUJEJUU1JUFFJUI2JUU1JUJBJUFEXzMuMC42XzYwMTc2Lm1kc1pa
+#query_url = string:magnet:?xt=urn:btih:G71d70f0677f59934758b9d5ff798f8fa71fec32
+#query_url = string:magnet:?xt=urn:btih:A2A329B637C11FE5A2FF307DA41EFF1CB42A7B3E
+#query_url = string:magnet:?xt=urn:btih:09d64762704dad1b145ac0aab3dfa1cdab8c7b01&tr=http://bt.mp4ba.com:2710/announce
+#query_url = string:magnet:?xt=urn:btih:E1061849E2AD99FAF628FADE1F9C8D1AC0C6E4FB
+#query_url = string:magnet:magnet:?xt=urn:btih:d43205f1bce47d187be7e51895d8e7880dbc9eee
+#query_url = string:http
+#query_url = string:magnet:?xt=urn:btih:84B0AAD67081A024E5EF34AF342AF74B072AE65F
+#query_url = string:magnet:?xt=urn:btih:d43205f1bce47d187be7e51895d8e7880dbc9eee
+#query_url = string:magnet:?xt=urn:btih:30F38E191583A9B518FD30042D2E1B6464FE9961&dn=名侦探柯南1-300
+#query_url = string:http://redirected_1.url.com/test.flv
+#query_url = string:http://umcdn.uc.cn/down3/caitt/xunleikb1/UCBrowser_V10.10.1.812_android_pf145_bi800_(Build160603114823).apk
+#query_url = string:magnet:?xt=urn:btih:A20F6E2C6BF614264C5E70A610C52FCC42D0501F&dn=fadfaf.rar
+#query_url = string:magnet:?xt=urn:btih:0162F35CCE95A8FEBBAAE80970191B09382F0530&dn=fafdff.rar
+#query_url = string:http://torrent.google.com.btba.xinqiys.com/upload/2016/07/29/【BT吧】[1080p韩字]-独立日:卷土重来-独立日2-天煞-地球反击战2(港)-3.71GB.torrent
+#query_url = string:http://dynamic.cloud.vip.xunlei.com/interface/get_torrent?userid=95847549&infoid=F8181597B51C157FB470E5EE236E364C6FBC2AF2
+#query_url = string:http://f2.market.mi-img.com/download/AppStore/04fb1a53929cb41f2028b9305c6d6f56aa0b4cbfd/%E5%B0%8F%E7%B1%B3%E6%99%BA%E8%83%BD%E5%AE%B6%E5%BA%AD_3.0.6_60176.mds
+#query_url = string:thunder://QUFlZDJrOi8vfGZpbGV8ob5MT0y159OwzOzMw3d3dy5sb2xkeXR0LmNvbaG/0s/Iyy4yMDE1LkhEVFPH5c7606LT79bQ06LLq9fWW0J0ubcgbG9sZHl0dC5jb21dKGxvbGR5dHQuY29tKS5tcDR8NjM5MDg4NjI3fDAwREQ0M0I2OUZENUQ0ODczREU0OTFBRkE2MjA0OUQ2fGg9TFRXVlRGVDdQUU8zQ1FXUVdCVjdZQkJZUU9QSjREMzZ8aHR0cDovL2ZhZmRhZmEucmFyfC9aWg==
+#query_url = string:ed2k://|file|【LOL电影天堂www.loldytt.com】蚁人.2015.HDTS清晰英语中英双字[Bt狗 loldytt.com](loldytt.com).mp4|639088627|00DD43B69FD5D4873DE491AFA62049D6|h=LTWVTFT7PQO3CQWQWBV7YBBYQOPJ4D36|http://fafdafa.rar|/
+#query_url = string:http://218.77.3.29/cdn.baidupcs.com/file/7b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=NBTt&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm
+#query_url = string:http://gdl.lixian.vip.xunlei.com/蚁人 haidf_.exe?fid=5bTGntNVeixBNXJLO4XFNj1rst/AGBAAAAAAALapN3kdmCuPM/GPnTBbCC5JVHJ6&mid=666&threshold=150&tid=0CDBEF0232878C1D515C9142D31E6A89&srcid=4&verno=1&g=134C07C8E67D64ACAB1E34E49CA6C3AD12975919&scn=c8&i=D9A8B2F1CE0BA7CE9BA8C9CF3CC20C9DCBC93B36&t=1&ui=109273277&ti=832266684861696&s=94745652&m=0&n=01085F972B616C6C5F075D852C68706C611854966E367833320044BB387462645F0259963B5F646E5F005085006169682E0449815F00000000&ff=0&co=5D4FC1B856091AFBA4CF6C29B9C5A5E7&cm=1&pk=lixian&ak=1:1:6:4&e=2000000000&ms=10485760&ck=98B2000655D698FAF0ED0B1C8C8D2779&at=B0B0871FA4588D729673CB1DC7E75D8D
+#query_url = string:thunder://QUFodHRwOi8vZ2RsLmxpeGlhbi52aXAueHVubGVpLmNvbS/Sz8jLIGhhaWRmXy5leGU/ZmlkPTViVEdudE5WZWl4Qk5YSkxPNFhGTmoxcnN0L0FHQkFBQUFBQUFMYXBOM2tkbUN1UE0vR1BuVEJiQ0M1SlZISjYmbWlkPTY2NiZ0aHJlc2hvbGQ9MTUwJnRpZD0wQ0RCRUYwMjMyODc4QzFENTE1QzkxNDJEMzFFNkE4OSZzcmNpZD00JnZlcm5vPTEmZz0xMzRDMDdDOEU2N0Q2NEFDQUIxRTM0RTQ5Q0E2QzNBRDEyOTc1OTE5JnNjbj1jOCZpPUQ5QThCMkYxQ0UwQkE3Q0U5QkE4QzlDRjNDQzIwQzlEQ0JDOTNCMzYmdD0xJnVpPTEwOTI3MzI3NyZ0aT04MzIyNjY2ODQ4NjE2OTYmcz05NDc0NTY1MiZtPTAmbj0wMTA4NUY5NzJCNjE2QzZDNUYwNzVEODUyQzY4NzA2QzYxMTg1NDk2NkUzNjc4MzMzMjAwNDRCQjM4NzQ2MjY0NUYwMjU5OTYzQjVGNjQ2RTVGMDA1MDg1MDA2MTY5NjgyRTA0NDk4MTVGMDAwMDAwMDAmZmY9MCZjbz01RDRGQzFCODU2MDkxQUZCQTRDRjZDMjlCOUM1QTVFNyZjbT0xJnBrPWxpeGlhbiZhaz0xOjE6Njo0JmU9MjAwMDAwMDAwMCZtcz0xMDQ4NTc2MCZjaz05OEIyMDAwNjU1RDY5OEZBRjBFRDBCMUM4QzhEMjc3OSZhdD1CMEIwODcxRkE0NTg4RDcyOTY3M0NCMURDN0U3NUQ4RFpa
+#query_url = string:thunder://QUFodHRwOi8vdGh1bmRlci5xdmNkLm5ldC9DMkNFNTk0NDkyMEVFOTQyNDhENzA1QTQyNTFENzdEQkZBNEJBNTRFL6G+UXZjZLXn07B3d3cucXZjZC5uZXShv7+q0MTEp7eoLkRWRLn60+/W0NfWLnJtdmJaWg==
+#query_url = string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+#query_url = string:thunder://QUFodHRwJTNBJTJGJTJGZjMubWFya2V0Lm1pLWltZy5jb20lMkZkb3dubG9hZCUyRkFwcFN0b3JlJTJGMGRiOGM0Yzc2MDE2ZDBlOWNkMmRjNDQ5ODFkZTQ0MjhkNTc0M2Q1MjElMkYlRTUlQkQlOTMlRTUlQkQlOTMtJUU5JUE2JTk2JUU1JThEJTk1JUU3JUFCJThCJUU1JTg3JThGNSVFNSU4NSU4M181LjkuN184NS5hcGtaWg==
+#query_url = string:http%3A%2F%2Ff3.market.mi-img.com/download/AppStore/0db8c4c76016d0e9cd2dc44981de4428d5743d521/当当-首单立减5元_5.9.7_85.apk
+#query_url = string:xt=urn:btih:027CD2A68FBFA903714EA5ADE3171663CC19DF79&dn=水曜どうでしょう -2011年最新作- 原付日本列島制覇 東京-紀伊半島-高
+#query_url =string:magnet:?xt=urn:btih:G044D0809C82E4B003594446624B3FB32E24734A&dn=[BTBT.TV出品][名侦探柯南：业火的向日葵][BD720P][2.51 GB]
+refer_url = string:http://gdl.lixian.vip.xunlei.com?userid=10927327
+query_option = int32:1
+
+[reserve]
+#reverse_length=uint32:1
+thunder_ver=string:8.0.9.2
+product_flag=uint32:12236962
+partner_id=string:0
+thunderS_ver=string:3.0.1. 

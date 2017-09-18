@@ -1,0 +1,28 @@
+[globalsection]
+version = uint32:
+seq = uint32:
+length = uint32:
+cmdid = uint8:
+
+result = uint8:
+peer_resource = list:peer_rsc_info:
+unknow = uint32:
+timenow = uint32:
+query_interval = uint16:
+
+[peer_rsc_info]
+__with_struct_size__ = 0
+peerid = string:
+internal_ip = uint32:
+tcp_port = uint16:
+udp_port = uint16:
+res_level = uint8:
+res_priority = uint8:
+capability = uint32:
+sn_num = uint8:
+ip_0 = uint32:
+port_0 = uint16:
+peerid_0 = string:
+ip_1 = uint32:
+port_1 = uint16:
+peerid_1 = string:

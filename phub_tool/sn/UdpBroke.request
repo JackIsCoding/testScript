@@ -1,0 +1,11 @@
+[globalsection]
+version = uint32:70
+command_type = uint8:134
+SeqNum = uint32:100
+requestor_ip = uint32:168476481
+requestor_port = uint16:8888
+#remote_peerid = string:00FF502B15526IUQ
+remote_peerid = string:102EC9B3C9030002
+requester_peerid = string:40FF202B15526000
+udt_version = uint16:62
+mhxy_version = uint8:62

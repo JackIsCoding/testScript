@@ -1,0 +1,102 @@
+[read_interface]
+host = http://10.10.159.53:80
+#host = http://10.10.159.119:80
+
+[write_interface]
+host = http://10.10.159.54:80
+#host = http://10.10.159.118:80
+
+[cn_query]
+host = http://10.10.159.52
+port = 8788
+
+[dcn_interface]
+host = http://10.10.159.54
+port = 8754
+
+[df_query]
+host = http://10.10.159.52
+port = 8755
+
+[updator]
+host = http://10.10.159.49
+port = 16095
+
+[votebox]
+host = http://10.10.159.50
+port = 16040
+
+[dbproxy]
+host = http://10.10.159.51
+port = 10086
+
+[msg_channel]
+host = 10.10.159.47
+port = 9000
+
+[msg_processor]
+host = 10.10.159.50
+port = 9001
+
+[twemproxy]
+host = 10.10.159.49
+port = 22123
+
+[database]
+dbHost = 10.10.159.54
+dbPort = 3306
+dbUsername = root
+dbPassword = sd-9898w
+
+[runtime]
+r_queryresinfo_url=10
+r_queryresinfo_cid=50
+r_queryserverres=1
+r_querybcid=50
+r_querybtinfo=50
+r_querybtres=50
+r_insertemuleres=50
+r_queryemuleinfo=1
+r_queryemuleres=50
+r_inserts=1
+r_insertbtres=50
+r_insertbcid=50
+r_voteurlinfo=50
+r_reportchg2=50
+r_reportrc=5
+r_votebtinfo=1
+
+[lines]
+l_queryresinfo_url=10
+l_queryresinfo_cid=50
+l_queryserverres=1
+l_querybcid=50
+l_querybtinfo=50
+l_querybtres=50
+l_insertemuleres=50
+l_queryemuleinfo=5
+l_queryemuleres=50
+l_inserts=1
+l_insertbtres=50
+l_insertbcid=50
+l_voteurlinfo=50
+l_reportchg2=50
+l_reportrc=5
+
+
+[fake]
+f_queryresinfo_url=2
+f_queryresinfo_cid=50
+f_queryserverres=1
+f_querybcid=50
+f_querybtinfo=50
+f_querybtres=50
+f_insertemuleres=50
+f_queryemuleinfo=30
+f_queryemuleres=5
+f_inserts=1
+f_insertbtres=50
+f_insertbcid=50
+f_voteurlinfo=50
+f_reportchg2=50
+f_reportrc=5

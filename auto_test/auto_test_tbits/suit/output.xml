@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160725 17:36:45.264" generator="Robot 2.8.7 (Python 2.6.6 on linux2)">
+<suite source="/usr/local/mshub_interface_lua/auto_test_tbits/suit/report_journal.robot" id="s1" name="Report Journal">
+<test id="s1-t1" name="Send Report Journal with empty download userid">
+<kw type="kw" name="ReportJournal.Case Init">
+<doc></doc>
+<arguments>
+<arg>${resources_path}/report_journal.req</arg>
+<arg>${resources_path}/report_journal.resp</arg>
+</arguments>
+<msg timestamp="20160725 17:36:45.490" level="FAIL">KeyError: 'journal_interface'</msg>
+<status status="FAIL" endtime="20160725 17:36:45.490" starttime="20160725 17:36:45.429"></status>
+</kw>
+<doc>Report Journal request could be sent.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160725 17:36:45.491" critical="yes" starttime="20160725 17:36:45.426">KeyError: 'journal_interface'</status>
+</test>
+<test id="s1-t2" name="Send Report Journal with empty upload userid">
+<kw type="kw" name="ReportJournal.Case Init">
+<doc></doc>
+<arguments>
+<arg>${resources_path}/report_journal.req</arg>
+<arg>${resources_path}/report_journal.resp</arg>
+</arguments>
+<msg timestamp="20160725 17:36:45.495" level="FAIL">KeyError: 'journal_interface'</msg>
+<status status="FAIL" endtime="20160725 17:36:45.495" starttime="20160725 17:36:45.494"></status>
+</kw>
+<doc>Report Journal request could be sent.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160725 17:36:45.496" critical="yes" starttime="20160725 17:36:45.492">KeyError: 'journal_interface'</status>
+</test>
+<test id="s1-t3" name="Send Report Journal Request Successfully">
+<kw type="kw" name="ReportJournal.Case Init">
+<doc></doc>
+<arguments>
+<arg>${resources_path}/report_journal.req</arg>
+<arg>${resources_path}/report_journal.resp</arg>
+</arguments>
+<msg timestamp="20160725 17:36:45.500" level="FAIL">KeyError: 'journal_interface'</msg>
+<status status="FAIL" endtime="20160725 17:36:45.501" starttime="20160725 17:36:45.499"></status>
+</kw>
+<doc>Report Journal request could be sent.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160725 17:36:45.501" critical="yes" starttime="20160725 17:36:45.497">KeyError: 'journal_interface'</status>
+</test>
+<test id="s1-t4" name="Return correct results">
+<kw type="kw" name="ReportJournal.Case Init">
+<doc></doc>
+<arguments>
+<arg>${resources_path}/report_journal.req</arg>
+<arg>${resources_path}/report_journal.resp</arg>
+</arguments>
+<msg timestamp="20160725 17:36:45.505" level="FAIL">KeyError: 'journal_interface'</msg>
+<status status="FAIL" endtime="20160725 17:36:45.506" starttime="20160725 17:36:45.504"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160725 17:36:45.506" critical="yes" starttime="20160725 17:36:45.502">KeyError: 'journal_interface'</status>
+</test>
+<test id="s1-t5" name="Return correct calculations">
+<kw type="kw" name="ReportJournal.Case Init">
+<doc></doc>
+<arguments>
+<arg>${resources_path}/report_journal.req</arg>
+<arg>${resources_path}/report_journal.resp</arg>
+</arguments>
+<msg timestamp="20160725 17:36:45.510" level="FAIL">KeyError: 'journal_interface'</msg>
+<status status="FAIL" endtime="20160725 17:36:45.511" starttime="20160725 17:36:45.509"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160725 17:36:45.511" critical="yes" starttime="20160725 17:36:45.507">KeyError: 'journal_interface'</status>
+</test>
+<doc>Report Journal test suit.
+
+Test test.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20160725 17:36:45.512" starttime="20160725 17:36:45.265"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="5" pass="0">Critical Tests</stat>
+<stat fail="5" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="5" pass="0" id="s1" name="Report Journal">Report Journal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

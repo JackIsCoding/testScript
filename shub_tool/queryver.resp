@@ -1,0 +1,33 @@
+[globalsection]
+version = uint32:50
+sequence = uint32:3
+length = uint32:32
+client_version = uint32:526521
+compress_flag = uint16:0
+cmdid = uint16:1004
+result = uint8:
+shub_ip = uint32:
+shub_port = uint32:
+phub_ip = uint32:
+phub_port = uint32:
+packages_list = list:package:
+
+[package]
+current_version = string:
+url = string:
+filesize = uint64:
+xgcid = string:
+filepath = string:
+filename = string:
+type = uint8:
+flag = uint8:
+min_interval_retry = uint32:
+max_interval_retry = uint32:
+product_flag = uint32:
+package_id = uint32:
+prompt_flag = uint32:
+description = string:
+cid = string_unhex:
+gcid = string_unhex:
+tracker_ip = uint32:
+tracker_port = uint32:

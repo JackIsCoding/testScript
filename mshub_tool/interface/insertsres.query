@@ -1,0 +1,40 @@
+[globalsection]
+version = uint32:61
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reserve = client_info:0
+cmdid = uint16:2005
+peerid = string:5E15DBA7F638492C
+url = string:http://ftp12.jingzong.org/newmedia/64K/02/02-039/02-039-0271a.mp3
+url_code_page = uint32:8
+reference_url = string:
+refer_url_code_page = uint32:8
+redirected_url = string:
+redirected_url_code_page = uint32:8
+
+filesize = uint64:2634150
+cid = string_hex:501E2ECEF09C38BAD3565F4113C7F165E116D462
+gcid = string_hex:ABE57467C43C279374D5606AE73E62FEA25F1206
+
+gcid_level = uint32:88
+gcid_part_size = uint32:262144
+
+bcid = string_hex:BAFB06284D1210021EF19C7FB6F81DD58617EF6511093C5EBD2BC274ABFFAF067CF0D57DA256007A9B8CF978C8D20D1413B56282E88C63A7036F627DB13BB7D04A30E76E4D8E32A454677CB3FC64A776CF87CD864AE8E021E058DBC18F1EE7E9C9C3A1ED8B784687CF59CF62F539816791977F64D7FD1F02C3295945B16000DE3142F572F69933DB8139540D3ECDC5A6AFB1014F19D4F896A116490E05E2804EDA114851202A50D5B3A07F187FD04DCEAE51AA59ED54E02A378277784B3882894CE1FF98B4479DA06FE3394175990E1462092D377EA8EF9A0734101D
+
+filesuffix = string:torrent
+download_status = uint32:4
+have_password = uint8:0
+download_ip = uint32:3
+download_stat = uint32:4
+insert_course = uint32:5
+partner_id = string:6
+pruduct_flag = uint32:7
+referUrlType = uint8:8
+
+[client_info]
+thunder_ver = string:7.9.9.9
+product_flag = uint32:123
+partner_id = string:001234567800
+thunderS_ver = string:2.1.2.256

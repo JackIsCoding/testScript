@@ -1,0 +1,7 @@
+[globalsection]
+version = uint32:50
+seq = uint32:255
+length = uint32:0
+isrc_online_resp = uint8:52
+result = uint8:0
+should_report_rc_list = uint32:0

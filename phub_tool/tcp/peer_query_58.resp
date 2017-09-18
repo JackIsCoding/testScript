@@ -1,0 +1,20 @@
+[globalsection]
+version = uint32:
+seq = uint32:
+length = uint32:
+query_resp = uint8:
+result = uint8:
+cid = string_unhex:
+filesize = uint64:
+gcid = string_unhex:
+level_resource = uint8:
+peer_resource = list:peer_rsc_info:
+total_peers = uint32:
+query_interval= uint16:
+
+[peer_rsc_info]
+peerid = string:
+filename = string:
+internal_ip = uint32:
+tcp_port = uint16:
+capability = uint8:

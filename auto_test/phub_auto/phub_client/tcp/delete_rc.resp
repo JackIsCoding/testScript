@@ -1,0 +1,6 @@
+[globalsection]
+version = uint32:0
+seq = uint32:0
+length = uint32:0
+delete_rc_resp = uint8:0
+result = uint8:0

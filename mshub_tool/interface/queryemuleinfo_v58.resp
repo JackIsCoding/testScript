@@ -1,0 +1,17 @@
+[globalsection]
+version = uint32:
+sequence = uint32:
+length = uint32:
+client_version = uint32:
+compress_flag = uint16:
+cmdid = uint16:
+result = uint8:
+has_record = uint32:
+aich_hash = string_unhex:
+part_hash = string_unhex:
+cid = string_unhex:
+gcid = string_unhex:
+gcid_part_size = uint32:
+gcid_level = uint32:
+control_flag = uint32:
+download_strategy = uint32:

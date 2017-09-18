@@ -1,0 +1,7 @@
+[globalsection]
+version = uint32:65
+command_type = uint8:136
+seqNum = uint32:
+sN_peerid = string:
+remote_peerid = string:
+isOnline = uint8:

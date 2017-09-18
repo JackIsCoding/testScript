@@ -1,0 +1,19 @@
+[globalsection]
+version = uint32:70
+seq = uint32:255
+length = uint32:0
+report_rclist = uint8:53
+
+peerid = string:321511897A31AD9Q
+peer_rclist = list:rc_info:2
+p2p_capacity = uint32:255
+
+[rc_info_0]
+cid = string_hex:6C16FEA784ED223E256728C76C4E366ABEFDBC81
+filesize = uint64:1729541309
+gcid = string_hex:1488A340A90B591F17C47EC087500A459A5542D7
+
+[rc_info_1]
+cid = string_hex:4121BC50351318A7C290291C86F499DC3EF7448D
+filesize = uint64:3954015110
+gcid = string_hex:31A8A6036721D268C3364929DD78C0B3220F3246

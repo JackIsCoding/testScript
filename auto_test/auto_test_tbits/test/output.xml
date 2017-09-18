@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150512 17:45:18.290" generator="Robot 2.8.7 (Python 2.6.6 on linux2)">
+<suite source="/usr/local/mshub_interface_lua/auto_test/test/test.robot" id="s1" name="Test">
+<kw type="setup" name="DatabaseOperation.Connect To Database">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150512 17:45:18.537" level="FAIL">NoSectionError: No section: 'database'</msg>
+<status status="FAIL" endtime="20150512 17:45:18.537" starttime="20150512 17:45:18.536"></status>
+</kw>
+<test id="s1-t1" timeout="10 seconds" name="Test 5">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150512 17:45:18.539" critical="yes" starttime="20150512 17:45:18.537">Parent suite setup failed:
+NoSectionError: No section: 'database'</status>
+</test>
+<test id="s1-t2" timeout="10 seconds" name="Test 6">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150512 17:45:18.540" critical="yes" starttime="20150512 17:45:18.539">Parent suite setup failed:
+NoSectionError: No section: 'database'</status>
+</test>
+<test id="s1-t3" timeout="10 seconds" name="Test 7">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150512 17:45:18.542" critical="yes" starttime="20150512 17:45:18.541">Parent suite setup failed:
+NoSectionError: No section: 'database'</status>
+</test>
+<kw type="teardown" name="DatabaseOperation.Disconnect From Database">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150512 17:45:18.544" level="FAIL">AttributeError: 'DatabaseOperation' object has no attribute '_dbconnection'</msg>
+<status status="FAIL" endtime="20150512 17:45:18.544" starttime="20150512 17:45:18.543">AttributeError: 'DatabaseOperation' object has no attribute '_dbconnection'</status>
+</kw>
+<doc>Try test suit.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20150512 17:45:18.544" starttime="20150512 17:45:18.291">Suite setup failed:
+NoSectionError: No section: 'database'
+
+Also suite teardown failed:
+AttributeError: 'DatabaseOperation' object has no attribute '_dbconnection'</status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="0">Critical Tests</stat>
+<stat fail="3" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" pass="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20150512 17:45:18.533" level="ERROR">Error in file '/usr/local/mshub_interface_lua/auto_test/test/test.robot': Initializing test library 'RedisOperation' with no arguments failed: NoSectionError: No section: 'twemproxy'
+Traceback (most recent call last):
+  File "/usr/local/mshub_interface_lua/auto_test/library/Redisbase.py", line 16, in __init__
+    self.connect_to_redis()
+  File "/usr/local/mshub_interface_lua/auto_test/library/Redisbase.py", line 21, in connect_to_redis
+    host = config.get('twemproxy', 'host')
+  File "/usr/lib64/python2.6/ConfigParser.py", line 532, in get
+    raise NoSectionError(section)</msg>
+</errors>
+</robot>

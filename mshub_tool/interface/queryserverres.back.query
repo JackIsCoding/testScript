@@ -1,0 +1,31 @@
+[globalsection]
+version = uint32:61
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = client_info:0
+cmdid = uint16:2023
+cid = string_hex:85EEFBD4B75AAA1A1DAF72646D0D769C68468F49
+filesize = uint64:94371840
+gcid = string_hex:68E9200723B7B7D10176886AEACDE6B654FF4E9D
+gcid_level = uint32:1
+assist_url = string:
+assist_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+cid_query_type = uint8:0
+max_server_res = uint32:5
+bonus_res_num = uint8:5
+peerid = string:00FF202B15526IU1
+report_ip = uint32:0
+query_time = uint32:1
+file_suffix = string:
+
+[client_info]
+thunder_ver=string:7.9.9.9
+product_flag=uint32:2147483648
+partner_id=string:001234567800
+thunderS_ver=string:9.0.0.1

@@ -1,0 +1,12 @@
+[globalsection]
+sequence = uint32:1010101
+streamIDList = list:uint64:3
+
+[streamIDList_uint64_0]
+streamID=uint64:30
+
+[streamIDList_uint64_1]
+streamID=uint64:31
+
+[streamIDList_uint64_2]
+streamID=uint64:32

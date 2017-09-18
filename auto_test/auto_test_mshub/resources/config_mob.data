@@ -1,0 +1,75 @@
+[read_interface]
+#host = "http://123.129.242.226" ##"http://c1213.sandai.net"
+#host = "http://123.129.242.227" ##"http://c1214.sandai.net"
+#host = "http://c1213.sandai.net"
+#host = http://tw07611.sandai.net
+host = http://m07a013.sandai.net
+#host = "http://tw07573.sandai.net"
+#host = "http://61.155.184.228"	#tw07573.sandai.net
+#host = "http://61.155.184.227"	#tw07572.sandai.net
+#host = http://tw07572.sandai.net
+#host = http://tw07610.sandai.net
+
+[write_interface]
+host = http://m07a020.sandai.net
+#host = "http://c12a67.sandai.net"
+##host = "http://123.129.242.209"  #####c12a67.sandai.net
+#host = http://c12a67.sandai.net
+#host = "http://123.129.242.177"  #####c12a68.sandai.net
+#host = "http://153.37.209.9"#####"tw07612.sandai.net"
+#host = http://tw07612.sandai.net
+#host = "http://61.155.185.240:80"
+
+#host = "http://c12a38.sandai.net"
+
+[cn_query]
+#host = "http://c1213.sandai.net"
+#host = "http://c1214.sandai.net"
+host = http://tw07572.sandai.net
+#host = "http://tw07573.sandai.net"
+port = 8788
+
+[dcn_interface]
+host = http://c1278.sandai.net
+port = 8754
+
+[dc_query]
+host = http://c1269.sandai.net
+#host = "http://tw07567.sandai.net"
+#host = "http://tw07567.sandai.net"
+#host = "http://tw07612.sandai.net"
+port = 8755
+
+[updator]
+host = http://c12a67.sandai.net
+#host = "http://c12a68.sandai.net"
+#host = "http://tw07567.sandai.net"
+#host = "http://tw07612.sandai.net"
+port = 16095
+
+[votebox]
+host = http://c12a67.sandai.net
+port = 16040
+
+[dbproxy]
+host = http://c12a67.sandai.net
+#host = "http://c12a68.sandai.net"
+#host = "http://tw07567.sandai.net"
+#host = "http://tw07612.sandai.net"
+port = 10086
+
+[msg_channel]
+host = http://c12a67.sandai.net
+port = 9000
+
+[msg_processor]
+host = http://c12a67.sandai.net
+port = 9001
+
+[twemproxy]
+host = http://c1280.sandai.net
+port = 22123
+
+[database]
+host = http://c12a52.sandai.net
+port = 3306

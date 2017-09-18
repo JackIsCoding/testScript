@@ -1,0 +1,25 @@
+[globalsection]
+version=uint32:61
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reverse = string:onlystring
+cmdid = uint16:2009
+peerid = string:00FF202B15526IU1
+urlchangeinfo = list:urlchangeinfo:1
+cid = string_hex:C2CE5944920EE94248D705A4251D77DBFA4BA54E
+filesize = uint64:547222305
+gcid = string_hex:846ACA4CC5A6490766CFC9E718080490CE7F20D5
+partner_id = string:80000010
+productflag = uint32:8388608
+
+[urlchangeinfo_0]
+download_url=string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+download_url_code_page=uint32:8
+reference_url=string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+reference_url_code_page=uint32:8
+url_change_flag=uint8:1
+original_url_=string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+original_url_code_page=uint32:8
+

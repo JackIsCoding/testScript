@@ -1,0 +1,20 @@
+[globalsection]
+ProtocolVersion = uint32:3
+SequenceNumber = uint32:1
+BodyLength = uint32:0
+DPHubCommands = uint16:21
+CompresLength = uint32:0
+CompressFlag = uint16:0
+
+PeerID = string:7845C4084DE3ED1U
+PeerCapability = uint32:45163
+RegionId = uint32:0
+ParentId = uint32:0
+Productinfo = ProductInfo:0
+LastQueryTime = uint32:0
+
+[ProductInfo]
+PartnerID = string:pc.thunder9
+ProductReleaseID = uint32:2623440
+ProductFlag = uint32:134217728
+ThunderVerstion = string:0.0.0.0

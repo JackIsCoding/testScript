@@ -1,0 +1,16 @@
+[globalsection]
+version = uint32:54
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+cmdid = uint16:2017
+peerid = string:00FF202B15526IUQ
+auxiliary_type=uint8:0
+auxiliary_info=string:
+file_url="string:http://dldx.csdn.net/fd.php?i=708864151197564&s=74a549e7b95c7a645a4c32a9e5422c5c"
+filesize = uint64:6201259
+max_server_res=uint32:10
+bonus_res_num=uint8:8
+partner_id = string:80000010
+productflag = uint32:8388608

@@ -1,0 +1,17 @@
+[journal_interface]
+host = http://10.10.32.144:8080
+
+[account_interface]
+host = http://10.10.159.51:3078
+
+[cert_interface]
+host = http://10.10.159.52:3078
+
+[write_interface]
+host = http://10.10.159.54:80
+
+[database]
+dbHost = 10.10.159.54
+dbPort = 3306
+dbUsername = root
+dbPassword = sd-9898w

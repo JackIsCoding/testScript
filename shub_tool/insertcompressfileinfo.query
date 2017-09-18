@@ -1,0 +1,17 @@
+[globalsection]
+version=uint32:60
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reverse = string:onlystring
+cmdid=uint16:2031
+peerid=string:00FF202B15526IUQ
+gcid=string_hex:5B47F60ABBA980C696D7CBCD683EDE9CACA88888
+file_type = uint8:0
+is_encrypt = uint8:0
+sub_file_info_list = list:sub_file_info:1
+
+[sub_file_info_0]
+file_attribute = uint8:0
+

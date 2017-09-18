@@ -1,0 +1,30 @@
+[globalsection]
+version=uint32:60
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reverse = string:onlystring
+cmdid=uint16:4005
+peerid=string:80FF202B15526IU3
+infoid=string_hex:F2A329B637C11FE5A2FF307DA41EFF1CB42A7B3E
+index=uint32:10
+file_size=uint64:102400
+
+cid = string_hex:87D62E0F5B7EA7A86329062B9D209BC1834DB1BF
+
+gcid=string_hex:B6D47B6E72FCC3730C01519F6ED2BE5007043E91
+
+
+
+gcid_level=uint32:90
+bt_dw_size=uint64:1024
+server_dw_size=uint64:1024
+peer_dw_size=uint64:1024
+
+bcid=string_hex:DCB810E6EABF7EC117ED1D106FAE13F291F99073
+file_total_size = uint64:1890989915
+
+
+start_offset=uint32:100
+block_size=uint32:256

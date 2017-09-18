@@ -1,0 +1,4 @@
+[globalsection]
+sequence = uint32:1010101
+businessID = uint32:25
+streamKey = string:12345

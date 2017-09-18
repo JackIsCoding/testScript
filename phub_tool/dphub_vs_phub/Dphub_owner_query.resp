@@ -1,0 +1,18 @@
+[globalsection]
+ProtocolVersion = uint32:
+SequenceNumber = uint32:
+BodyLength = uint32:
+DPHubCommands = uint16:
+CompresLength = uint32:
+CompressFlag = uint16:
+
+Result = uint16:
+
+RegionId = uint32:
+ParentNodeId = uint32:
+ParenNodeHost = string:
+ParentNodePort = uint16:
+TimeStamp = uint32:
+QueryInterval = uint32:
+PingInterval = uint32:
+Config = string:

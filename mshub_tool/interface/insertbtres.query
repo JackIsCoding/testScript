@@ -1,0 +1,24 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+cmdid = uint16:4003
+peerid = string:5284AF6CB09137DE
+infoid = string_hex:23061849E2AD99FAF628FADE1F9C8D1AC0C6E000
+index = uint32:8
+cource = uint32:0
+file_size = uint64:1460662
+cid = string_hex:6DD73B21028358CE9A0BAFFB2DD846D81C311133
+gcid = string_hex:8B009E840C508801C0D96DD84FAC515EB0F6E5A3
+gcid_level = uint32:90
+gcid_part_size = uint32:262144
+bcid = string_hex:
+file_total_size = uint64:1890989915
+start_offset = uint64:472610166
+block_size = uint32:524288
+partner_id = string:partner_id
+product_flag = uint32:0
+new_info_id = string_hex:

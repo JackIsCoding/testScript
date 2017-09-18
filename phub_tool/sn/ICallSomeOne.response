@@ -1,0 +1,10 @@
+[globalsection]
+version = uint32:50
+command_type = uint8:252
+sn_peerid= string:
+remote_peerid = string:
+is_online = uint8:
+remote_ip = uint32:
+remote_port = uint16:
+virtual_port = uint16:
+nat_type = uint32:

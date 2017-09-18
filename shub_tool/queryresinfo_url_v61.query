@@ -1,0 +1,33 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[url]
+query_url = string:http://cdn.amazeui.org/src/1.0/dist/AmazeUI-1.0.1.zip
+query_url_code_page = uint32:8
+#original_url = string:
+#original_url = string:http://keyword.vnet.cn/test.zip
+#original_url = string:http://hehe.haha.com/errhint.aspx?kw=test.zip
+original_url = string:http://test3.redirected_url.com/test.zip
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+

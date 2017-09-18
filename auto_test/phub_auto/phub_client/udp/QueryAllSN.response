@@ -1,0 +1,14 @@
+[globalsection]
+protocol_ver = uint32:
+cmd_type = uint8:
+
+communicate_chan1 = uint32:
+communicate_chan2 = uint32:
+communicate_server_list = list:super_peerid_info:
+total_suppose = uint32:
+
+[super_peerid_info]
+peerid = string:
+support_num = uint32:
+super_ip = uint32:
+super_port = uint32:

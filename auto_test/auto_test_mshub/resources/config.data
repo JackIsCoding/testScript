@@ -1,0 +1,49 @@
+[read_interface]
+host = http://10.10.67.101:80
+#host = http://t16105.sandai.net:80
+
+[write_interface]
+host = http://10.10.67.102:80
+#host = http://c12a20.sandai.net:80
+
+[cn_query]
+host = http://10.10.32.144
+port = 8788
+
+[dcn_interface]
+host = http://10.10.159.54
+port = 8754
+
+[dc_query]
+host = http://10.10.32.143
+port = 8755
+
+[updator]
+host = http://10.10.32.143
+port = 16095
+
+[votebox]
+host = http://10.10.32.143
+port = 16040
+
+[dbproxy]
+host = http://10.10.32.144
+port = 10086
+
+[msg_channel]
+host = 10.10.32.142
+port = 9000
+
+[msg_processor]
+host = 10.10.32.142
+port = 9001
+
+[twemproxy]
+host = 10.10.67.104
+port = 22123
+
+[database]
+dbHost = 10.10.67.102
+dbPort = 3306
+dbUsername = root
+dbPassword = sd-9898w

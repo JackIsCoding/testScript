@@ -1,0 +1,37 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = client_info:0
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:2
+query_info = url:0
+peerid = string:11FF202B15526IUQ
+report_ip = uint32:123456
+query_time = uint32:2
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+query_option = int32:1
+
+[url]
+query_url = string:http://dl.97ting.com/content/01/114/1114417-MP3-128K-FTD-mp3.atmd?wsSecret=5be1c1a5ad65eb87f73794eb64ae77fd&wsTime=56e48afb&transDeliveryCode=XM@35@1457645563
+query_url_code_page = uint32:8
+original_url=string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+
+
+[client_info]
+thunder_ver=string:17.9.9.9
+product_flag=uint32:123
+partner_id=string:001234567800
+thunderS_ver=string:2.2.2.301

@@ -1,0 +1,5 @@
+useage: ./SHubClient.py -f $filename $host
+
+for example:
+./SHubClient.py -f insertbcid.query -h "http://10.10.7.105:8800"
+

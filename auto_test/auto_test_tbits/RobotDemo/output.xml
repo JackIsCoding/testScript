@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150312 17:56:34.404" generator="Robot 2.8.7 (Python 2.6.6 on linux2)">
+<suite source="/usr/local/mshub_interface_lua/auto_test/RobotDemo/keyword_driven.txt" id="s1" name="Keyword Driven">
+<test id="s1-t1" name="Push button">
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.497" starttime="20150312 17:56:34.496"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Result Should Be">
+<doc>Verifies that the current result is `expected`.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.498" starttime="20150312 17:56:34.497"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150312 17:56:34.498" critical="yes" starttime="20150312 17:56:34.494"></status>
+</test>
+<test id="s1-t2" name="Push multiple buttons">
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.501" starttime="20150312 17:56:34.501"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.502" starttime="20150312 17:56:34.502"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Result Should Be">
+<doc>Verifies that the current result is `expected`.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.503" starttime="20150312 17:56:34.503"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150312 17:56:34.504" critical="yes" starttime="20150312 17:56:34.499"></status>
+</test>
+<test id="s1-t3" name="Simple calculation">
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.506" starttime="20150312 17:56:34.506"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>+</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.507" starttime="20150312 17:56:34.507"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.508" starttime="20150312 17:56:34.508"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>=</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.509" starttime="20150312 17:56:34.509"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Result Should Be">
+<doc>Verifies that the current result is `expected`.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.510" starttime="20150312 17:56:34.510"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150312 17:56:34.511" critical="yes" starttime="20150312 17:56:34.504"></status>
+</test>
+<test id="s1-t4" name="Longer calculation">
+<kw type="kw" name="CalculatorLibrary.Push Buttons">
+<doc>Pushes the specified `buttons`.</doc>
+<arguments>
+<arg>5 + 4 - 3 * 2 / 1 =</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.514" starttime="20150312 17:56:34.513"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Result Should Be">
+<doc>Verifies that the current result is `expected`.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.515" starttime="20150312 17:56:34.514"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150312 17:56:34.515" critical="yes" starttime="20150312 17:56:34.511"></status>
+</test>
+<test id="s1-t5" name="Clear">
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.518" starttime="20150312 17:56:34.517"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Push Button">
+<doc>Pushes the specified `button`.</doc>
+<arguments>
+<arg>C</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.519" starttime="20150312 17:56:34.519"></status>
+</kw>
+<kw type="kw" name="CalculatorLibrary.Result Should Be">
+<doc>Verifies that the current result is `expected`.</doc>
+<arguments>
+<arg>${EMPTY}</arg>
+</arguments>
+<status status="PASS" endtime="20150312 17:56:34.520" starttime="20150312 17:56:34.520"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150312 17:56:34.521" critical="yes" starttime="20150312 17:56:34.516"></status>
+</test>
+<doc>Example test cases using the keyword-driven testing approach.
+
+All tests contain a workflow constructed from keywords in
+`CalculatorLibrary`. Creating new tests or editing existing
+is easy even for people without programming skills.
+
+This kind of style works well for normal test automation.
+If also business people need to understand tests, using
+_gherkin_ style may work better.</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150312 17:56:34.522" starttime="20150312 17:56:34.405"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="5" id="s1" name="Keyword Driven">Keyword Driven</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20150312 17:56:34.488" level="ERROR">Error in file '/usr/local/mshub_interface_lua/auto_test/RobotDemo/keyword_driven.txt': Importing test library 'CalculatorLibrary2' failed: ImportError: No module named CalculatorLibrary2
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/lib/python2.6/site-packages/robotframework-2.8.7-py2.6.egg/robot/libraries
+  /usr/lib/python2.6/site-packages/robotframework-2.8.7-py2.6.egg
+  /usr/bin
+  /usr/lib/python2.6/site-packages/protobuf-2.6.0-py2.6.egg
+  /usr/lib/python2.6/site-packages/redis-2.10.3-py2.6.egg
+  /usr/lib/python2.6/site-packages/robotframework_selenium2library-1.6.0-py2.6.egg
+  /usr/lib/python2.6/site-packages/selenium-2.44.0-py2.6.egg
+  /usr/lib/python2.6/site-packages/robotframework_databaselibrary-0.6-py2.6.egg
+  /usr/lib/python2.6/site-packages/robotframework_httplibrary-0.4.2-py2.6.egg
+  /usr/lib/python2.6/site-packages/WebTest-2.0.17-py2.6.egg
+  /usr/lib/python2.6/site-packages/beautifulsoup4-4.3.2-py2.6.egg
+  /usr/lib/python2.6/site-packages/waitress-0.8.9-py2.6.egg
+  /usr/lib/python2.6/site-packages/WebOb-1.4-py2.6.egg
+  /usr/lib64/python26.zip
+  /usr/lib64/python2.6
+  /usr/lib64/python2.6/plat-linux2
+  /usr/lib64/python2.6/lib-tk
+  /usr/lib64/python2.6/lib-old
+  /usr/lib64/python2.6/lib-dynload
+  /usr/lib64/python2.6/site-packages
+  /usr/lib64/python2.6/site-packages/gst-0.10
+  /usr/lib64/python2.6/site-packages/gtk-2.0
+  /usr/lib64/python2.6/site-packages/webkit-1.0
+  /usr/lib/python2.6/site-packages
+  .
+  /usr/local/mshub_interface_lua/auto_test/RobotDemo</msg>
+</errors>
+</robot>

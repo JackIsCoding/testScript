@@ -1,0 +1,4 @@
+[globalsection]
+sequence = uint64:1010101
+streamID = uint64:255
+streamStatus = int64:4

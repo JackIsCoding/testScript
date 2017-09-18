@@ -1,0 +1,18 @@
+[globalsection]
+version = uint32:
+sequence = uint32:3
+length = uint32:96
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+cmdid = uint16:4002
+result = uint8:1
+has_record = uint32:1
+filesize = uint64:154340828
+cid = string_unhex:
+gcid = string_unhex:
+gcid_part_size = uint32:524288
+gcid_level = uint32:80
+control_flag = uint32:2
+bcid = string_unhex:
+download_strategy = uint32:0

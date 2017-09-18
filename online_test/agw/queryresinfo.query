@@ -1,0 +1,66 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = reserve:0
+#reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:2122334455667788
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:1
+query_option = int32:3
+
+[url]
+query_url = string:ftp://ygdy8:ygdy8@yg73.dydytt.net:7004/[阳光电影www.ygdy8.com].上海王.HD.720p.国语中字.mkv
+#query_url = string:http://down.sandai.net/thunder9/Thunder9.1.25.604.exe
+#query_url = string:thunder://QUFodHRwOi8vZnRwNC5paWR2ZC5jb206MjExL86izqLSu9CmutzH47PHLjIwMTYux+XO+lRT1tDX1nJlcGFjay13d3cuaWlkdmQuY29tLm1wNC50b3JyZW50Wlo=
+#query_url = string:  http://pubnet.sandai.net:8080/20/c7cbb1a4ea986831ff7ca0a6922a9cc3427f7f98/fda828573c73cb5025fb51e80ba58c612c2114e1/1cba0685/200000/0/f62f5/0/0/1cba0685/0/index=0-12034/indexmd5=e653af462899a8ba72bc1eb5a4f9983f/90b8b9e231250636f1b4b8fa07b05775/47728e70c12307984ff35b4ab9af1973/fda828573c73cb5025fb51e80ba58c612c2114e1.flv.xv?type=vod&movieid=184337&subid=1093783&ext=.xv
+#query_url = string:http://dl.games.qq.com/323456789124/123123123123123ass123123123123aa/1467709741046
+#query_url = string:http://f3.market.mi-img.com/download/AppStore/05dae654a1ba54c55130c76bcf3b74d91d55b26f3/今日头条_5.3.2_532.apk   
+#query_url = string:  http://down.sandai.net/1234567890123456789012345678901234567890/thunder7/Thunder_dl.rmvb
+#query_url = string:http://pubnet.sandai.net:8080/20/c7cbb1a4ea986831ff7ca0a6922a9cc3427f7f98/fda828573c73cb5025fb51e80ba58c612c2114e1/1cba0685/200000/0/f62f5/0/0/1cba0685/0/index=0-12034/indexmd5=e653af462899a8ba72bc1eb5a4f9983f/90b8b9e231250636f1b4b8fa07b05775/47728e70c12307984ff35b4ab9af1973/fda828573c73cb5025fb51e80ba58c612c2114e1.flv.xv?type=vod&movieid=184337&subid=1093783&ext=.xv
+#query_url = string:http://i4.market.mi-img.com/downloadł¢¢º/AppStore/079c7c58c2b4d48a010beac9461dad43c6ef2d29b/air.com.goblin.humanlife.apk 
+#query_url = string:ed2k://|file|%E6%9E%81%E7%9B%97%E8%80%85.BD1280%E8%B6%85%E6%B8%85%E5%9B%BD%E8%8B%B1%E5%8F%8C%E8%AF%AD%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97.mp4|2621437210|D9E838214B776A583D66CECF940E1518|h=ACX75ZWN55K7FU53QMYAUJ7O6IBMH62R|/
+#query_url = string:http://f3.market.xiaomi.com/download/AppStore/086de14c338734e01314d85d2bbccc3073e39ca02/%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF_2.1.3%2837815%29_44.mds 
+#query_url =string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+#query_url = string:http://f3.market.mi-img.com/download/AppStore/0db8c4c76016d0e9cd2dc44981de4428d5743d521/当当-首单立减5元_5.9.7_85.apk
+#query_url = string:ed2k://|file|%E8%A1%8C%E5%B0%B8%E8%B5%B0%E8%82%89.The.Walking.Dead.S06E01.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024x576.x264.v2.mp4|647030232|c6cacbf888fa32e1e82ad725e92d4a32|h=q3dmfsyabowb5oso2m7ljphj7dw7miqm|/
+#query_url = string:http://skycnxz2.wy119.com/uangsushurufa.zip
+
+#query_url = string:http%25252525253A%25252525252F%25252525252Fi4.market.mi-img.com%25252525252Fdownload%25252525252FAppStore%25252525252F079c7c58c2b4d48a010beac9461dad43c6ef2d29b%25252525252Fair.com.goblin.humanlife.apk
+#query_url = string:http://white.test.com/kankan/XMPSetup_8.8.888888.exe
+#query_url = string:http://i3.market.mi-img.com/download/AppStore/0a4e0527d61b42c3fa564e3836c9427c876431003/com.tuyingshijie.juemingtanyaSS.apk  
+#query_url = string:http://12white.test.com/kankan/XMPSetup_8.8.888888.exe
+#query_url = string:http://redirected_1.url.com/test.flv
+#query_url = string:ftp://6:6@ftp2.kan66.com:4165/¡¾6vµçwww.dy131.com¡¿ħ¹íӤCD3.rmvb
+#query_url = string:ftp://121111131323433.com/1.rar
+query_url_code_page = uint32:1
+#original_url = string:http://down.sandai.net/1234567890123456789012345678901234567890/thunder7/Thunder_dl.rmvb
+#original_url = string:  ftp://6:6@ftp2.kan66.com:4165/¡¾6vµçwww.dy131.com¡¿ħ¹í
+#original_url = string:    ftp://10.10.7.105/1234567890123456789012345678901234567890/thunder7/Thunder_dl.rmvb
+#original_url = string:http://i4.market.mi-img.com/download/AppStore/079c7c58c2b4d48a010beac9461dad43c6ef2d29b/air.com.goblin.humanlife.apk
+original_url = string:
+#original_url = string:http://218.77.3.29/cdn.baidupcs.com/file/3b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=NBTt&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm
+original_url_code_page = uint32:1
+refer_url = string:http://baidu.com/1/raaa
+#refer_url = string:http%25252525253A%25252525252F%25252525252Fi4.market.mi-img.com%25252525252Fdownload%25252525252FAppStore%25252525252F079c7c58c2b4d48a010beac9461dad43c6ef2d29b%25252525252Fair.com.goblin.humanlife.apk
+refer_url_code_page = uint32:1
+
+[reserve]
+#reverse_length=uint32:1
+thunder_ver=string:4.2.13.3882
+product_flag=uint32:8388608
+partner_id=string:8388608
+thunderS_ver=string:17.2.13.3882

@@ -1,0 +1,42 @@
+[globalsection]
+version = uint32:63
+command_type = uint8:12
+peerid = string:4000000000000007
+internal_ip = uint32:120000077
+network_submask = uint32:45
+listen_port = uint16:0
+product_flag = uint32:4278255360
+product_version = uint32:168476481
+sn_array = list:mystring:1
+network = uint32:0
+upnp_ip = uint32:158476401
+upnp_port = uint16:1
+online_time = uint32:100
+download_bytes = uint32:1000
+upload_bytes = uint32:1500
+upload_resource_number = uint16:25
+cur_uploading_numbers = uint8:5
+cur_download_task_number = uint8:3
+cur_download_connect_num = uint8:4
+cur_download_speed = uint16:200
+cur_upload_speed = uint16:300
+max_download_speed = uint16:500
+max_upload_speed = uint16:410
+auto_upload_speed_limit = uint16:700
+user_upload_speed_limit = uint16:231
+download_speed_limit = uint16:500
+peer_status_flag = uint16:255
+local_bind_port = uint16:0
+external_neighbor = uint16:50
+internal_neighbor = uint16:100
+parterID = string:001EC9B3C9030002
+thunders_version = string:7.9.20.2345
+product_info_array = list:product_info:1
+
+[mystring_0]
+sn = string:00FF202B15526IUQ
+
+[product_info_0]
+product_version = string:1.3.4.65
+product_id = uint32:4096
+product_partner_id = string:99887766

@@ -1,0 +1,13 @@
+[globalsection]
+protocol_ver = uint32:
+cmd_type = uint8:
+
+result = uint8:
+max_sn_size = uint16:
+sn_list = list:super_peerid_info:
+SNAllocStrategy = uint32:
+
+[super_peerid_info]
+peerid = string:
+sn_ip = uint32:
+sn_port = uint16:

@@ -1,0 +1,10 @@
+[globalsection]
+protocol_ver = uint32:60
+cmd_type = uint8:6
+
+communicate_chan1 = uint32:2406879793
+communicate_chan2 = uint32:2544966682
+communicate_server_peerid = string:001EC9B3C9030000
+is_online = uint8:0
+max_suppose = uint32:0
+cur_suppose = uint32:0

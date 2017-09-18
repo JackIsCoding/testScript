@@ -1,0 +1,33 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+cmdid = uint16:4003
+peerid = string:1A6343CA679C7DD5
+#infoid = string_hex:046ACA4CC5A6490766CFC9E718080490CE7F20D5
+infoid=string_hex:D2A329B637C11FE5A2FF307DA41EFF1CB42A7B3E
+
+
+index = uint32:11
+cource = uint32:0
+file_size = uint64:102400
+## original cid = string_hex:87D62E0F5B7EA7A86329062B9D209BC1834DB1BC
+cid = string_hex:57D62E0F5B7EA7A86329062B9D209BC1834DB1BD
+
+
+gcid=string_hex:B6D47B6E72FCC3730C01519F6ED2BE5007043E91
+#gcid = string_hex:0BF0424569697EA0BFC9589BC6450FE9EA59B393
+gcid_level = uint32:90
+gcid_part_size = uint32:262144
+bcid=string_hex:DCB810E6EABF7EC117ED1D106FAE13F291F99073
+#bcid=string_hex:B1E85D8AC64E099D3FD3440A23E45A3CB18141F2
+file_total_size = uint64:1890989915
+start_offset = uint64:472610166
+block_size = uint32:524288
+partner_id = string:partner_id
+product_flag = uint32:0
+new_info_id=string_hex:32A329B637C11FE5A2FF307DA41EFF1CB42A7B3E
+#new_info_id = string_hex:376ACA4CC5A6490766CFC9E718080490CE7F20D5

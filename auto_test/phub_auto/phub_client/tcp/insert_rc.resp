@@ -1,0 +1,6 @@
+[globalsection]
+version = uint32:
+seq = uint32:
+length = uint32:
+insert_rc_resp = uint8:
+result = uint8:

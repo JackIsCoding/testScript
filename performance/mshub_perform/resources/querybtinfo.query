@@ -1,0 +1,23 @@
+[globalsection]
+version=uint32:60
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reverse = client_info:0
+cmdid=uint16:4001
+peerid=string:00FF202B15526IUQ
+infoid=string_hex:A2A329B637C11FE5A2FF307DA41EFF1CB42A7B3E
+index=uint32:10
+query_times_sn=uint32:1
+query_flag=uint8:1
+partner_id=string:0
+product_flag=uint32:0
+file_size=uint64:429496729600
+ed2k_hash=string_hex:
+
+[client_info]
+thunder_ver=string:7.9.9.9
+product_flag=uint32:123
+partner_id=string:001234567800
+thunderS_ver=string:2.2.2.30

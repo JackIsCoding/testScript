@@ -1,0 +1,7 @@
+reqFuncList = append(reqFuncList, getMySnReq)
+        reqFuncList = append(reqFuncList, getPeerSnReq)
+        reqFuncList = append(reqFuncList, pingSNReq)
+        reqFuncList = append(reqFuncList, logoutReq)
+        reqFuncList = append(reqFuncList, ICallSomeOneReq)
+        reqFuncList = append(reqFuncList, UDPBrokeReq)
+        reqFuncList = append(reqFuncList, TCPBrokeReq)

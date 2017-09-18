@@ -1,0 +1,15 @@
+sequence: 824685811239076
+errorCode: E_OK
+streamDetailList {
+  errorCode: E_OK
+  originDC: "dc1"
+  detail {
+    streamID: 7450
+    businessID: 3888782317708049
+    streamKey: "autotest_1505211714_PcqvQHKJ"
+    streamName: "autotest"
+    streamType: "flv"
+    streamStatus: OPENED
+  }
+}
+

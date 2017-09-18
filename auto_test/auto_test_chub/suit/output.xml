@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160819 15:09:29.112" generator="Robot 2.8.7 (Python 2.6.6 on linux2)">
+<suite source="/usr/local/mshub_interface_lua/auto_test_chub/suit/redis.robot" id="s1" name="Redis">
+<kw type="setup" name="Connect To Database">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20160819 15:09:29.699" level="FAIL">No keyword with name 'Connect To Database' found.</msg>
+<status status="FAIL" endtime="20160819 15:09:29.699" starttime="20160819 15:09:29.699"></status>
+</kw>
+<test id="s1-t1" name="Query http url">
+<doc>query http url.</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20160819 15:09:29.708" critical="yes" starttime="20160819 15:09:29.700">Parent suite setup failed:
+No keyword with name 'Connect To Database' found.</status>
+</test>
+<doc>CHUB Query test suit.
+
+Test query.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20160819 15:09:29.714" starttime="20160819 15:09:29.113">Suite setup failed:
+No keyword with name 'Connect To Database' found.</status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="Redis">Redis</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20160819 15:09:29.649" level="ERROR">Error in file '/usr/local/mshub_interface_lua/auto_test_chub/suit/redis.robot': Initializing test library 'RedisOperation' with no arguments failed: NoSectionError: No section: 'twemproxy'
+Traceback (most recent call last):
+  File "/usr/local/mshub_interface_lua/auto_test_chub/library/Redisbase.py", line 16, in __init__
+    self.connect_to_redis()
+  File "/usr/local/mshub_interface_lua/auto_test_chub/library/Redisbase.py", line 21, in connect_to_redis
+    host = config.get('twemproxy', 'host')
+  File "/usr/lib64/python2.6/ConfigParser.py", line 532, in get
+    raise NoSectionError(section)</msg>
+</errors>
+</robot>

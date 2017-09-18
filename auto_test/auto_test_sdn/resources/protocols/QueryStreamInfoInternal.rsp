@@ -1,0 +1,12 @@
+sequence: 1010101
+errorCode: E_OK
+streamDetailList {
+  errorCode: E_NOT_EXIST
+}
+streamDetailList {
+  errorCode: E_NOT_EXIST
+}
+streamDetailList {
+  errorCode: E_NOT_EXIST
+}
+

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161114 15:08:41.954" generator="Robot 3.0 (Python 2.7.8 on linux2)">
+<suite source="/usr/local/sandai/test_tools/phub_tool/phub_auto/suit/communiserver.robot" id="s1" name="Communiserver">
+<test id="s1-t1" name="Test36:PingSN to Commuinserver">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/PingSN.request</arg>
+<arg>./phub_client/udp/PingSN.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.013" starttime="20161114 15:08:42.012"></status>
+</kw>
+<kw name="Set Ping Sn" library="communiserver">
+<arguments>
+<arg>00FF502B15526IUQ</arg>
+<arg>798951946</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.016" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.016" starttime="20161114 15:08:42.013"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.016" critical="yes" starttime="20161114 15:08:42.011">KeyError: 'globalsection'</status>
+</test>
+<test id="s1-t2" name="Test37:Tcpbroke to SN,remote peerid is online">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/TcpBroke.request</arg>
+<arg>./phub_client/udp/TcpBroke.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.018" starttime="20161114 15:08:42.017"></status>
+</kw>
+<kw name="Set Tcp Broke" library="communiserver">
+<arguments>
+<arg>00FF502B15526IUQ</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.019" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.019" starttime="20161114 15:08:42.018"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.019" critical="yes" starttime="20161114 15:08:42.016">KeyError: 'globalsection'</status>
+</test>
+<test id="s1-t3" name="Test38:TcpBroke to SN,remote peerid is not online">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/TcpBroke.request</arg>
+<arg>./phub_client/udp/TcpBroke.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.022" starttime="20161114 15:08:42.021"></status>
+</kw>
+<kw name="Set Tcp Broke" library="communiserver">
+<arguments>
+<arg>11FF502B15526IUQ</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.023" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.023" starttime="20161114 15:08:42.022"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.023" critical="yes" starttime="20161114 15:08:42.020">KeyError: 'globalsection'</status>
+</test>
+<test id="s1-t4" name="Test39:Udpbroke to SN,remote peerid is online">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/TcpBroke.request</arg>
+<arg>./phub_client/udp/TcpBroke.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.025" starttime="20161114 15:08:42.024"></status>
+</kw>
+<kw name="Set Udp Broke" library="communiserver">
+<arguments>
+<arg>00FF502B15526IUQ</arg>
+<arg>00FF502B155201234</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.026" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.026" starttime="20161114 15:08:42.025"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.026" critical="yes" starttime="20161114 15:08:42.024">KeyError: 'globalsection'</status>
+</test>
+<test id="s1-t5" name="Test40:Udpbroke to SN,remote peerid is not online">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/TcpBroke.request</arg>
+<arg>./phub_client/udp/TcpBroke.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.028" starttime="20161114 15:08:42.027"></status>
+</kw>
+<kw name="Set Udp Broke" library="communiserver">
+<arguments>
+<arg>11FF502B15526IUQ</arg>
+<arg>00FF502B155201234</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.029" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.029" starttime="20161114 15:08:42.028"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.029" critical="yes" starttime="20161114 15:08:42.027">KeyError: 'globalsection'</status>
+</test>
+<test id="s1-t6" name="Test41:Icallsomeone to SN,remote peerid is online">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/ICallSomeOne.request</arg>
+<arg>./phub_client/udp/ICallSomeOne.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.031" starttime="20161114 15:08:42.031"></status>
+</kw>
+<kw name="Set Icallsomeone" library="communiserver">
+<arguments>
+<arg>00FF502B15526IUQ</arg>
+<arg>00FF502B15526111</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.032" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.033" starttime="20161114 15:08:42.032"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.033" critical="yes" starttime="20161114 15:08:42.030">KeyError: 'globalsection'</status>
+</test>
+<test id="s1-t7" name="Test42:Icallsomeone to SN,remote peerid is not online">
+<kw name="Init" library="communiserver">
+<arguments>
+<arg>./phub_client/udp/ICallSomeOne.request</arg>
+<arg>./phub_client/udp/ICallSomeOne.response</arg>
+</arguments>
+<status status="PASS" endtime="20161114 15:08:42.035" starttime="20161114 15:08:42.034"></status>
+</kw>
+<kw name="Set Icallsomeone" library="communiserver">
+<arguments>
+<arg>11FF502B15526IUQ</arg>
+<arg>00FF502B15526111</arg>
+</arguments>
+<msg timestamp="20161114 15:08:42.036" level="FAIL">KeyError: 'globalsection'</msg>
+<status status="FAIL" endtime="20161114 15:08:42.036" starttime="20161114 15:08:42.035"></status>
+</kw>
+<status status="FAIL" endtime="20161114 15:08:42.037" critical="yes" starttime="20161114 15:08:42.033">KeyError: 'globalsection'</status>
+</test>
+<status status="FAIL" endtime="20161114 15:08:42.038" starttime="20161114 15:08:41.957"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="7" pass="0">Critical Tests</stat>
+<stat fail="7" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="7" id="s1" name="Communiserver" pass="0">Communiserver</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

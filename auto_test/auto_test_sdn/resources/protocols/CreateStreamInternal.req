@@ -1,0 +1,8 @@
+[globalsection]
+sequence = uint64:1010101
+businessID = uint64:255
+streamKey = string:abcdef
+
+streamName = string:autotestInternal
+streamType = string:flv
+pullUrl = string:rtmp://tw03a107.sandai.net/test/xunlei

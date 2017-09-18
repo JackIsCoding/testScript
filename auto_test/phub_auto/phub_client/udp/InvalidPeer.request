@@ -1,0 +1,11 @@
+[globalsection]
+version = uint32:53
+seq = uint32:255
+type = uint8:21
+
+gcid = string:44A8A6036721D268C3364929DD78C0B3220F3246
+filesize = uint64:3954015110
+peerid = string:6597A25297DD26A3
+reason = uint8:1
+invalid_peerip = uint32:168430885
+cid = string:1421BC50351318A7C290291C86F499DC3EF7448D

@@ -1,0 +1,12 @@
+[globalsection]
+query_resp = uint16:6002
+result = uint8:
+error_code = uint32:
+has_record = uint32:
+total_download_strategy = uint32:
+task_type = uint32:
+task_name = string:
+task_id = string:
+res_info_list = list:
+
+[]

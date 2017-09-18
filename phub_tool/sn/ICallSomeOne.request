@@ -1,0 +1,7 @@
+[globalsection]
+version = uint32:70
+command_type = uint8:3
+local_peerid= string:00FF202B15526IU7
+remote_peerid = string:202EC9B3C9030001
+virtual_port = uint16:8888
+nat_type = uint32:0

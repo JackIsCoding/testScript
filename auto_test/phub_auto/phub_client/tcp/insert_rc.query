@@ -1,0 +1,11 @@
+[globalsection]
+version = uint32:53
+seq = uint32:255
+length = uint32:0
+cmd_type = uint8:55
+
+peerid = string:4000000000000000
+cid = string_hex:211CBC50351318A7C290291C86F499DC3EF7448D
+filesize = uint64:2000000
+gcid = string_hex:3118A6036721D268C3364929DD78C0B3220F3246
+p2p_capacity = uint32:255

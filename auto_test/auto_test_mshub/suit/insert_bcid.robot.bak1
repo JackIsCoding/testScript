@@ -1,0 +1,57 @@
+# -*- coding: robot -*-
+*** Settings ***
+Documentation     Insert bcid test suit.
+...
+...               Test test. 
+Library           ../library/InsertBcid.py
+Library           ../library/DatabaseOperation.py
+Library           ../library/RedisOperation.py
+Resource          ../resources/res_info_data.robot
+Resource          ../resources/bcid_info_data.robot
+Resource          ../resources/resources.robot
+Suite Setup       Connect To Database
+Suite Teardown    Disconnect From Database
+
+*** Test Cases ***
+
+Insert bcid info with rsa
+	[Documentation]				Insert bcid with rsa encode
+	Case_init					${resources_path}/insertbcid.query    ${resources_path}/insertbcid.resp
+	Set_bcid_info               ${ftp_gcid}    ${ftp_cid}    ${ftp_filesize}    ${ftp_bcid}
+	Delete_bcid_info            ${ftp_gcid}
+	Del_dc_bcid_info            ${ftp_gcid}
+	Del_cn_bcid_info            ${ftp_gcid}
+	Rsa_send_insert
+	Sleep						1
+	Check_bcid_info              ${ftp_gcid}    ${ftp_bcid}    1
+	Check
+#	Case_init                    ${resources_path}/insertbcid.query    ${resources_path}/insertbcid.resp
+#	Set_bcid_info                ${thunder_gcid}    ${thunder_cid}    ${thunder_filesize}    ${EMPTY}
+#	Set_too_long_bcid
+#	Send_insert
+#	Check
+
+
+###Server decode fail,so return 500.
+#Insert bcid info,whose cid contains invalid character
+#	[Documentation]              
+#	Case_init                    ${resources_path}/insertbcid.query    ${resources_path}/insertbcid.resp
+#	Set_bcid_info                ${thunder_gcid}    @555555555555555555555555555555555555555    ${thunder_filesize}    ${thunder_bcid}
+#	Send_insert
+#	Check
+#
+#Insert bcid info,whose gcid contains invalid character
+#	[Documentation]              
+#	Case_init                    ${resources_path}/insertbcid.query    ${resources_path}/insertbcid.resp
+#	Set_bcid_info                @555555555555555555555555555555555555555    ${thunder_cid}     ${thunder_filesize}    ${thunder_bcid}
+#	Send_insert
+#	Check
+#
+#Insert bcid info,whose filesize contains invalid character
+#	[Documentation]              
+#	Case_init                    ${resources_path}/insertbcid.query    ${resources_path}/insertbcid.resp
+#	Set_bcid_info                 ${thunder_gcid}    ${thunder_cid}     *1234567890    ${thunder_bcid}
+#	Send_insert
+#	Check
+
+

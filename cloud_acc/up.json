@@ -1,0 +1,7 @@
+{
+        "ServiceId": "up000",
+        "RoomId": "t01",
+	    "Connections": 100,
+	        "LoadTime": 1234
+}
+

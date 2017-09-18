@@ -1,0 +1,22 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = reserve:0
+cmdid = uint16:6001
+peerid = string:2122334455667788
+internal_ip  = uint32:123454545
+#query_url = string:magnet:?xt=urn:btih:29A73B5AEF9AFD024C4E67CE963872D33BF2AAE3&dn=【LN-FENXIAN】收集整理 犬夜叉 Inuyasha(TVA+Movie+SP) (576p+720p)
+#query_url = string:magnet:?xt=urn:btih:9B07F8B8093C52876C37DACF555BD04D15E9FACB&dn=海贼王501-600
+#query_url = string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb
+query_url = string:http://f3.market.mi-img.com/download/AppStore/0db8c4c76016d0e9cd2dc44981de4428d5743d521/当当-首单立减5元_5.9.7_85.apk
+refer_url = string:
+query_option = int32:3
+
+[reserve]
+thunder_ver=string:7.9.9.9
+product_flag=uint32:2147483649
+partner_id=string:0
+thunderS_ver=string:1.1.2.256

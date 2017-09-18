@@ -1,0 +1,17 @@
+[globalsection]
+protocol_ver = uint32:66
+cmd_type = uint8:2
+
+peerid = string:00FF502B15526IUQ
+net_type = uint32:0
+Latest_Port = uint16:0
+Time_elapsed = uint32:0
+Delta_port = uint32:0
+Udt_ver = uint16:0
+local_port = uint16:80
+Mhxy_ver = uint8:0
+Tcp_port = uint16:80
+Internal_IP = uint32:798951943
+Upnp_ip = uint32:10000
+Upnp_port = uint16:0
+Peer_statu_flag = uint16:0

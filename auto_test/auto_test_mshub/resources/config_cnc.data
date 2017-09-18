@@ -1,0 +1,45 @@
+[read_interface]
+host = http://tw07611.sandai.net
+
+[write_interface]
+host = http://tw07612.sandai.net
+
+[cn_query]
+host = http://m07a012.sandai.net
+port = 8788
+
+[dcn_interface]
+#host = http://c1278.sandai.net
+#port = 8754
+
+[dc_query]
+host = http://m07a020.sandai.net
+port = 8755
+
+[updator]
+host = http://m07a020.sandai.net
+port = 16095
+
+[votebox]
+host = http://m07a020.sandai.net
+port = 16040
+
+[dbproxy]
+host = http://m07a020.sandai.net
+port = 10086
+
+[msg_channel]
+host = http://m07a020.sandai.net
+port = 9000
+
+[msg_processor]
+host = http://m07a020.sandai.net
+port = 9001
+
+[twemproxy]
+host = http://m07a020.sandai.net
+port = 22123
+
+[database]
+host = http://m07a005.sandai.net
+port = 3306

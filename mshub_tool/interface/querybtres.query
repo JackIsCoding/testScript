@@ -1,0 +1,15 @@
+[globalsection]
+version=uint32:60
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reverse = string:onlystring
+cmdid=uint16:4013
+peerid=string:00FF202B15526IUQ
+query_type=uint8:2
+cid=string_hex:697C3AC4130E25632B204D652A2FDF6A0C9281B6
+file_size=uint64:358351
+gcid=string_hex:8343D73CF1EFADECB4694D09B2B03E10464C36C5
+partner_id = string:80000010
+product_flag = uint32:8388608

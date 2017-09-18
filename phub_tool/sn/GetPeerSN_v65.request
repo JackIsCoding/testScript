@@ -1,0 +1,5 @@
+[globalsection]
+protocol_ver = uint32:65
+cmd_type = uint8:0
+
+peerid = string:15E47CE0F0AC8219

@@ -1,0 +1,34 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[url]
+query_url="string:http://random.url.test/jfibfgbdjk/9845626416"
+original_url = string:
+refer_url = string:
+
+[cid_info]
+cid = string_hex:C64897A31D925BD3573E0A8EF4D46946D7E12BE6
+filesize = uint64:6201259
+assist_url = string:
+original_url = string:
+refer_url = string:
+cid_query_type = uint8:1

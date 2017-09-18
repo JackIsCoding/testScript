@@ -1,0 +1,29 @@
+[globalsection]
+version = uint32:
+sequence = uint32:
+length = uint32:
+client_version = uint32:
+compress_flag = uint16:
+reverse = string:
+cmdid = uint16:
+result = uint8:
+cid = string_unhex:
+filesize = uint64:
+gcid = string_unhex:
+server_res_list = list:res_list:
+bonus_res_num = uint8:
+
+[res_list]
+url = string:
+refer_url = string:
+url_speed = uint32:
+fetch_hint = uint8:
+connect_time = uint32:
+gcid_type = uint8:
+max_connection = uint8:
+min_retry_interval = uint8:
+control_flag = uint32:
+url_quality = uint8:
+user_agent = uint32:
+res_level = uint8:
+res_priority = uint8:

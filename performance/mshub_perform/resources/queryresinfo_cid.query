@@ -1,0 +1,64 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reserve=reserve:0
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:1
+query_info = cid_info:0
+peerid = string:H888888888888874
+report_ip = uint32:123456
+query_time = uint32:22
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[cid_info]
+#cid = string_hex:4A81B94BB4ABBF9B7BE8551AEE9918C49FDCDC51
+#filesize = uint64:11534336
+
+#cid = string_hex:89890B3A56F90F93F6D50EC11A5068761F0FA57F
+#filesize = uint64:18653506
+#cid = string_hex:4A16FDEF566185BFB1483A5066DA2775B539F7EB
+#cid=string:A803670799BC152843F2814C8394AE4E361E04E1
+#filesize=uint64:925088
+#filesize = uint64:32490667
+#cid = string_hex:96C32F6962A450C3F213C9FEFA03666AEC30854D
+#filesize = uint64:6201259
+cid=string_hex:FA9A887E55324E314ADEE297EFB6030ECD8F55BF
+
+#cid=string:50995
+
+filesize=uint64:1005825
+
+#ssist_url=string:http://nm.newhua.com/down/cctvdowncnsetup.zip
+
+#assist_url = "string:http://f1.market.xiaomi.com/download/AppStore/0b1904c5243df5dea931b2ea937c8b3bead407ddf/%E4%B9%B1%E6%96%97%E8%A5%BF%E6%B8%B8_1.0.23_23.mds"
+#assist_url=string:http://west263.onlinedown.net/down/Thunder_dl_7.9.39.4994.zip
+#assist_url=string:http://west263.onlinedown.net/down/Thunder_dl_7.9.39.4994.zip
+#assist_url = "string:http://black.url.com/black.rar"
+#assist_url = "string:http://218.77.3.29/cdn.baidupcs.com/file/3b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=N,B,T,t&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm"
+assist_url = string:
+assist_url_code_page = uint32:8
+#original_url = string:http://f1.market.xiaomi.com/download/AppStore/0b1904c5243df5dea931b2ea937c8b3bead407ddf/%E4%B9%B1%E6%96%97%E8%A5%BF%E6%B8%B8_1.0.23_23.mds
+#original_url = string:http://original.url.com/test.avi
+original_url=string:
+original_url_code_page = uint32:8
+refer_url = string:http://refer.url.com
+refer_url_code_page = uint32:8
+cid_query_type = uint8:1
+
+
+[reserve]
+thunder_ver=string:7.9.9.9
+product_flag=uint32:123
+partner_id=string:001234567800
+thunderS_ver=string:8.0.0.1
+

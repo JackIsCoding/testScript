@@ -1,0 +1,15 @@
+[globalsection]
+sequence = uint32:1010101
+streamInfoKeyList = list:StreamInfoKey:3
+
+[streamInfoKeyList_StreamInfoKey_0]
+businessID=uint64:255
+streamKey=string:60
+
+[streamInfoKeyList_StreamInfoKey_1]
+businessID=uint64:255
+streamKey=string:1498032021.4
+
+[streamInfoKeyList_StreamInfoKey_2]
+businessID=uint64:255
+streamKey=string:1498032021.41

@@ -1,0 +1,28 @@
+[globalsection]
+version = uint32:67
+seq = uint32:255
+length = uint32:0
+cmdid = uint8:22
+last_qry_stamp = uint32:0
+by_what = uint8:0
+
+gcid = string_hex:964210643582611F59492B2C77219BD8BF0F9479
+filesize = uint64:1452474514
+peerid = string:17CCF8AFC63C529B
+
+local_ip = uint32:2434796042
+local_port = uint16:20001
+expect_peer_size = uint8:127
+nat_type = uint32:1
+down_ratio = uint8:0
+down_map = uint64:0
+capability = uint32:127
+product_release_id = uint32:1100
+upnp_ip = uint32:916392458
+upnp_port = uint16:20001
+p2p_capacity = uint32:255
+udp_port = uint16:10001
+rsc_type = uint8:8
+partner_id = string:abcd0134566
+product_flag = uint32:0
+cid = string_hex:BAE0BA91E554E3EC04D61C7A301A634019D34348

@@ -1,0 +1,22 @@
+[globalsection]
+version = uint32:60
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+cmdid = uint16:2023
+cid = string_hex:568A3FC4F8F74506F2F5291D5D0744EA2AB90CB1
+filesize = uint64:1514081919
+gcid = string_hex:758C345E4810E3C571F4DC250CB44D5725E8ADCF
+gcid_level = uint32:90
+assist_url = string:
+original_url = string:
+refer_url = string:
+cid_query_type = uint8:0
+max_server_res = uint32:10
+bonus_res_num = uint8:1
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:1
+file_suffix = string:

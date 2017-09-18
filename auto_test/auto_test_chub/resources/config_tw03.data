@@ -1,0 +1,14 @@
+[interface]
+#host = http://10.10.159.53:10089
+#host = http://idx.c.hub.sandai.net
+host = http://tw03a113.sandai.net
+
+[twemproxy]
+host = 10.10.32.142
+port = 22123
+
+[database]
+dbHost = 10.10.159.54
+dbPort = 3306
+dbUsername = root
+dbPassword = sd-9898w

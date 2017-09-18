@@ -1,0 +1,47 @@
+[read_interface]
+host = http://10.10.159.119:80
+
+[write_interface]
+host = http://10.10.159.118:80
+
+[cn_query]
+host = http://10.10.159.119
+port = 8788
+
+[dcn_interface]
+host = http://10.10.159.117
+port = 8754
+
+[dc_query]
+host = http://10.10.159.117
+port = 8755
+
+[updator]
+host = http://10.10.200.152
+port = 16095
+
+[votebox]
+host = http://10.10.200.153
+port = 16040
+
+[dbproxy]
+host = http://10.10.200.152
+port = 10086
+
+[msg_channel]
+host = 10.10.159.47
+port = 9000
+
+[msg_processor]
+host = 10.10.159.50
+port = 9001
+
+[twemproxy]
+host = 10.10.159.49
+port = 22123
+
+[database]
+dbHost = 10.10.159.54
+dbPort = 3306
+dbUsername = root
+dbPassword = sd-9898w

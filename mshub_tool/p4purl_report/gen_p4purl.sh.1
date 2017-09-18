@@ -1,0 +1,103 @@
+#!/bin/bash
+#coding:utf8
+cur_day=`date -d'1 days ago' +%Y%m%d`
+ago_day=`date -d'2 days ago' +%Y%m%d`
+cur_date_hour=`date +%Y%m%d%H`
+cur_week=`date +%w`
+
+ip=`/sbin/ifconfig|sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p'|grep -v "^192.168"|grep -v "^127.0"|grep -v "^10."|grep -v "^172."|uniq|head -n 1`
+
+dir="/usr/local/sandai/p4purl_report"
+seedsdir="/usr/local/sandai/distserver/dat"
+
+##抓取新采集数据
+grep "new_download" ${seedsdir}/seedfiles.dat | sed -e "s#{|}# #g"|awk '{print $5" "$3" "$2" "$4}' > ${dir}/data/${cur_day}.seedfiles.dat
+
+##分析数据并生成p4purl
+domain="${ip}:443"
+seedfile="${dir}/data/${cur_day}.seedfiles.dat"
+
+cat ${seedfile} | while read seed
+do
+    file_path=`echo ${seed} | awk '{print $4}'`
+    uri=`echo ${file_path}|sed -e "s#cdnpub\/##g"|awk -F. '{print $1}'`
+    suffix=`echo ${file_path}|sed -e "s#cdnpub\/##g"|awk -F. '{print $2}'`
+    
+    case "$suffix" in
+        rmvb)
+            suffix_new="php"
+            ;;
+        mp3)
+            suffix_new="asp"
+            ;;
+        rar)
+            suffix_new="aspx"
+            ;;
+        exe)
+            suffix_new="jsp"
+            ;;
+        avi)
+            suffix_new="cgi"
+            ;;
+        zip)
+            suffix_new="fcgi"
+            ;;
+        rm)
+            suffix_new="php2"
+            ;;
+        mp4)
+            suffix_new="asp2"
+            ;;
+        wmv)
+            suffix_new="aspx2"
+            ;;
+        mkv)
+            suffix_new="jsp2"
+            ;;
+        jpg)
+            suffix_new="cgi2"
+            ;;
+        3gp)
+            suffix_new="fcgi2"
+            ;;
+        txt)
+            suffix_new="asp3"
+            ;;
+        wma)
+            suffix_new="aspx3"
+            ;;
+        iso)
+            suffix_new="jsp3"
+            ;;
+        mpg)
+            suffix_new="cgi3"
+            ;;
+        bin)
+            suffix_new="fcgi3"
+            ;;
+        7z)
+            suffix_new="fcgi4"
+            ;;
+        flv)
+            suffix_new="fcgi5"
+            ;;
+        *)
+            suffix_new=${suffix}
+    esac
+
+    if [ "X${suffix_new}" == "X" ];then
+	echo ${seed}|awk '{print $1" "$2" "$3" http://""'"${domain}"'""'"${uri}"'"" ""'"${ip}"'"}' >> ${dir}/data/${cur_day}.preview.txt
+    else
+	echo ${seed}|awk '{print $1" "$2" "$3" http://""'"${domain}"'""'"${uri}"'"".""'"${suffix_new}"'"" ""'"${ip}"'"}' >> ${dir}/data/${cur_day}.preview.txt
+    fi
+done
+
+#if [ ${cur_week} -eq 0 ];then
+#    cat ${dir}/data/${cur_day}.preview.txt > ${dir}/data/${cur_day}.txt
+#else
+#    if [ -f "${dir}/data/${ago_day}.txt" ];then
+#        diff ${dir}/data/${cur_day}.preview.txt ${dir}/data/${ago_day}.txt | grep "<" | awk -F"<" '{print $2}' > ${cur_day}.txt
+#    else
+#	cat ${dir}/data/${cur_day}.preview.txt > ${dir}/data/${cur_day}.txt
+#    fi
+#fi

@@ -1,0 +1,21 @@
+[globalsection]
+version=uint32:51
+sequence=uint32:3
+length=uint32:360
+client_version=uint32:526521
+compress_flag=uint16:0
+cmdid=uint16:2015
+peerid=string:00FF202B15526IUQ
+hub_cid = string_hex:26AFFA53A40784CF9888E67FB02BD46AC4859DA0
+hub_file_size = uint64:778888
+hub_gcid = string_hex:5DBDE644B61CF63375146C05D0BA0E45878B592A
+block_number=uint32:1
+url_correction_info_list = list:url_correction_info:1
+partner_id=string:80000010
+productflag=uint32:8
+
+[url_correction_info_0]
+origin_url = string:http://origin.change.cn/test.zip
+redict_url = string:http://redict.change.cn/test.zip
+refer_url = string:http://refer.change.cn/test.zip
+

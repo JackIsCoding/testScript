@@ -1,0 +1,43 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:8888888888888888
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[url]
+#query_url = 'string:thunder://QUFmdHA6Ly9keTEzMS5jb206NnZkeS5jb21AZnRwMi42NmUuY2M6NjUyMC+hvjZ2tefTsHd3dy42dmR5LmNvbaG/0am5+sHQs7VCRNbQ06LLq9fWMTAyNLjfx+UubWt2Wlo='
+#query_url = 'string:http://119.147.135.245/file.data.weipan.cn/46567549/2e9c6b6f04ac0413a48a6d970dc4910831d29c6c?ssig=+JoUsdkTKg&Expires=1418055172&KID=sae,l30zoo1wmz&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&corp=1'
+#query_url = 'string:thunder://QUFmdHA6Ly9keTEzMS5jb206NnZkeS5jb21AZnRwMi42NmUuY2M6NjUyNy+hvjZ2tefTsHd3dy5keTEzMS5jb22hv7ffxa21xNChxPEwMS43MjBwLkJExPHT787e19YubWt2Wlo='
+#query_url = 'string:http://117.135.241.107/hotfiles/4164000001F9AF58/117.135.241.34/files/7164000001F9AF58/bigota.d.miui.com/4.12.5/miui_MI2_4.12.5_da66fbcb95_4.1.zip'
+#query_url = 'string:http://111.7.131.74:80/cache/bigota.d.miui.com/V6.2.1.0.KXCCNBK/miui-ota-pisces-V6.1.2.0.KXCCNBJ-V6.2.1.0.KXCCNBK-eb0bdb3090-4.4.zip?ich_args=643ef3c9403afb44089677f87f33081a_1_0_0_8_f1753472d3602dfc352a6370e47a21ede4749a8f90b76e4584cd54be5b0c86f0_ca873fa16d005a968e4b37863d7ab95a_1_0'
+#query_url = 'string:http://222.22.80.253/cloud/202.196.15.251/files/115500000038BC6F/bigota.d.miui.com/V6.2.1.0.KXDCNBK/miui_MI3WMI4W_V6.2.1.0.KXDCNBK_433b2f5404_4.4.zip'
+#query_url = 'string:http://black.url.com/black.rar'
+query_url = 'string:ftp://xl.77ds.com:10888/开心魔法DVD国语.rmvb'
+#query_url = 'string:http://thunder.qvcd.net/C2CE5944920EE94248D705A4251D77DBFA4BA54E/【Qvcd电影www.qvcd.net】开心魔法.DVD国语中字.rmvb'
+#query_url = 'string:http://ftp2.nwsuaf.edu.cn/ftp/incoming/Movie/%b9%fa%b2%fa%b5%e7%d3%b0/%bf%aa%d0%c4%c4%a7%b7%a8DVD%b9%fa%d3%efby%b9%c8%d7%d3.rmvb'
+
+#query_url = 'string:http://dl5.csdn.net/fd.php?i=155570423552560&s=514b449ebbbddb0c6ef74275f6013e7b'
+
+#query_url = 'string:http://192.168.1.2/server.1421304044.log.2'
+
+query_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8

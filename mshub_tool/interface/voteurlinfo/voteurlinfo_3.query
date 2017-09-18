@@ -1,0 +1,30 @@
+[globalsection]
+version=uint32:61
+sequence=uint32:3
+length=uint32:270
+client_version=uint32:526521
+compress_flag=uint16:0
+reverse = string:onlystring
+cmdid=uint16:2007
+peerid=string:1111111111111113
+query_url="string:http://redirected_1.url.com/test.flv"
+#query_url="string:http://218.77.3.29/cdn.baidupcs.com/file/3b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=N,B,T,t&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm"
+#query_url=string:http://dldx.csdn.net/fd.php?i=708864151197564&s=74a549e7b95c7a645a4c32a9e5422c5c
+#query_url=string:http://black.url.com/black.rar
+#query_url=string:http://eee.eblackw.fe/fefa.flv
+#query_url=string:http://www.bhost.cn/fwef/fefew.flv
+#query_url= string:http://dl5.csdn.net/fd.php?i=155570423552560&s=514b449ebbbddb0c6ef74275f6013e7b
+#query_url = string:
+query_url_code_page=uint32:8
+filesize=uint64:6201259
+cid=string_hex:96C32F6962A450C3F213C9FEFA03666AEC30854D
+gcid=string_hex:59A49B62E1AFAFB01C6879B8CDE53A0ACBBCD607
+gcid_level=uint32:90
+#origubal_url="string:http://218.77.3.29/cdn.baidupcs.com/file/3b571b8a4a786d9d4a191e7be82a3f1e?xcode=f080c63ed91e8fad3ea1baae38b1d03d3cce9f1bc6d88472&fid=1614005835-250528-2851940094&time=1400056872&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-TWdlcfpjuLSIOrkAKrYDHGKQooU%3D&to=cb&fm=N,B,T,t&sta_dx=6&sta_cs=22&sta_ft=pdf&sta_ct=6&newver=1&expires=1400057472&rt=sh&r=767581845&logid=2184372551&sh=1&vuk=282335&fn=NoSQL%E7%B2%BE%E7%B2%B9.pdf&wshc_tag=0&wsiphost=ipdbm"
+original_url=string:http://oringinal_1.url.com/test.flv
+#original_url=string:http://black.url.com/black.rar
+#original_url=string:http://eee.eblackw.fe/fefa.flv
+#original_url=string:http://www.bhost.cn/fwef/fefew.flv
+original_url_code_page=uint32:8
+partner_id=string:80000010
+productflag=uint32:8388608

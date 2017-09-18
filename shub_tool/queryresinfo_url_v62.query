@@ -1,0 +1,29 @@
+[globalsection]
+version = uint32:62
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:0
+query_info = url:0
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[url]
+query_url = string:http://pubnet.sandai.net:8080/20/758c345e4810e3c571f4dc250cb44d5725e8adcf/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1/5a3f0e7f/200000/0/24bc53/0/0/5a3f0e7f/0/index=0-28814/indexmd5=29bf88e39c8abe01b2a22c4932ec7260/e6d86a5876626ed8ba04034a4500c340/20b2f66d85b172e16c36b2e796dd32ba/568a3fc4f8f74506f2f5291d5d0744ea2ab90cb1_IBOdownload_.flv.xv?type=vod&movieid=175377&subid=903236&ext=.xv
+query_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8

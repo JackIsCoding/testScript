@@ -1,0 +1,32 @@
+[globalsection]
+version = uint32:61
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = client_info:0
+cmdid = uint16:2023
+cid = string_hex:C736E29EACB4956485893C8D4B1B0CBC8D228C0D
+filesize = uint64:51000000
+gcid = string_hex:E1CA9C8D82635DF966BF249FE4A822B5837DFC7F
+gcid_level = uint32:90
+assist_url=string:
+assist_url_code_page = uint32:8
+original_url=string:s.com
+original_url_code_page = uint32:8
+refer_url=string:
+refer_url_code_page = uint32:8
+cid_query_type = uint8:0
+max_server_res = uint32:10
+bonus_res_num = uint8:1
+peerid = string:1222334455667788
+report_ip = uint32:0
+query_time = uint32:1
+file_suffix = string:
+
+
+[client_info]
+thunder_ver=string:7.9.9.9
+product_flag=uint32:2147483649
+partner_id=string:2147483649
+thunderS_ver=string:6.1.2.253

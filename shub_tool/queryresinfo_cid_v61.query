@@ -1,0 +1,33 @@
+[globalsection]
+version = uint32:61
+sequence = uint32:3
+length = uint32:270
+client_version = uint32:526521
+compress_flag = uint16:0
+reverse = string:onlystring
+#reverse_length=uint32:25
+#product_version=string:0
+#product_id=uint32:0
+#partner_id=string:0
+#thunders=string:7.9.5.43
+#download_throw=string:0
+cmdid = uint16:2021
+bywhat = uint8:1
+query_info = cid_info:0
+peerid = string:00FF202B15526IUQ
+report_ip = uint32:0
+query_time = uint32:0
+bcid_range_begin = int32:0
+bcid_range_end = int32:-1
+
+[cid_info]
+cid = string_hex:1377B18E02B7F24A1D600DB9B2B3D50AC87DB396
+filesize = uint64:1118096
+#assist_url = string:
+assist_url = string:http://test.redirected_url.com/txt.rar
+assist_url_code_page = uint32:8
+original_url = string:
+original_url_code_page = uint32:8
+refer_url = string:
+refer_url_code_page = uint32:8
+cid_query_type = uint8:1

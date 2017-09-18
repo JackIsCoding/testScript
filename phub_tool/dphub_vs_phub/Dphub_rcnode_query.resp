@@ -1,0 +1,23 @@
+[globalsection]
+ProtocolVersion = uint32:
+SequenceNumbern = uint32:
+BodyLength = uint32:
+Cmdid = uint16:74
+CompresLength = uint32:
+CompressFlag = uint16:
+Result = uint16:
+Cid = string_unhex:
+Gcid = string_unhex:
+Filesize = uint64:
+BlockSize = uint32:
+Levelresource = uint16:
+Totalresource = uint32:
+Retryinterval = uint32:
+UpLevelNodeRc = Noderc:0
+NodeRcList = list:Noderc:0
+
+[Noderc]
+Nodeid = uint32:
+Nodetype = uint8:
+Nodehost = string:
+Nodeport = uint16:

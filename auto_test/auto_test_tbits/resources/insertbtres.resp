@@ -1,0 +1,9 @@
+[globalsection]
+version=uint32:
+sequence=uint32:
+length=uint32:
+client_version=uint32:
+compress_flag=uint16:
+reverse = string:
+cmdid=uint16:
+result=uint8:

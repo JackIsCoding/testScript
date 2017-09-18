@@ -1,0 +1,10 @@
+[globalsection]
+version = uint32:
+sequence = uint32:
+length = uint32:
+client_version = uint32:
+compress_flag = uint16:
+cmdid = uint16:
+result = uint8:
+gcid = string_unhex:
+bcid = string_unhex:
