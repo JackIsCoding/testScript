@@ -1,0 +1,22 @@
+[interface]
+host = 10.10.67.110
+port = 801
+
+[scheduler]
+host = 10.10.67.109
+port = 8800
+
+[twemproxy]
+host = 10.10.67.104
+port = 22123
+
+[database]
+host = 10.10.67.102
+port = 3306
+username = root
+password = sd-9898w
+
+[redis]
+host = 10.10.67.107
+port = 6379
+db = 0

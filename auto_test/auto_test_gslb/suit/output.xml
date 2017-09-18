@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170224 15:17:08.626" generator="Robot 3.0 (Python 2.7.8 on linux2)">
+<suite source="/usr/local/sandai/test_tools/xcloud_tool/xcloud_auto_test/suit/test_xcloud.robot" id="s1" name="Test Xcloud">
+<test id="s1-t1" name="根据父运营商，子运营商，省份，城市权重排序返回iplist">
+<kw name="Judge Rank1" library="xcloud">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.test1.zhangxy.com</arg>
+</arguments>
+<msg timestamp="20170224 15:17:09.018" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<status status="PASS" endtime="20170224 15:17:09.048" starttime="20170224 15:17:09.009"></status>
+</kw>
+<doc>Check return iplist</doc>
+<status status="PASS" endtime="20170224 15:17:09.049" critical="yes" starttime="20170224 15:17:09.003"></status>
+</test>
+<test id="s1-t2" name="根据父运营商，子运营商，省份，城市权重排序返回iplist,权重相同的ip，随机hash">
+<kw name="Judge Rank2" library="xcloud">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.test2.zhangxy.com</arg>
+<arg>103.60.32.0</arg>
+<arg>103.60.44.0</arg>
+</arguments>
+<msg timestamp="20170224 15:17:09.058" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.064" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.070" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.077" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.082" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.086" level="INFO">['103.60.32.0', '103.60.44.0', '1.24.248.0', '1.37.0.0', '1.40.0.0', '1.51.178.0']
+iplist1: [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']
+iplist2: [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']
+iplist3: [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']
+iplist4: [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']
+iplist5: [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']
+ip1_num: 5 ip2_num: 0
+5 0</msg>
+<msg timestamp="20170224 15:17:09.087" level="FAIL">('return iplist is wrong!', 'url:', u'http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.test2.zhangxy.com', 'iplist_theory:', [['103.60.32.0', '103.60.44.0', '1.24.248.0', '1.37.0.0', '1.40.0.0', '1.51.178.0'], ['103.60.44.0', '103.60.32.0', '1.24.248.0', '1.37.0.0', '1.40.0.0', '1.51.178.0']], 'iplist_test:', [[u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']])</msg>
+<status status="FAIL" endtime="20170224 15:17:09.087" starttime="20170224 15:17:09.056"></status>
+</kw>
+<doc>Check return iplist</doc>
+<status status="FAIL" endtime="20170224 15:17:09.087" critical="yes" starttime="20170224 15:17:09.049">('return iplist is wrong!', 'url:', u'http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.test2.zhangxy.com', 'iplist_theory:', [['103.60.32.0', '103.60.44.0', '1.24.248.0', '1.37.0.0', '1.40.0.0', '1.51.178.0'], ['103.60.44.0', '103.60.32.0', '1.24.248.0', '1.37.0.0', '1.40.0.0', '1.51.178.0']], 'iplist_test:', [[u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0'], [u'103.60.32.0', u'103.60.44.0', u'1.24.248.0', u'1.37.0.0', u'1.40.0.0', u'1.51.178.0']])</status>
+</test>
+<test id="s1-t3" name="ip1和ip2的idc相同，返回的首个ip为ip1或者ip2">
+<kw name="Check First Ip" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.test2.liubo.com</arg>
+<arg>1.4.1.0</arg>
+<arg>1.4.2.0</arg>
+</arguments>
+<msg timestamp="20170224 15:17:09.093" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<status status="PASS" endtime="20170224 15:17:09.100" starttime="20170224 15:17:09.091"></status>
+</kw>
+<doc>Check first ip in ips</doc>
+<status status="PASS" endtime="20170224 15:17:09.101" critical="yes" starttime="20170224 15:17:09.088"></status>
+</test>
+<test id="s1-t4" name="ip1和ip2的idc相同，返回的首个ip中，ip1:ip2=ip1_weight:ip2_weight">
+<kw name="Check Static Weight" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.test2.liubo.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20170224 15:17:09.107" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.112" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.121" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.133" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.138" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.146" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.151" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.157" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.163" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.168" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.174" level="INFO">first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0']
+ip1_num: 6 ip2_num: 4</msg>
+<status status="PASS" endtime="20170224 15:17:09.174" starttime="20170224 15:17:09.104"></status>
+</kw>
+<doc>Check ip weight</doc>
+<status status="PASS" endtime="20170224 15:17:09.175" critical="yes" starttime="20170224 15:17:09.101"></status>
+</test>
+<test id="s1-t5" name="返回的ipList的长度最大值为(schedule_per_idc_max_return_ip_num)*(schedule_idc_max_num)">
+<kw name="Check Ips Length" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.test1.zhangxy.com</arg>
+<arg>16</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170224 15:17:09.180" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.189" level="INFO">16</msg>
+<status status="PASS" endtime="20170224 15:17:09.189" starttime="20170224 15:17:09.178"></status>
+</kw>
+<doc>Check ip list length</doc>
+<status status="PASS" endtime="20170224 15:17:09.189" critical="yes" starttime="20170224 15:17:09.175"></status>
+</test>
+<test id="s1-t6" name="DB查询成功，但是IPlist为空(key不存在于数据库中)">
+<kw name="Check Key Null" library="xcloudWeight">
+<msg timestamp="20170224 15:17:09.196" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.205" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:09.211" level="INFO">lfmiderpue
+http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=random.url.autotest.lfmiderpue.com
+None
+200</msg>
+<status status="PASS" endtime="20170224 15:17:09.211" starttime="20170224 15:17:09.194"></status>
+</kw>
+<doc>Check host key whether in DB</doc>
+<status status="PASS" endtime="20170224 15:17:09.211" critical="yes" starttime="20170224 15:17:09.190"></status>
+</test>
+<test id="s1-t7" name="idc中包含ip1和ip2，ip1超过负载，ip2未超过负载时，一分钟后再次发送请求，返回的iplist中首个ip均为ip2">
+<kw name="Check Ip1 Overload" library="xcloudWeight">
+<doc>grpc_num meaning the number of scheduler,all_ip_weight meaning the sum number of request</doc>
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load1.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>2</arg>
+<arg>100</arg>
+</arguments>
+<msg timestamp="20170224 15:17:24.274" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.280" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.287" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.295" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.300" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.308" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.313" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.319" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.324" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:17:24.333" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:24.400" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:24.405" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:24.410" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.416" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.1.0']
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.1.0']
+ip1_num: 7 ip2_num: 3
+please wait for 60 seconds!</msg>
+<msg timestamp="20170224 15:18:29.417" level="FAIL">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</msg>
+<status status="FAIL" endtime="20170224 15:18:29.418" starttime="20170224 15:17:09.220"></status>
+</kw>
+<doc>Check ip1 overload ip2 not overload</doc>
+<status status="FAIL" endtime="20170224 15:18:29.418" critical="yes" starttime="20170224 15:17:09.211">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</status>
+</test>
+<test id="s1-t8" name="当返回的iplist中，ip1和ip2idc不同时(不存在权重相同的ip，且各ip不过载)，按照就近原则返回">
+<kw name="Check First Ip DifferentIDC" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.differentIdc.zhangxy.com</arg>
+<arg>10</arg>
+<arg>1.4.1.0</arg>
+<arg>1.0.2.0</arg>
+</arguments>
+<msg timestamp="20170224 15:18:29.428" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.439" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.443" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.447" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.452" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.456" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.462" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.467" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.472" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.477" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.480" level="INFO">first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0']
+ip1_num: 10 ip2_num: 0</msg>
+<status status="PASS" endtime="20170224 15:18:29.480" starttime="20170224 15:18:29.427"></status>
+</kw>
+<doc>Check first ip in ips</doc>
+<status status="PASS" endtime="20170224 15:18:29.481" critical="yes" starttime="20170224 15:18:29.419"></status>
+</test>
+<test id="s1-t9" name="idc1中的ip1和ip2均超过负载，返回idc2中的ip时，按照weight权重返回">
+<kw name="Check Idc1 Overload" library="xcloudWeight">
+<doc>url =  "http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load2.test.zhangxy.com"</doc>
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load2.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>2</arg>
+<arg>1</arg>
+<arg>1.0.2.0</arg>
+<arg>1.0.4.0</arg>
+<arg>3</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20170224 15:18:29.488" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.495" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.500" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.505" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.510" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.527" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.540" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.545" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.549" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:18:29.555" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:29.620" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:34.625" level="INFO">first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0']
+ip1_num: 6 ip2_num: 4
+please wait for 60 seconds!</msg>
+<msg timestamp="20170224 15:19:34.626" level="FAIL">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</msg>
+<status status="FAIL" endtime="20170224 15:19:34.626" starttime="20170224 15:18:29.486"></status>
+</kw>
+<doc>Check idc2 return</doc>
+<status status="FAIL" endtime="20170224 15:19:34.626" critical="yes" starttime="20170224 15:18:29.481">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</status>
+</test>
+<test id="s1-t10" name="idc1中的ip1超过负载，ip2未超过负载时，等待一段时间后，ip1可以重新返回">
+<kw name="Check Overload Eraser1" library="xcloudWeight">
+<doc>url =  "http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load1.test.zhangxy.com"</doc>
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load1.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>2</arg>
+<arg>100</arg>
+</arguments>
+<msg timestamp="20170224 15:19:49.783" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.828" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.833" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.853" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.858" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.895" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.899" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.929" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.934" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:19:49.962" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.067" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.073" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.078" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.084" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.088" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.093" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.098" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.103" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.112" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.117" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:21:50.121" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.1.0']
+ip1_num: 7 ip2_num: 3
+please wait for 120 seconds!
+first_ip_list: [u'1.4.2.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0']</msg>
+<status status="PASS" endtime="20170224 15:21:50.121" starttime="20170224 15:19:34.633"></status>
+</kw>
+<doc>Check ip1 can return angain</doc>
+<status status="PASS" endtime="20170224 15:21:50.122" critical="yes" starttime="20170224 15:19:34.627"></status>
+</test>
+<test id="s1-t11" name="idc1中的ip1和ip2均超过负载时，等待一段时间后，ip1和ip2可以重新按照weight权重返回">
+<kw name="Check Overload Eraser2" library="xcloudWeight">
+<doc>url =  "http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load2.test.zhangxy.com"</doc>
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test1&amp;seq=1001&amp;host=auto.load2.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170224 15:22:05.142" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.156" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.161" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.190" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.195" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.217" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.230" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.246" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.250" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:22:05.261" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.366" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.399" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.412" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.428" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.434" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.450" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.458" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.497" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.513" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.538" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.549" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.1.0']
+ip1_num: 7 ip2_num: 3
+please wait for 120 seconds!
+first_ip_list: [u'1.4.2.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0']</msg>
+<msg timestamp="20170224 15:24:05.550" level="FAIL">('ERROR : ip1 has overload,wait for 2 minute,ip1 can not accept requests yet! ', 'ip1:', u'1.4.1.0', 'ip1_weight:', u'3', 'ip2:', u'1.4.2.0', 'ip2_weight:', u'2', 'new_first_ip_list:', [u'1.4.2.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0'], 'grpc_num:', u'2', 'load_limit_ip1:', u'2', 'load_limit_ip2:', u'2')</msg>
+<status status="FAIL" endtime="20170224 15:24:05.550" starttime="20170224 15:21:50.129"></status>
+</kw>
+<doc>Check ip1 and ip2 can return angain</doc>
+<status status="FAIL" endtime="20170224 15:24:05.550" critical="yes" starttime="20170224 15:21:50.122">('ERROR : ip1 has overload,wait for 2 minute,ip1 can not accept requests yet! ', 'ip1:', u'1.4.1.0', 'ip1_weight:', u'3', 'ip2:', u'1.4.2.0', 'ip2_weight:', u'2', 'new_first_ip_list:', [u'1.4.2.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0'], 'grpc_num:', u'2', 'load_limit_ip1:', u'2', 'load_limit_ip2:', u'2')</status>
+</test>
+<test id="s1-t12" name="返回的首个ip中，ip1:ip2:ip3=ip1_weight:ip2_weight:ip3_weight">
+<kw name="Check Static Weight2" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.load3.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>10.10.32.144</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20170224 15:24:05.555" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.599" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.607" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.627" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.637" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.651" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.667" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.709" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.735" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.748" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.811" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.839" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:05.848" level="INFO">first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'1.4.2.0', u'10.10.32.144']
+[u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'1.4.2.0', u'10.10.32.144']
+ip1_num: 6 ip2_num: 4 ip3_num: 2
+6 4 2</msg>
+<status status="PASS" endtime="20170224 15:24:05.848" starttime="20170224 15:24:05.553"></status>
+</kw>
+<doc>Check ip weight</doc>
+<status status="PASS" endtime="20170224 15:24:05.849" critical="yes" starttime="20170224 15:24:05.551"></status>
+</test>
+<test id="s1-t13" name="ip1超过负载，ip2&amp;ip3随机返回">
+<kw name="Check Return Ip Correctness1" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.load3.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>10.10.32.144</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>6</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170224 15:24:20.839" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.847" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.852" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.861" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.866" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.876" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.881" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.921" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.926" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.940" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.958" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:24:20.971" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:21.043" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:26.049" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'1.4.2.0', u'10.10.32.144']
+ip1_num: 6 ip2_num: 4 ip3_num: 2</msg>
+<msg timestamp="20170224 15:25:26.050" level="FAIL">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</msg>
+<status status="FAIL" endtime="20170224 15:25:26.050" starttime="20170224 15:24:05.852"></status>
+</kw>
+<doc>Check return ip2&amp;ip3</doc>
+<status status="FAIL" endtime="20170224 15:25:26.050" critical="yes" starttime="20170224 15:24:05.849">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</status>
+</test>
+<test id="s1-t14" name="ip1&amp;ip2超过负载，返回ip3">
+<kw name="Check Return Ip Correctness2" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.load3.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>10.10.32.144</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>6</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170224 15:25:41.030" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.051" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.077" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.086" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.096" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.114" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.152" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.158" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.172" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.186" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.215" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.229" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.264" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.306" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.366" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.426" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.526" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.551" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.579" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.588" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.620" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.681" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.708" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:25:41.750" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:26:41.838" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:26:41.846" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:26:46.851" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144']
+ip1_num: 12 ip2_num: 8 ip3_num: 4
+12 8 4</msg>
+<msg timestamp="20170224 15:26:46.852" level="FAIL">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</msg>
+<status status="FAIL" endtime="20170224 15:26:46.852" starttime="20170224 15:25:26.053"></status>
+</kw>
+<doc>Check return ip3</doc>
+<status status="FAIL" endtime="20170224 15:26:46.852" critical="yes" starttime="20170224 15:25:26.051">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</status>
+</test>
+<test id="s1-t15" name="ip1&amp;ip2&amp;ip3均超过负载后，待load重新开始计算，ip1&amp;ip2&amp;ip3重新开始按照weight权重比例返回">
+<kw name="Check Return Ip Correctness3" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.load3.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>10.10.32.144</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>6</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170224 15:27:01.883" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:01.906" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:01.954" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:01.983" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:01.988" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:01.999" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.006" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.013" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.023" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.037" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.051" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.081" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.087" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.100" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.108" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.122" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.148" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.177" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.199" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.214" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.227" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.249" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.277" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.287" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.300" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.311" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.328" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.357" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.387" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.400" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.410" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.429" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.454" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.489" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.499" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:27:02.511" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.624" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.639" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.645" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.668" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.674" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.704" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.718" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.742" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.749" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.763" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.775" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.804" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:02.807" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144']
+ip1_num: 18 ip2_num: 12 ip3_num: 6
+18 12 6
+please wait for 120 seconds!
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144']
+ip1_num: 6 ip2_num: 4 ip3_num: 2</msg>
+<status status="PASS" endtime="20170224 15:29:02.808" starttime="20170224 15:26:46.859"></status>
+</kw>
+<doc>Check return ip1&amp;ip2&amp;ip3</doc>
+<status status="PASS" endtime="20170224 15:29:02.808" critical="yes" starttime="20170224 15:26:46.853"></status>
+</test>
+<test id="s1-t16" name="idc1中的ip1&amp;ip2&amp;ip3均超过负载后,load未重新开始计算前，再次发送请求，返回idc2中的ip，并且也按照比例返回">
+<kw name="Check Return Ip Correctness4" library="xcloudWeight">
+<arguments>
+<arg>http://10.10.67.110:801/xcloud/hostquery?version=1.0&amp;channel=test&amp;seq=1001&amp;host=auto.load3.test.zhangxy.com</arg>
+<arg>2</arg>
+<arg>1.4.1.0</arg>
+<arg>3</arg>
+<arg>1.4.2.0</arg>
+<arg>2</arg>
+<arg>10.10.32.144</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>6</arg>
+<arg>5</arg>
+<arg>1.0.2.0</arg>
+<arg>1.0.4.0</arg>
+<arg>3</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20170224 15:29:17.873" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.887" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.898" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.904" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.934" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.949" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.965" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.976" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.990" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:17.995" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.001" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.010" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.035" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.049" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.067" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.088" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.099" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.132" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.139" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.156" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.168" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.181" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.196" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.208" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.237" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.265" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.278" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.290" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.300" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.333" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.345" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.364" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.370" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.382" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.396" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:29:18.436" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:30:18.513" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:30:18.531" level="INFO">Starting new HTTP connection (1): 10.10.67.110</msg>
+<msg timestamp="20170224 15:30:23.537" level="INFO">Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+Stopping scheduler.unified_gateway: [  OK  ]
+Checking scheduler.unified_gateway: [  OK  ]
+Starting scheduler.unified_gateway: [  OK  ]
+first_ip_list: [u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.1.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'1.4.2.0', u'10.10.32.144', u'10.10.32.144']
+ip1_num: 18 ip2_num: 12 ip3_num: 6
+18 12 6
+please wait for 60 seconds!</msg>
+<msg timestamp="20170224 15:30:23.537" level="FAIL">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</msg>
+<status status="FAIL" endtime="20170224 15:30:23.538" starttime="20170224 15:29:02.817"></status>
+</kw>
+<doc>Check return ip in idc2</doc>
+<status status="FAIL" endtime="20170224 15:30:23.538" critical="yes" starttime="20170224 15:29:02.808">ReadTimeout: HTTPConnectionPool(host='10.10.67.110', port=801): Read timed out. (read timeout=5)</status>
+</test>
+<doc>Xcloud test suit.
+
+Test test.</doc>
+<status status="FAIL" endtime="20170224 15:30:23.540" starttime="20170224 15:17:08.628"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="7" pass="9">Critical Tests</stat>
+<stat fail="7" pass="9">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="7" id="s1" name="Test Xcloud" pass="9">Test Xcloud</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
