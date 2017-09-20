@@ -1,10 +1,33 @@
-sequence: 1392394383123136
+sequence: 538133478639272
 errorCode: E_OK
-allCount: 1
+allCount: 5
 streamInfoList {
-  streamID: 7270
-  streamKey: "autotest_1504768401_PL4lMJo5"
-  streamName: "test"
+  streamID: 211
+  streamKey: "3TQV0wKi"
+  streamName: "autotest"
+  streamStatus: CREATED
+}
+streamInfoList {
+  streamID: 212
+  streamKey: "6ok3rT9z"
+  streamName: "autotest"
+  streamStatus: OPENED
+}
+streamInfoList {
+  streamID: 213
+  streamKey: "dWaGPzwB"
+  streamName: "autotest"
   streamStatus: CLOSED
+}
+streamInfoList {
+  streamID: 214
+  streamKey: "G2FScBK8"
+  streamName: "autotest"
+  streamStatus: ERRORED
+}
+streamInfoList {
+  streamID: 210
+  streamKey: "o8xPF6tK"
+  streamName: "autotest"
 }
 
