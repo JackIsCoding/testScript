@@ -81,9 +81,9 @@ class BasicStreamTest(object):
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
         errorCode = self.common.affirmEqual(self.resp.errorCode, pb.E_OK)
-        detailErrorCode = self.common.affirmEqual(self.resp.streamDetailList[0].errorCode, pb.E_OK)
+        #detailErrorCode = self.common.affirmEqual(self.resp.streamDetailList[0].errorCode, pb.E_OK)
         streamDetailList = self.resp.streamDetailList
-        return sequence, errorCode, detailErrorCode, streamDetailList
+        return sequence, errorCode, streamDetailList
 
     def queryStreamInfoInternal(self, streamID):
 	self.xconfig.load(sms_client.get_req_path("QueryStreamInfoInternal"))

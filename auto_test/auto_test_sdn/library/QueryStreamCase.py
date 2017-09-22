@@ -51,6 +51,16 @@ class QueryStreamCase(object):
         else:
             raise AssertionError("queryStream:query stream fail when stream status equal OPENED!")
 
+    def hasNoneInfoKey(self):
+        businessID = int(time.time())
+        streamKey = 'queryStreamInfo_'+str(int(time.time()))+self.common.generateCode()
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfo(businessID, streamKey)
+        print(detailErrorCode, streamDetailList)
+        if sequence and errorCode:
+            pass
+        else:
+            raise AssertionError("queryStreamInfo:query streamInfoKey fail when business and streamKey is not in DB!")
+
     def hasNoneBusiness(self):
         businessID = int(time.time())
         sequence, errorCode, allCount, streamInfoList = self.basic.queryStreamList(businessID)
@@ -73,7 +83,7 @@ class QueryStreamCase(object):
     def haveMultipleBusiness(self):
         businessID = int(time.time())
         for i in range(5):
-            streamKey = self.common.generateCode()
+            streamKey = 'queryStreamList_'+str(int(time.time()))+self.common.generateCode()
             insertSql = "insert into xcloud.stream_info (business_id,stream_key,stream_name,stream_type,stream_status,origin_dc) values("+str(businessID)+",'"+streamKey+"','autotest','flv',"+str(i)+",'dc1')";
             print(insertSql)
             data = self.mysql.executeMysql(insertSql)
@@ -127,9 +137,10 @@ class QueryStreamCase(object):
 
 if __name__=="__main__":
     test = QueryStreamCase()
+    test.hasNoneInfoKey()
     #test.queryStreamLogic()
     #test.queryStreamInternalLogic()
     #test.hasNoneBusiness()
     #test.hasOneBusiness()
-    test.haveMultipleBusiness()
+    #test.haveMultipleBusiness()
 
