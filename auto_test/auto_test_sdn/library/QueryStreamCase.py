@@ -55,8 +55,8 @@ class QueryStreamCase(object):
         businessID = int(time.time())
         streamKey = 'queryStreamInfo_'+str(int(time.time()))+self.common.generateCode()
         sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfo(businessID, streamKey)
-        print(detailErrorCode, streamDetailList)
-        if sequence and errorCode:
+        print(detailErrorCode, streamDetailList[0].detail.businessID, streamDetailList[0].detail.streamKey)
+        if sequence and errorCode and not detailErrorCode and streamDetailList[0].detail.businessID == businessID and streamDetailList[0].detail.streamKey == streamKey:
             pass
         else:
             raise AssertionError("queryStreamInfo:query streamInfoKey fail when business and streamKey is not in DB!")
@@ -101,6 +101,14 @@ class QueryStreamCase(object):
 
 
 
+    def hasNoneKey(self):
+        streamID = int(time.time())
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(streamID)
+        print(detailErrorCode, streamDetailList[0].detail)
+        if sequence and errorCode and not detailErrorCode and streamDetailList[0].detail.streamID == streamID:
+            pass
+        else:
+            raise AssertionError("queryStreamInfoInternal:query streamInfoKey fail when streamID is not in DB!")
 
     def queryStreamInternalLogic(self):
         _, _, streamID, _, _, _, _ = self.basic.createStreamInternal()
@@ -137,7 +145,8 @@ class QueryStreamCase(object):
 
 if __name__=="__main__":
     test = QueryStreamCase()
-    test.hasNoneInfoKey()
+    #test.hasNoneInfoKey()
+    test.hasNoneKey()
     #test.queryStreamLogic()
     #test.queryStreamInternalLogic()
     #test.hasNoneBusiness()
