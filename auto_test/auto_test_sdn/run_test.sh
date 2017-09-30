@@ -7,7 +7,7 @@ then
         exit 1
 fi
 
-ROOT_PATH='/home/zhangxiangyu/qa_tools/auto_test/auto_test_sdn'
+ROOT_PATH='/usr/local/sandai/zhangxy_tools/auto_test/auto_test_sdn'
 REPORT_PATH=$ROOT_PATH'/report/log'
 
 cd $ROOT_PATH'/suit'

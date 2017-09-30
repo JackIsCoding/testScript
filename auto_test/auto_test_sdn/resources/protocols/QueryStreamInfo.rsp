@@ -1,10 +1,10 @@
-sequence: 57348477573540
+sequence: 813970641575558
 errorCode: E_OK
 streamDetailList {
   errorCode: E_NOT_EXIST
   detail {
-    businessID: 1506070077
-    streamKey: "queryStreamInfo_1506070077avHzLhs8"
+    businessID: 1506667964
+    streamKey: "queryStreamInfo_1506667964gzXj2Es0"
   }
 }
 

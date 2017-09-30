@@ -28,7 +28,7 @@ def uploadData(filePath,blocksize,offset,addrs):
         block_size = os.path.getsize(basePath+file)
         data = {"json": "%s" % json.dumps({"upload_info": {"offset": int(file), "len": block_size}})}
         resp = requests.post(url=addrs, files=files, data=data)
-        #print resp.content
+        print resp.content
         offset += int(file)
 
 

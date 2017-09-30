@@ -10,6 +10,7 @@ import requests
 def upload_Request(filePath,blocksize,offset,url):
     filePath=filePath
     blocksize=blocksize
+    ver=2.0
     fileszie = os.path.getsize(filePath)
     block_infos=get_block_infos(filePath,blocksize)
     headers={"Content-Type" : "application/json",
@@ -17,6 +18,7 @@ def upload_Request(filePath,blocksize,offset,url):
     }
     upload_req_postData = {
         "filename": filePath,
+        "version":ver,
         "filesize": fileszie,
         "block_size": blocksize,
         "block_infos": block_infos

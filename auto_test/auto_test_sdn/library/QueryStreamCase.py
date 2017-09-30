@@ -29,7 +29,7 @@ class QueryStreamCase(object):
         key = str(businessID)+'_'+streamKey
         redisKey = 'XC_GSM_ID_'+self.common.zhashSha1(key)
         value = '{"id":'+str(data[0])+'}'
-        redisInfoKey = 'XC_GSM_INFO_'+str(streamID)
+        redisInfoKey = 'XC_GSM_INFO_'+str(data[0])
         """
         sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfo(businessID, streamKey)
         if sequence and errorCode and detailErrorCode and streamDetailList[0].detail.streamID == data[0] and streamDetailList[0].detail.businessID == data[1] and streamDetailList[0].detail.streamKey == data[2] and streamDetailList[0].detail.streamName == data[3] and streamDetailList[0].detail.streamType == data[4] and streamDetailList[0].detail.streamStatus == pb.CREATED and streamDetailList[0].originDC == data[6]:

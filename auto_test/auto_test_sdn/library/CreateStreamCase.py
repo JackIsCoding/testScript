@@ -28,6 +28,7 @@ class CreateStreamCase(object):
 		print(streamName, streamType)
 		rtmpUrl = 'rtmp://'+sdn_config.rtmp_server_endpoint+'/'+str(businessID)+'/'+streamKey
 		sql1 = 'SELECT * FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
+		data1 = self.mysql.executeMysql(sql1)
 		if sequence and errorCode:
 		    if len(data1) != 0 and data1[1] == businessID and data1[2] == streamKey and data1[3] == streamName and data1[4] == streamType and data1[5] == pb.CREATED:
 			time.sleep(3)
@@ -78,7 +79,7 @@ class CreateStreamCase(object):
 
 if __name__ == "__main__":
 	test = CreateStreamCase()
-	#test.createStreamLogic()
+	test.createStreamLogic()
 	test.createStreamInternalLogic()
 
 

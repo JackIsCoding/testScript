@@ -1,33 +1,33 @@
-sequence: 538133478639272
+sequence: 2125327961415691
 errorCode: E_OK
 allCount: 5
 streamInfoList {
-  streamID: 211
-  streamKey: "3TQV0wKi"
+  streamID: 710
+  streamKey: "queryStreamList_15066679642WL1nSYC"
   streamName: "autotest"
-  streamStatus: CREATED
 }
 streamInfoList {
-  streamID: 212
-  streamKey: "6ok3rT9z"
-  streamName: "autotest"
-  streamStatus: OPENED
-}
-streamInfoList {
-  streamID: 213
-  streamKey: "dWaGPzwB"
-  streamName: "autotest"
-  streamStatus: CLOSED
-}
-streamInfoList {
-  streamID: 214
-  streamKey: "G2FScBK8"
+  streamID: 714
+  streamKey: "queryStreamList_1506667964aLK5Ikbp"
   streamName: "autotest"
   streamStatus: ERRORED
 }
 streamInfoList {
-  streamID: 210
-  streamKey: "o8xPF6tK"
+  streamID: 712
+  streamKey: "queryStreamList_1506667964FUy0AXhu"
   streamName: "autotest"
+  streamStatus: OPENED
+}
+streamInfoList {
+  streamID: 713
+  streamKey: "queryStreamList_1506667964IzYk0Co3"
+  streamName: "autotest"
+  streamStatus: CLOSED
+}
+streamInfoList {
+  streamID: 711
+  streamKey: "queryStreamList_1506667964mcWgOHu4"
+  streamName: "autotest"
+  streamStatus: CREATED
 }
 

@@ -4,8 +4,9 @@
 #****************************************************
 # Author: zhangxiangyu
 # Created: 2017-09-26 14:36
-# Filename: test.py
-# Description: 
+# Filename: UpdateStreamCase.py
+# Description:主要写了updateStream的逻辑处理，
+#	      嵌套了部分destroyStream的逻辑处理 
 #****************************************************
 
 import basic_stream_opera
@@ -23,7 +24,7 @@ class UpdateStreamCase(object):
         
     def updateFirst(self):
         """
-        update status from unknown to created
+        update status from unknown to created,destroy stream change status from created to closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -31,21 +32,27 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfo(businessID, streamKey)
+        self.basic.queryStreamInfo(businessID, streamKey)
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 1 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfo(businessID, streamKey)
+		result = self.basic.destroyStream(businessID, streamKey)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
-                raise AssertionError("update stream fail!")
+		raise AssertionError("updateStream:update stream fail!")
         else:
-            raise AssertionError("queryStreamInfo fail!")
+	    raise AssertionError("queryStreamInfo:queryStreamInfo fail!")
 
     def updateSecond(self):
         """
-        update status from unknown to opened
+        update status from unknown to opened,destroy stream change status from opened to closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -53,22 +60,28 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfo(businessID, streamKey)
+        self.basic.queryStreamInfo(businessID, streamKey)
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 2 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfo(businessID, streamKey)
+		result = self.basic.destroyStream(businessID, streamKey)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+                	pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
-                raise AssertionError("update stream fail!")
+		raise AssertionError("updateStream:update stream fail!")
         else:
-            raise AssertionError("queryStreamInfo fail!")
+	    raise AssertionError("queryStream:queryStreamInfo fail!")
         
                 
     def updateThird(self):
         """
-        update status from unknown to closed
+        update status from unknown to closed,destroy stream can not change status when status equal closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -82,7 +95,13 @@ class UpdateStreamCase(object):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 3 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfo(businessID, streamKey)
+		result = self.basic.destroyStream(businessID, streamKey)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -91,7 +110,7 @@ class UpdateStreamCase(object):
 
     def updateFourth(self):
         """
-        update status from unknown to errored
+        update status from unknown to errored,destroy stream can not change status when status equal errored!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -105,7 +124,13 @@ class UpdateStreamCase(object):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 4 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfo(businessID, streamKey)
+		result = self.basic.destroyStream(businessID, streamKey)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 4 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -113,7 +138,7 @@ class UpdateStreamCase(object):
        
     def updateFifth(self):
         """
-        update status from created to unknown
+        update status from created to unknown,destroy stream change status from unknown to closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -127,11 +152,17 @@ class UpdateStreamCase(object):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 0 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfo(businessID, streamKey)
+		result = self.basic.destroyStream(businessID, streamKey)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+                	pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
-                raise AssertionError("update stream fail!")
+		    raise AssertionError("updateStream:update stream fail!")
         else:
-            raise AssertionError("queryStreamInfo fail!")
+		raise AssertionError("queryStreamInfo:queryStreamInfo fail!")
 
 
     def updateSixth(self):
@@ -479,8 +510,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,0)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -492,8 +527,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,1)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -505,8 +544,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,2)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -518,8 +561,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,3)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -531,15 +578,19 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,4)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
 
     def updateFirstInter(self):
         """
-        update status from unknown to created
+        update status from unknown to created,destroy stream internal from created to closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -547,13 +598,19 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 1 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfoInternal(streamID)
+		result = self.basic.destroyStreamInternal(streamID)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -561,7 +618,7 @@ class UpdateStreamCase(object):
 
     def updateSecondInter(self):
         """
-        update status from unknown to opened
+        update status from unknown to opened,destroy stream internal from opened to closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -569,13 +626,19 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 2 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfoInternal(streamID)
+		result = self.basic.destroyStreamInternal(streamID)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -584,7 +647,7 @@ class UpdateStreamCase(object):
                 
     def updateThirdInter(self):
         """
-        update status from unknown to closed
+        update status from unknown to closed,destroy stream internal can not change status when status equals closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -592,13 +655,19 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 3 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfoInternal(streamID)
+		result = self.basic.destroyStreamInternal(streamID)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -607,7 +676,7 @@ class UpdateStreamCase(object):
 
     def updateFourthInter(self):
         """
-        update status from unknown to errored
+        update status from unknown to errored,destroy stream internal can not change status when status equals errored!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -615,13 +684,19 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 4 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfoInternal(streamID)
+		result = self.basic.destroyStreamInternal(streamID)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 4 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -629,7 +704,7 @@ class UpdateStreamCase(object):
        
     def updateFifthInter(self):
         """
-        update status from created to unknown
+        update status from created to unknown,destroy stream internal from unknown to closed!
         """
         businessID = int(time.time())
         streamKey = 'updateStream_'+str(int(time.time()))+self.common.generateCode()
@@ -637,13 +712,19 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 0 and self.redis.znil(redisKey):
-                pass
+		self.basic.queryStreamInfoInternal(streamID)
+		result = self.basic.destroyStreamInternal(streamID)
+		data = self.mysql.executeMysql(sql)
+		if result and data[1] == 3 and self.redis.znil(redisKey):
+			pass
+		else:
+			raise AssertionError("destroyStream:destroy stream fail!")
             else:
                 raise AssertionError("update stream fail!")
         else:
@@ -660,7 +741,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
@@ -683,7 +764,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
@@ -706,7 +787,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
@@ -729,7 +810,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
@@ -751,7 +832,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
@@ -773,7 +854,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
@@ -795,7 +876,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
@@ -817,7 +898,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
@@ -840,7 +921,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
@@ -863,7 +944,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
@@ -886,7 +967,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
@@ -909,7 +990,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
@@ -931,7 +1012,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
@@ -953,7 +1034,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
@@ -976,7 +1057,7 @@ class UpdateStreamCase(object):
         self.mysql.executeMysql(insertSql)
         sql = 'SELECT stream_id, stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
-        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(businessID, streamKey)
+        sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(data[0])
         redisKey = 'XC_GSM_INFO_'+str(data[0])
         if not self.redis.znil(redisKey):
             sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
@@ -995,8 +1076,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],0)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,0)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -1008,8 +1093,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],1)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,1)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -1021,8 +1110,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],2)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,2)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -1034,8 +1127,12 @@ class UpdateStreamCase(object):
         streamID = int(time.time())
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],3)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,3)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -1045,10 +1142,15 @@ class UpdateStreamCase(object):
         update stream when streamID is not in DB
         """
         streamID = int(time.time())
+	print(streamID)
         sql = "SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)'";
         data = self.mysql.executeMysql(sql)
-        if len(data) == 0:
-            sequence, errorCode, streamID = self.basic.updateStream(data[0],4)
+        if data is None:
+            sequence, errorCode, _ = self.basic.updateStream(streamID,4)
+	    if sequence and errorCode:
+		    pass
+	    else:
+		    raise AssertionError("update stream fail when streamID is not DB!")
         else:
             raise AssertionError("streamID should not hava data In DB but have!")
 
@@ -1061,6 +1163,14 @@ class UpdateStreamCase(object):
 
 if __name__=="__main__":
     test = UpdateStreamCase()
-    test.updateFirst()
-    test.updateSecond()
-    test.updateThird()
+    #test.updateFirst()
+    #test.updateFirstInter()
+    #test.updateSecondInter()
+    #test.updateSecond()
+    #test.updateThird()
+    #test.updateThirdInter()
+    #test.updateFourthInter()
+    #test.updateFourth()
+    #test.updateFifthInter()
+    test.updateTwentyFourthInter()
+    test.updateTwentyFifthInter()

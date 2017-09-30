@@ -30,13 +30,13 @@ class BasicStreamTest(object):
         self.req.streamName = self.xconfig.get_string("streamName")
         self.req.streamType = self.xconfig.get_string("streamType")
         self.req.pullUrl = self.xconfig.get_string_url("pullUrl")
-        print("req:", self.req)
+        print("createStream req:", self.req)
 	businessID = self.req.businessID
 	streamKey = self.req.streamKey
 	streamName = self.req.streamName
 	streamType = self.req.streamType
 	self.resp = self.client.CreateStream(self.req)
-        print("resp:", self.resp)
+        print("createStream resp:", self.resp)
         sms_client.write_rsp_into_file("CreateStream", self.resp)
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -52,13 +52,13 @@ class BasicStreamTest(object):
         self.req.streamName = self.xconfig.get_string("streamName")
         self.req.streamType = self.xconfig.get_string("streamType")
         self.req.pullUrl = self.xconfig.get_string_url("pullUrl")
-        print("req:", self.req)
+        print("createStreamInternal req:", self.req)
         businessID = self.req.businessID
         streamKey = self.req.streamKey
         streamName = self.req.streamName
         streamType = self.req.streamType
         self.resp = self.client.CreateStreamInternal(self.req)
-        print("resp:", self.resp)
+        print("createStreamInternal resp:", self.resp)
         sms_client.write_rsp_into_file("CreateStreamInternal", self.resp)
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -74,9 +74,9 @@ class BasicStreamTest(object):
         info = self.req.streamInfoKeyList.add()
         info.businessID = businessID
         info.streamKey = streamKey
-        print("req:", self.req)
+        print("queryStreamInfo req:", self.req)
         self.resp = self.client.QueryStreamInfo(self.req)
-        print("resp:", self.resp)
+        print("queryStreamInfo resp:", self.resp)
         sms_client.write_rsp_into_file("QueryStreamInfo", self.resp)
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -90,9 +90,9 @@ class BasicStreamTest(object):
 	self.req = pb.QueryStreamInfoInternalReq()
 	self.req.sequence = self.common.generateNum()
 	self.req.streamIDList.append(streamID)
-	print("req:", self.req)
+	print("queryStreamInfoInternal req:", self.req)
 	self.resp = self.client.QueryStreamInfoInternal(self.req)
-	print("resp:", self.resp)
+	print("queryStreamInfoInternal resp:", self.resp)
 	#sms_client.write_rsp_info_file("QueryStreamInfoInternal", self.resp)
 
 	sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -106,9 +106,9 @@ class BasicStreamTest(object):
         self.req = pb.QueryStreamListReq()
         self.req.sequence = self.common.generateNum()
         self.req.businessID = businessID
-        print("req:", self.req)
+        print("queryStreamList req:", self.req)
         self.resp = self.client.QueryStreamList(self.req)
-        print("resp:", self.resp)
+        print("queryStreamList resp:", self.resp)
         sms_client.write_rsp_into_file("QueryStreamList", self.resp)
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -138,9 +138,9 @@ class BasicStreamTest(object):
         self.req.sequence = self.common.generateNum()
         self.req.streamID = streamID
         self.req.streamStatus = streamStatus
-        print("req:", self.req)
+        print("updateStream req:", self.req)
         self.resp = self.client.UpdateStream(self.req)
-        print("resp:", self.resp)
+        print("updateStream resp:", self.resp)
         sms_client.write_rsp_into_file("UpdateStream", self.resp)
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -153,9 +153,9 @@ class BasicStreamTest(object):
 	self.req.sequence = self.common.generateNum()
 	self.req.businessID = businessID
 	self.req.streamKey = streamKey
-	print("req:", self.req)
+	print("destroyStream req:", self.req)
 	self.resp = self.client.DestroyStream(self.req)
-	print("resp:", self.resp)
+	print("destroyStream resp:", self.resp)
 	sms_client.write_rsp_into_file("DestroyStream", self.resp)
 
 	sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
@@ -170,9 +170,9 @@ class BasicStreamTest(object):
 	self.req = pb.DestroyStreamInternalReq()
 	self.req.sequence = self.common.generateNum()
 	self.req.streamID = streamID
-	print("req:", self.req)
+	print("destroyStreamInternal req:", self.req)
 	self.resp = self.client.DestroyStreamInternal(self.req)
-	print("resp:", self.resp)
+	print("destroyStreamInternal resp:", self.resp)
 	sms_client.write_rsp_into_file("DestroyStreamInternal", self.resp)
 
 	sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)

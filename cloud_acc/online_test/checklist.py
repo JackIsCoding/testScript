@@ -12,6 +12,7 @@ from query_index import queryIndex
 from upload_Request import upload_Request
 from upload_data import uploadData
 import shutil
+from contextlib import closing
 
 tmp_dir="./tmp"
 filename = "test.flv"
@@ -33,7 +34,7 @@ def gen_uri(gcid):
     filesize = "123456"
     t = 1601567699
     tid = get_sha1(gcid+filesize+str(t)+"xl_xcloud")
-    rest_url = "g="+gcid+"&s="+filesize+"&t="+str(t)+"&tid="+tid+"&ak=0:0:0:0&pk=filemail&ms=100&e="+str(t)+"&ui=123&ver=0"
+    rest_url = "g="+gcid+"&c="+gcid+"&s="+filesize+"&t="+str(t)+"&tid="+tid+"&ak=0:0:0:0&pk=filemail&ms=10240000&e="+str(t)+"&ui=2223&ver=0"
     aid = get_sha1(rest_url)
     uri = rest_url+"&aid="+aid
     return uri
@@ -43,7 +44,7 @@ def upload_test():
     print "############upload############"
     for i in range(51,61):
 	print "############start upload %d############"%i
-        gcid = "11111111111111111111111111111111111112"+str(i)
+        gcid = "11111111111111111111111111111111111114"+str(i)
         uri = gen_uri(gcid)
 	sche_url = "http://tw11a126.sandai.net:80/upload?"+uri
         r=requests.get(sche_url,allow_redirects=False)
@@ -67,15 +68,25 @@ def upload_test():
 def download_test():
     for i in range(61,71):
         print "############start download %d############"%i
-        gcid = "1111111111111111111111111111111111111251"
+        gcid = "1111111111111111111111111111111111111451"
 	uri = gen_uri(gcid)
 	sche_url = "http://tw11a125.sandai.net:80/httpdown?"+uri
 	r=requests.get(sche_url,allow_redirects=False)
 	redirect_url = r.headers['Location']
 	download_url = "http://down0"+str(i)+redirect_url[redirect_url.find('.'):]
-	r = requests.get(download_url)
-	with open("%s.data"%i, "wb") as code:
-	    code.write(r.content)
+        print download_url
+	#r = requests.get(download_url)
+	#with open("%s.data"%i, "wb") as code:
+	 #   code.write(r.content)
+        with closing(requests.get(download_url, stream=True)) as response:
+            chunk_size = 1024 # 单次请求最大值
+            content_size = int(response.headers['content-length']) # 内容体总大小
+            print "总大小%d"%content_size
+            with open("%s.data"%i, "wb") as file:
+                for data in response.iter_content(chunk_size=chunk_size):
+                    file.write(data)
+                    print "此次下载大小%d"%chunk_size
+                    break
 
 def checkindex(iplist,gcid,type):
     for ip  in iplist:
@@ -131,9 +142,9 @@ if __name__=="__main__":
     f.close()
     checkindex(index_iplist,"1111111111111111111111111111111111111251",255)
     #upload_test()
-    #download_test()
+    download_test()
     #schedule_test(sche_iplist,0)
-    schedule_test(sche_iplist,1)
+    #schedule_test(sche_iplist,1)
 
 
 
