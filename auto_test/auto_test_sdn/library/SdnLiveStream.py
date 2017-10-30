@@ -441,13 +441,55 @@ class SdnLiveStream(object):
 		else:
 		    raise AssertionError("paramCheckSlashInterTwo===>createStream fail when streamKey&streamName&streamType include slash!")
 
+	def paramCheckPullurl(self):
+		businessID, streamKey, streamName, streamType, pullUrl = self.basic.createParam()
+		pullUrl = ""
+		sequence, errorCode = self.basic.createStream(businessID, streamKey, streamName, streamType, pullUrl)
+		time.sleep(3)
+		sql1 = 'SELECT stream_id,stream_status FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
+		data1 = self.mysql.executeMysql(sql1)
+		sql2 = 'SELECT stream_id FROM xcloud.origin_manager_stream_info where stream_id='+str(data1[0]);
+		data2 = self.mysql.executeMysql(sql2)
+		print(data2)
+		if sequence and errorCode and data2 == None and data1[1] == pb.CREATED:
+			sequence, errorCode = self.basic.destroyStream(businessID, streamKey)
+			if sequence and errorCode:
+				pass
+			else:
+				raise AssertionError("paramCheckPullurl===>destroy stream fail when pullurl equal empty!")
+		else:
+		    raise AssertionError("paramCheckPullurl===>createStream fail when pullurl equal empty!")
+
+
+	def paramCheckPullurlInter(self):
+		businessID, streamKey, streamName, streamType, pullUrl = self.basic.createInterParam()
+		pullUrl = ""
+		sequence, errorCode, streamID = self.basic.createStreamInternal(businessID, streamKey, streamName, streamType, pullUrl)
+		time.sleep(3)
+		sql1 = 'SELECT stream_status FROM xcloud.stream_info where stream_id='+str(streamID);
+		data1 = self.mysql.executeMysql(sql1)
+		sql2 = 'SELECT stream_id FROM xcloud.origin_manager_stream_info where stream_id='+str(streamID);
+		data2 = self.mysql.executeMysql(sql2)
+		if sequence and errorCode and data2 == None and data1[0] == pb.CREATED:
+			sequence, errorCode = self.basic.destroyStreamInternal(streamID)
+			if sequence and errorCode:
+				pass
+			else:
+				raise AssertionError("paramCheckPullurlInter===>destroy stream fail when pullurl equal empty!")
+		else:
+			raise AssertionError("paramCheckPullurlInter===>createStream fail when pullurl equal empty!")
 	
+	
+
+
 
 
 
 
 if __name__ == "__main__":
 	test = SdnLiveStream()
+	#test.paramCheckPullurl()
+	test.paramCheckPullurlInter()
 	#test.assertStreamLogic()
 	#test.assertStreamInternalLogic()
 	#test.paramCheckAsteriskOne()
@@ -455,4 +497,3 @@ if __name__ == "__main__":
 	#test.paramCheckAsteriskInterTwo()
 	#test.paramCheckDotInterTwo()
 	#test.paramCheckDollarInterOne()
-	test.paramCheckSlashTwo()

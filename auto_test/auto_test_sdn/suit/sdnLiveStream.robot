@@ -80,6 +80,15 @@ Overall process inter testing when streamKey streamName streamType include Slash
                 ParamCheckSlashInterTwo
 
 
+Overall process testing when pullurl equal empty 
+                [Documentation]                         errorCode should equal E_OK
+		ParamCheckPullurl
+
+Overall process inter testing when pullurl equal empty
+                [Documentation]                         errorCode should equal E_OK
+		ParamCheckPullurlInter
+
+
 
 
 
