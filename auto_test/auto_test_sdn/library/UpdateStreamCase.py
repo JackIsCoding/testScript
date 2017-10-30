@@ -39,9 +39,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 1 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfo(businessID, streamKey)
-		result = self.basic.destroyStream(businessID, streamKey)
+		sequence, errorCode = self.basic.destroyStream(businessID, streamKey)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -67,9 +67,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 2 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfo(businessID, streamKey)
-		result = self.basic.destroyStream(businessID, streamKey)
+		sequence, errorCode = self.basic.destroyStream(businessID, streamKey)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
                 	pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -96,9 +96,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 3 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfo(businessID, streamKey)
-		result = self.basic.destroyStream(businessID, streamKey)
+		sequence, errorCode = self.basic.destroyStream(businessID, streamKey)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -125,9 +125,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 4 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfo(businessID, streamKey)
-		result = self.basic.destroyStream(businessID, streamKey)
+		sequence, errorCode = self.basic.destroyStream(businessID, streamKey)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 4 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 4 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -153,9 +153,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 0 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfo(businessID, streamKey)
-		result = self.basic.destroyStream(businessID, streamKey)
+		sequence, errorCode = self.basic.destroyStream(businessID, streamKey)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
                 	pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -605,9 +605,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 1 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfoInternal(streamID)
-		result = self.basic.destroyStreamInternal(streamID)
+		sequence, errorCode = self.basic.destroyStreamInternal(streamID)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -633,9 +633,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 2 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfoInternal(streamID)
-		result = self.basic.destroyStreamInternal(streamID)
+		sequence, errorCode = self.basic.destroyStreamInternal(streamID)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -662,9 +662,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 3 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfoInternal(streamID)
-		result = self.basic.destroyStreamInternal(streamID)
+		sequence, errorCode = self.basic.destroyStreamInternal(streamID)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -691,9 +691,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 4 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfoInternal(streamID)
-		result = self.basic.destroyStreamInternal(streamID)
+		sequence, errorCode = self.basic.destroyStreamInternal(streamID)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 4 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 4 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")
@@ -719,9 +719,9 @@ class UpdateStreamCase(object):
             data = self.mysql.executeMysql(sql)
             if sequence and errorCode and streamID == data[0] and data[1] == 0 and self.redis.znil(redisKey):
 		self.basic.queryStreamInfoInternal(streamID)
-		result = self.basic.destroyStreamInternal(streamID)
+		sequence, errorCode = self.basic.destroyStreamInternal(streamID)
 		data = self.mysql.executeMysql(sql)
-		if result and data[1] == 3 and self.redis.znil(redisKey):
+		if sequence and errorCode and data[1] == 3 and self.redis.znil(redisKey):
 			pass
 		else:
 			raise AssertionError("destroyStream:destroy stream fail!")

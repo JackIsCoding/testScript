@@ -15,3 +15,4 @@ pybot -T -d $REPORT_PATH -r sdnLiveStreamReport.html -l sdnLiveStreamLog.html -o
 pybot -T -d $REPORT_PATH -r createStreamCaseReport.html -l createStreamCaseLog.html -o createStreamCaseOutput -L TRACE createStreamCase.robot
 pybot -T -d $REPORT_PATH -r queryStreamCaseReport.html -l queryStreamCaseLog.html -o queryStreamCaseOutput -L TRACE queryStreamCase.robot
 pybot -T -d $REPORT_PATH -r updateStreamCaseReport.html -l updateStreamCaseLog.html -o updateStreamCaseOutput -L TRACE updateStreamCase.robot
+pybot -T -d $REPORT_PATH -r destroyStreamCaseReport.html -l destroyStreamCaseLog.html -o destroyStreamCaseOutput -L TRACE destroyStreamCase.robot

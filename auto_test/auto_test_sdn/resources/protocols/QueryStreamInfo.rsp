@@ -1,10 +1,15 @@
-sequence: 813970641575558
+sequence: 428871770443251
 errorCode: E_OK
 streamDetailList {
-  errorCode: E_NOT_EXIST
+  errorCode: E_OK
+  originDC: "dc1"
   detail {
-    businessID: 1506667964
-    streamKey: "queryStreamInfo_1506667964gzXj2Es0"
+    streamID: 726
+    businessID: 4083896147842618
+    streamKey: "autotest_1507620258_1n6KwGrt"
+    streamName: "autotest"
+    streamType: "flv"
+    streamStatus: OPENED
   }
 }
 

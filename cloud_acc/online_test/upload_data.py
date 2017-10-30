@@ -5,6 +5,7 @@ import os
 import requests
 import json
 import shutil
+import time
 
 basePath=r"./tmp/"
 if not os.path.exists(basePath):
@@ -14,12 +15,18 @@ def uploadData(filePath,blocksize,offset,addrs):
     if filePath:
         filesize=os.path.getsize(filePath)
     with open(filePath, "rb") as f:
-        while offset < filesize:
+        while (offset + blocksize) <= filesize :
             chunk=f.read(blocksize)
             filename = os.path.join(basePath+ "%d" % offset)
             with open(filename, 'wb') as file:
                 file.write(chunk)
             offset+=blocksize
+	if offset < filesize :
+	    print "################"
+	    chunk=f.read((filesize-offset))
+	    filename = os.path.join(basePath+ "%d" % filesize)
+	    with open(filename, 'wb') as file:
+                file.write(chunk)
 
     for file in os.listdir(basePath):
         files={
@@ -27,8 +34,10 @@ def uploadData(filePath,blocksize,offset,addrs):
             }
         block_size = os.path.getsize(basePath+file)
         data = {"json": "%s" % json.dumps({"upload_info": {"offset": int(file), "len": block_size}})}
+	print data,filesize
         resp = requests.post(url=addrs, files=files, data=data)
         print resp.content
+	#time.sleep(1)
         offset += int(file)
 
 

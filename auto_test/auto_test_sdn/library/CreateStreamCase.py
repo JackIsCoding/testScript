@@ -24,8 +24,8 @@ class CreateStreamCase(object):
 		self.xconfig = my_config_parser.XConfigParser()
 	
 	def createStreamLogic(self):
-		sequence, errorCode, businessID, streamKey, streamName, streamType = self.basic.createStream()
-		print(streamName, streamType)
+		businessID, streamKey, streamName, streamType, _ = self.basic.createParam()	
+		sequence, errorCode = self.basic.createStream(businessID, streamKey, streamName, streamType)
 		rtmpUrl = 'rtmp://'+sdn_config.rtmp_server_endpoint+'/'+str(businessID)+'/'+streamKey
 		sql1 = 'SELECT * FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
 		data1 = self.mysql.executeMysql(sql1)
@@ -47,12 +47,11 @@ class CreateStreamCase(object):
 	
 
 	def createStreamInternalLogic(self):
-		sequence, errorCode, streamID, businessID, streamKey, streamName, streamType = self.basic.createStreamInternal()
-		print(sequence, errorCode, streamID, businessID, streamKey, streamName, streamType)
+		businessID, streamKey, streamName, streamType, _ = self.basic.createInterParam()
+		sequence, errorCode, streamID = self.basic.createStreamInternal(businessID, streamKey, streamName, streamType)
 		rtmpUrl = 'rtmp://'+sdn_config.rtmp_server_endpoint+'/'+str(businessID)+'/'+streamKey
 		sql1 = 'SELECT * FROM xcloud.stream_info where stream_id='+str(streamID)
 		data1 = self.mysql.executeMysql(sql1)
-		print(sql1, data1)
 		if sequence and errorCode:
 		    if len(data1) != 0 and data1[0] == streamID and data1[1] == businessID and data1[2] == streamKey and data1[3] == streamName and data1[4] == streamType and data1[5] == pb.CREATED:
 			time.sleep(3)

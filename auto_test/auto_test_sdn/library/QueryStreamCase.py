@@ -23,7 +23,8 @@ class QueryStreamCase(object):
         self.redis = redis_opera.RedisOperation()
 
     def queryStreamLogic(self):
-        _, _, businessID, streamKey, _, _ = self.basic.createStream()
+	businessID, streamKey, _, _, _ = self.basic.createParam()
+        self.basic.createStream(businessID, streamKey)
         sql = 'SELECT * FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
         data = self.mysql.executeMysql(sql)
         key = str(businessID)+'_'+streamKey
@@ -70,10 +71,11 @@ class QueryStreamCase(object):
             raise AssertionError("queryStreamList:query stream info fail when business is not in DB!")
 
     def hasOneBusiness(self):
-        sql = 'SELECT * FROM xcloud.stream_info';
-        data = self.mysql.executeMysql(sql)
-        print(data)
-        businessID = data[1]
+	businessID, streamKey, _, _, _ = self.basic.createParam()
+	self.basic.createStream(businessID, streamKey)
+	sql = 'SELECT * FROM xcloud.stream_info where business_id='+str(businessID)+' and stream_key=\''+streamKey+'\'';
+	data = self.mysql.executeMysql(sql)
+	print("data:", data)
         sequence, errorCode, allCount, streamInfoList = self.basic.queryStreamList(businessID)
         if sequence and errorCode and allCount == 1 and streamInfoList[0].streamID == data[0] and streamInfoList[0].streamKey == data[2] and streamInfoList[0].streamName == data[3] and streamInfoList[0].streamStatus == data[5]:
             pass
@@ -111,7 +113,8 @@ class QueryStreamCase(object):
             raise AssertionError("queryStreamInfoInternal:query streamInfoKey fail when streamID is not in DB!")
 
     def queryStreamInternalLogic(self):
-        _, _, streamID, _, _, _, _ = self.basic.createStreamInternal()
+	businessID, streamKey, _, _, _ = self.basic.createInterParam()
+        _, _, streamID = self.basic.createStreamInternal(businessID, streamKey)
         sequence, errorCode, detailErrorCode, streamDetailList = self.basic.queryStreamInfoInternal(streamID)
         sql = 'SELECT * FROM xcloud.stream_info where stream_id='+str(streamID);
         data = self.mysql.executeMysql(sql)
@@ -146,10 +149,10 @@ class QueryStreamCase(object):
 if __name__=="__main__":
     test = QueryStreamCase()
     #test.hasNoneInfoKey()
-    test.hasNoneKey()
+    #test.hasNoneKey()
     #test.queryStreamLogic()
     #test.queryStreamInternalLogic()
     #test.hasNoneBusiness()
-    #test.hasOneBusiness()
+    test.hasOneBusiness()
     #test.haveMultipleBusiness()
 

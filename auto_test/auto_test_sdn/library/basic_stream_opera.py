@@ -21,42 +21,42 @@ class BasicStreamTest(object):
         self.xconfig = my_config_parser.XConfigParser()
         self.common = my_common_func.CommonFunc()
 
-    def createStream(self):
-        self.xconfig.load(sms_client.get_req_path("CreateStream"))
-        self.req = pb.CreateStreamReq()
+    def createStream(self, businessID, streamKey, streamName='autotest', streamType='rtmp', pullUrl='rtmp://tw03a107.sandai.net/test/xunlei'):
         self.req.sequence = self.common.generateNum()
-        self.req.businessID = self.common.generateNum()
-        self.req.streamKey = "autotest_%d_%s" %(int(time.time()), self.common.generateCode())
-        self.req.streamName = self.xconfig.get_string("streamName")
-        self.req.streamType = self.xconfig.get_string("streamType")
-        self.req.pullUrl = self.xconfig.get_string_url("pullUrl")
+        self.req.businessID = businessID
+        self.req.streamKey = streamKey
+        self.req.streamName = streamName
+        self.req.streamType = streamType
+        self.req.pullUrl = pullUrl
         print("createStream req:", self.req)
-	businessID = self.req.businessID
-	streamKey = self.req.streamKey
-	streamName = self.req.streamName
-	streamType = self.req.streamType
 	self.resp = self.client.CreateStream(self.req)
         print("createStream resp:", self.resp)
         sms_client.write_rsp_into_file("CreateStream", self.resp)
 
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
-        errorCode = self.common.affirmEqual(self.resp.errorCode, pb.E_OK)
-	return sequence, errorCode, businessID, streamKey, streamName, streamType 
+       	errorCode = self.common.affirmEqual(self.resp.errorCode, pb.E_OK)
+	return sequence, errorCode 
 
-    def createStreamInternal(self):
-        self.xconfig.load(sms_client.get_req_path("CreateStreamInternal"))
-        self.req = pb.CreateStreamInternalReq()
+    def createParam(self):
+        self.xconfig.load(sms_client.get_req_path("CreateStream"))
+        self.req = pb.CreateStreamReq()
+	businessID = self.common.generateNum()
+	streamKey = "autotest_%d_%s" %(int(time.time()), self.common.generateCode())
+	streamName = self.xconfig.get_string("streamName")
+	streamType = self.xconfig.get_string("streamType")
+	pullUrl = self.xconfig.get_string_url("pullUrl")
+	print(businessID, streamKey, streamName, streamType, pullUrl)
+	return businessID, streamKey, streamName, streamType, pullUrl
+	
+
+    def createStreamInternal(self, businessID, streamKey, streamName='autotestInternal', streamType='rtmp', pullUrl='rtmp://tw03a107.sandai.net/test/xunlei'):
         self.req.sequence = self.common.generateNum()
-        self.req.businessID = self.common.generateNum()
-        self.req.streamKey = "autotest_%d_%s" %(int(time.time()), self.common.generateCode())
-        self.req.streamName = self.xconfig.get_string("streamName")
-        self.req.streamType = self.xconfig.get_string("streamType")
-        self.req.pullUrl = self.xconfig.get_string_url("pullUrl")
+        self.req.businessID = businessID
+        self.req.streamKey = streamKey
+        self.req.streamName = streamName
+        self.req.streamType = streamType
+        self.req.pullUrl = pullUrl
         print("createStreamInternal req:", self.req)
-        businessID = self.req.businessID
-        streamKey = self.req.streamKey
-        streamName = self.req.streamName
-        streamType = self.req.streamType
         self.resp = self.client.CreateStreamInternal(self.req)
         print("createStreamInternal resp:", self.resp)
         sms_client.write_rsp_into_file("CreateStreamInternal", self.resp)
@@ -64,8 +64,18 @@ class BasicStreamTest(object):
         sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
         errorCode = self.common.affirmEqual(self.resp.errorCode, pb.E_OK)
         streamID = self.resp.streamID
-        return sequence, errorCode, streamID, businessID, streamKey, streamName, streamType
+        return sequence, errorCode, streamID
 
+    def createInterParam(self):
+	self.xconfig.load(sms_client.get_req_path("CreateStreamInternal"))
+	self.req = pb.CreateStreamInternalReq()
+	businessID = self.common.generateNum()
+	streamKey = "autotest_%d_%s_inter" %(int(time.time()), self.common.generateCode())
+	streamName = self.xconfig.get_string("streamName")
+	streamType = self.xconfig.get_string("streamType")
+	pullUrl = self.xconfig.get_string_url("pullUrl")
+	print(businessID, streamKey, streamName, streamType, pullUrl)
+	return businessID, streamKey, streamName, streamType, pullUrl
 
     def queryStreamInfo(self, businessID, streamKey):
         self.xconfig.load(sms_client.get_req_path("QueryStreamInfo"))
@@ -160,10 +170,7 @@ class BasicStreamTest(object):
 
 	sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
 	errorCode = self.common.affirmEqual(self.resp.errorCode, pb.E_OK)
-	if sequence and errorCode:
-	    return True
-	else:
-	    return False
+	return sequence, errorCode
 
     def destroyStreamInternal(self, streamID):
 	self.xconfig.load(sms_client.get_req_path("DestroyStreamInternal"))
@@ -177,20 +184,18 @@ class BasicStreamTest(object):
 
 	sequence = self.common.affirmEqual(self.resp.sequence, self.req.sequence)
 	errorCode = self.common.affirmEqual(self.resp.errorCode, pb.E_OK)
-	if sequence and errorCode:
-	    return True
-	else:
-	    return False
+	return sequence, errorCode
 
 
 
 if __name__ == "__main__":
     test = BasicStreamTest()
-    #test.createStream()
+    a, b, c, d, e = test.createInterParam()
+    test.createStreamInternal(a, b, c, d, e)
     #test.destroyStream(159961924170236,'autotest_1504768401_PL4lMJo5')
     #test.queryStreamInfo(159961924170236,'autotest_1504768401_PL4lMJo5')
     #test.queryStreamInfoInternal(7423)
-    test.queryStreamList(8)
+    #test.queryStreamList(8)
     #test.createStreamInternal()
     #test.destroyStreamInternal(7307)
     #test.queryStreamInfoInternal(7307)
